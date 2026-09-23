@@ -14,8 +14,10 @@
 }
 
 .image {
-  width: 100%;
-  max-width: 480px;
+  width: calc(100% + 64px);
+  max-width: var(--container-width);
+  margin-left: -32px;
+  margin-right: -32px;
   height: auto;
   display: block;
 }
