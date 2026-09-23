@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Cards from "./cards/Cards";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -20,13 +21,16 @@ export default function Hero() {
         defensa frente al vandalismo, la corrupción y el miedo que han intentado
         imponerse en las calles.
       </p>
-      <Image
-        src="/movimientobate-hero.png"
-        alt="Movimiento Bate hero"
-        width={1704}
-        height={923}
-        className={styles.image}
-      />
+      <div className={styles.imageWrapper}>
+        <Image
+          src="/movimientobate-hero.png"
+          alt="Movimiento Bate hero"
+          width={1704}
+          height={923}
+          className={styles.image}
+        />
+        <Cards />
+      </div>
     </section>
   );
 }

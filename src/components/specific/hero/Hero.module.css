@@ -13,13 +13,19 @@
   display: block;
 }
 
-.image {
+.imageWrapper {
+  position: relative;
   width: calc(100% + 64px);
   max-width: var(--container-width);
   margin-left: -32px;
   margin-right: -32px;
+}
+
+.image {
+  width: 100%;
   height: auto;
   display: block;
+  opacity: 0.4;
 }
 
 .title {
