@@ -11,7 +11,7 @@ export default function Hero({ onSelect, selected }: HeroProps) {
   return (
     <section className={styles.hero}>
       <Image
-        src="/logo.jpg"
+        src="/logo.png"
         alt="Movimiento Bate"
         width={1280}
         height={1280}
@@ -28,7 +28,7 @@ export default function Hero({ onSelect, selected }: HeroProps) {
       </p>
       <div className={styles.imageWrapper}>
         <Image
-          src="/movimientobate-hero.png"
+          src="/FONDO2.jpg"
           alt="Movimiento Bate hero"
           width={1704}
           height={923}

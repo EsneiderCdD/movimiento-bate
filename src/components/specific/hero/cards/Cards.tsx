@@ -7,9 +7,9 @@ export interface CardItem {
 }
 
 const items: CardItem[] = [
-  { title: "Mov Bate", image: "/logo.jpg" },
-  { title: "Formulario", image: "/logo.jpg" },
-  { title: "Tienda", image: "/logo.jpg" },
+  { title: "Mov Bate", image: "/logo.png" },
+  { title: "Formulario", image: "/logo.png" },
+  { title: "Tienda", image: "/logo.png" },
 ];
 
 interface CardsProps {

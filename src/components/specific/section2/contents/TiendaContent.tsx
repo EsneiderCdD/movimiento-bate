@@ -2,9 +2,9 @@ import Image from "next/image";
 import styles from "./TiendaContent.module.css";
 
 const products = [
-  { name: "Camiseta MB", price: "$45.000", image: "/logo.jpg" },
-  { name: "Gorra MB", price: "$25.000", image: "/logo.jpg" },
-  { name: "Sticker Pack", price: "$10.000", image: "/logo.jpg" },
+  { name: "Camiseta MB", price: "$45.000", image: "/logo.png" },
+  { name: "Gorra MB", price: "$25.000", image: "/logo.png" },
+  { name: "Sticker Pack", price: "$10.000", image: "/logo.png" },
 ];
 
 export default function TiendaContent() {
