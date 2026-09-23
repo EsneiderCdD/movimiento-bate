@@ -1,11 +1,5 @@
-import Hero from "@/components/specific/hero/Hero";
-import Section2 from "@/components/specific/section2/Section2";
+import HomeContent from "@/components/specific/HomeContent";
 
 export default function Home() {
-  return (
-    <>
-      <Hero />
-      <Section2 />
-    </>
-  );
+  return <HomeContent />;
 }

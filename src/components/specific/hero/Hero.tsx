@@ -2,7 +2,12 @@ import Image from "next/image";
 import Cards from "./cards/Cards";
 import styles from "./Hero.module.css";
 
-export default function Hero() {
+interface HeroProps {
+  onSelect: (title: string) => void;
+  selected: string | null;
+}
+
+export default function Hero({ onSelect, selected }: HeroProps) {
   return (
     <section className={styles.hero}>
       <Image
@@ -29,7 +34,7 @@ export default function Hero() {
           height={923}
           className={styles.image}
         />
-        <Cards />
+        <Cards onSelect={onSelect} selected={selected} />
       </div>
     </section>
   );

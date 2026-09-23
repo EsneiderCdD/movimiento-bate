@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./Cards.module.css";
 
-interface CardItem {
+export interface CardItem {
   title: string;
   image: string;
 }
@@ -12,11 +12,20 @@ const items: CardItem[] = [
   { title: "Tienda", image: "/logo.jpg" },
 ];
 
-export default function Cards() {
+interface CardsProps {
+  onSelect: (title: string) => void;
+  selected: string | null;
+}
+
+export default function Cards({ onSelect, selected }: CardsProps) {
   return (
     <div className={styles.cards}>
       {items.map((item) => (
-        <div key={item.title} className={styles.card}>
+        <div
+          key={item.title}
+          className={`${styles.card} ${selected === item.title ? styles.active : ""}`}
+          onClick={() => onSelect(item.title)}
+        >
           <Image
             src={item.image}
             alt={item.title}
