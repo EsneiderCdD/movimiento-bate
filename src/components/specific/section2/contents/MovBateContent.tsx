@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./MovBateContent.module.css";
 
 export default function MovBateContent() {
@@ -56,6 +57,9 @@ export default function MovBateContent() {
           decir basta. El bate no es un arma, es un símbolo de que el pueblo
           está unido y dispuesto a defender lo que le pertenece.
         </p>
+        <Link href="/nosotros" className={styles.button}>
+          Saber más
+        </Link>
       </div>
     </div>
   );
