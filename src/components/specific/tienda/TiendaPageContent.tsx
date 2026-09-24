@@ -1,5 +1,4 @@
-import Link from "next/link";
-import styles from "./TiendaContent.module.css";
+import styles from "./TiendaPageContent.module.css";
 
 const products = [
   {
@@ -22,14 +21,20 @@ const products = [
   },
 ];
 
-export default function TiendaContent() {
+export default function TiendaPageContent() {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.page}>
+      <div className={styles.header}>
+        <span className={styles.tag}>Tienda oficial</span>
+        <h1 className={styles.title}>Lleva el bate puesto</h1>
+        <p className={styles.subtitle}>Envíos a toda Colombia.</p>
+      </div>
+
       <div className={styles.grid}>
         {products.map((product) => (
           <div key={product.name} className={styles.card}>
             <div className={styles.image}>
-              <span className={styles.tag}>{product.tag}</span>
+              <span className={styles.cardTag}>{product.tag}</span>
             </div>
             <div className={styles.body}>
               <h3 className={styles.name}>{product.name}</h3>
@@ -43,11 +48,6 @@ export default function TiendaContent() {
             </div>
           </div>
         ))}
-      </div>
-      <div className={styles.cta}>
-        <Link href="/tienda" className={styles.ctaBtn}>
-          Saber más
-        </Link>
       </div>
     </div>
   );

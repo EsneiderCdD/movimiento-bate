@@ -1,9 +1,46 @@
-.wrapper {
+.page {
   display: flex;
   flex-direction: column;
+  gap: 64px;
+  padding: 80px 32px;
   align-items: center;
-  gap: 40px;
-  padding: 0 32px;
+}
+
+.header {
+  max-width: 720px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-oswald);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--amarillo);
+}
+
+.title {
+  font-family: var(--font-anton);
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 0.98;
+  text-transform: uppercase;
+  color: var(--blanco);
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: var(--font-barlow);
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--azul-gris);
+  margin: 0;
 }
 
 .grid {
@@ -41,7 +78,7 @@
   justify-content: center;
 }
 
-.tag {
+.cardTag {
   position: absolute;
   top: 14px;
   left: 14px;
@@ -108,29 +145,5 @@
 }
 
 .btn:hover {
-  background: #b81822;
-}
-
-.cta {
-  display: flex;
-  justify-content: center;
-}
-
-.ctaBtn {
-  display: inline-block;
-  background: #E11D2A;
-  color: #FFFFFF;
-  font-family: var(--font-oswald);
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 14px 32px;
-  border-radius: 6px;
-  transition: background 0.2s;
-}
-
-.ctaBtn:hover {
   background: #b81822;
 }
