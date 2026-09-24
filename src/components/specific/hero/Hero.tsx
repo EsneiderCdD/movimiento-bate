@@ -46,8 +46,8 @@ export default function Hero({ onSelect, selected }: HeroProps) {
           height={923}
           className={styles.image}
         />
-        <Cards onSelect={onSelect} selected={selected} />
       </div>
+      <Cards onSelect={onSelect} selected={selected} />
     </section>
   );
 }

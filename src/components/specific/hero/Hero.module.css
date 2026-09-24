@@ -97,11 +97,8 @@
 }
 
 .imageWrapper {
-  position: relative;
-  width: calc(100% + 64px);
-  max-width: var(--container-width);
-  margin-left: -32px;
-  margin-right: -32px;
+  width: 75%;
+  padding: 0 32px;
 }
 
 .image {
@@ -109,4 +106,5 @@
   height: auto;
   display: block;
   opacity: 0.4;
+  border-radius: 8px;
 }
