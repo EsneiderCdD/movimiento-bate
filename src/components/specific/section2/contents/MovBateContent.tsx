@@ -4,14 +4,39 @@ import styles from "./MovBateContent.module.css";
 export default function MovBateContent() {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.imageContainer}>
-        <Image
-          src="/fondo2.jpg"
-          alt="Movimiento Bate"
-          width={1704}
-          height={923}
-          className={styles.image}
-        />
+      <div className={styles.bentoGrid}>
+        <div className={styles.item1}>
+          <Image
+            src="/fondo2.jpg"
+            alt="Movimiento Bate"
+            fill
+            className={styles.bentoImage}
+          />
+        </div>
+        <div className={styles.item2}>
+          <Image
+            src="/fondo2.jpg"
+            alt="Movimiento Bate"
+            fill
+            className={styles.bentoImage}
+          />
+        </div>
+        <div className={styles.item3}>
+          <Image
+            src="/fondo2.jpg"
+            alt="Movimiento Bate"
+            fill
+            className={styles.bentoImage}
+          />
+        </div>
+        <div className={styles.item4}>
+          <Image
+            src="/fondo2.jpg"
+            alt="Movimiento Bate"
+            fill
+            className={styles.bentoImage}
+          />
+        </div>
       </div>
       <div className={styles.content}>
         <h2 className={styles.heading}>¿Quiénes somos?</h2>
