@@ -1,4 +1,4 @@
-import Separator from "@/components/reusables/separator/Separator";
+import SectionHeader from "@/components/reusables/sectionHeader/SectionHeader";
 import MovBateContent from "./contents/MovBateContent";
 import FormularioContent from "./contents/FormularioContent";
 import TiendaContent from "./contents/TiendaContent";
@@ -11,15 +11,38 @@ interface Section2Props {
 export default function Section2({ selected }: Section2Props) {
   if (!selected) return null;
 
-  const separatorTitle =
-    selected === "Mov Bate" ? "Mov Bate" : selected;
-
   return (
     <section className={styles.section}>
-      <Separator title={separatorTitle} />
-      {selected === "Mov Bate" && <MovBateContent />}
-      {selected === "Formulario" && <FormularioContent />}
-      {selected === "Tienda" && <TiendaContent />}
+      {selected === "Mov Bate" && (
+        <>
+          <SectionHeader
+            tag="Mov Bate"
+            title="Conoce nuestra causa"
+            subtitle="Somos un movimiento ciudadano comprometido con la defensa del orden, la libertad y el bienestar de nuestra gente."
+          />
+          <MovBateContent />
+        </>
+      )}
+      {selected === "Formulario" && (
+        <>
+          <SectionHeader
+            tag="Formulario"
+            title="Haz parte del cambio"
+            subtitle="Déjanos tus datos y únete a la causa ciudadana."
+          />
+          <FormularioContent />
+        </>
+      )}
+      {selected === "Tienda" && (
+        <>
+          <SectionHeader
+            tag="Tienda oficial"
+            title="Lleva el bate puesto"
+            subtitle="Envíos a toda Colombia."
+          />
+          <TiendaContent />
+        </>
+      )}
     </section>
   );
 }
