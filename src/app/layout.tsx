@@ -1,18 +1,28 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Anton, Oswald, Barlow } from "next/font/google";
 import Navbar from "@/components/specific/navbar/Navbar";
 import Footer from "@/components/specific/footer/Footer";
 import "./globals.css";
 import styles from "./layout.module.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const anton = Anton({
+  weight: "400",
+  variable: "--font-anton",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const oswald = Oswald({
+  variable: "--font-oswald",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const barlow = Barlow({
+  weight: ["400", "500", "600"],
+  variable: "--font-barlow",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +32,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html
+      lang="es"
+      className={`${anton.variable} ${oswald.variable} ${barlow.variable}`}
+    >
       <body>
         <div className={styles.spine}>
           <Navbar />

@@ -1,0 +1,264 @@
+================================================================================
+                    MOVIMIENTO DEL BATE - DESIGN SYSTEM
+                      Documentacion de Branding y UI
+================================================================================
+
+Proyecto: movimientobate-f (Next.js 16.2.9 - Static Export)
+Estilos: CSS Modules (sin Tailwind CSS)
+Ultima actualizacion: 23/09/2026
+
+================================================================================
+  1. TIPOGRAFIA
+================================================================================
+
+Fuentes cargadas via next/font/google en: src/app/layout.tsx
+
+  +------------+----------------+----------------------------------------------+
+  | Fuente     | Variable CSS   | Rol                                          |
+  +------------+----------------+----------------------------------------------+
+  | Anton      | --font-anton   | Display / Titulos principales (h1, h2)       |
+  | Oswald     | --font-oswald  | Labels, botones, tags, textos UI             |
+  | Barlow     | --font-barlow  | Cuerpo de texto, subtitulos, inputs          |
+  +------------+----------------+----------------------------------------------+
+  | Fallback   | system-ui, -apple-system, sans-serif (definido en globals.css) |
+  +------------+----------------+----------------------------------------------+
+
+--------------------------------------------------------------------------------
+  Tamanos de fuente - Anton (Titulos)
+--------------------------------------------------------------------------------
+
+  Contexto             Base     1500px   1250px   1000px   750px    600px    450px    350px
+  -------------------  ------   ------   ------   ------   ------   ------   ------   ------
+  HeroSection          80px     64px     56px     52px     44px     38px     32px     28px
+  SectionHeader        56px     48px     44px     38px     32px     28px     24px     20px
+  DenunciaCtaSection   56px     48px     44px     38px     32px     28px     24px     20px
+  QuienSoySection      56px     -        -        -        38px*    -        -        -
+  Tienda page          54px     -        -        -        -        36px*    -        -
+  Modal titulo         22px     -        -        -        -        -        -        -
+
+  * 768px  |  ** 640px
+
+--------------------------------------------------------------------------------
+  Tamanos de fuente - Barlow (Cuerpo / Subtitulos)
+--------------------------------------------------------------------------------
+
+  Contexto             Base     1250px   1000px   750px    600px    450px    350px
+  -------------------  ------   ------   ------   ------   ------   ------   ------
+  Hero subtitulo       22px     22px     20px     18px     -        16px     15px
+  SectionHeader sub    19px     -        17px     16px     -        15px     14px
+  DenunciaCta sub      19px     -        17px     16px     -        15px     14px
+  QuienSoy parrafos    18px     -        -        -        -        -        -
+  Tienda subtitulo     16px     -        -        -        -        -        -
+  Form inputs          16px     -        -        -        -        -        -
+  Modal mensaje        16px     -        -        -        -        -        -
+  ProductCard descr    14px     -        -        -        -        -        13px
+
+--------------------------------------------------------------------------------
+  Tamanos de fuente - Oswald (Labels / Botones / UI)
+--------------------------------------------------------------------------------
+
+  Contexto             Base     600px    450px    350px
+  -------------------  ------   ------   ------   ------
+  Hero label           14px     12px     -        -
+  Hero rol             17px     15px     -        13px
+  SectionHeader tag    13px     11px     -        10px
+  DenunciaCta tag      13px     11px     -        10px
+  CTA button           16px     14px*    13px     -
+  Submit button        16px     -        -        -
+  Block title          20px     -        -        -
+  Form label           14px     -        -        -
+  Ecommerce button     15px     14px**   13px     -
+  ProductCard nombre   18px     16px**   -        15px***
+  ProductCard boton    13px     -        12px***  -
+  ProductCard tag      11px     -        -        -
+
+  * 1250px  |  ** 600px  |  *** 350px
+
+================================================================================
+  2. ESTILO TIPOGRAFICO
+================================================================================
+
+--------------------------------------------------------------------------------
+  Grosor (font-weight)
+--------------------------------------------------------------------------------
+
+  400  - Anton headings (peso unico cargado)
+  500  - Oswald (cargado), Barlow (cargado)
+  600  - Labels, tags, roles, form labels, botones secundarios
+  700  - Block titles, submit buttons, CTA buttons, modal title
+
+--------------------------------------------------------------------------------
+  Letter-spacing
+--------------------------------------------------------------------------------
+
+  Valor     Contexto
+  --------  -------------------------------------------------------------
+  3px       Labels, tags, roles (desktop)
+  2px       Labels, tags en mobile (600px)
+  1.5px     Block titles, CTA buttons, submit buttons, ecommerce btn, modal
+  1px       Form labels, upload button, ProductCard button
+  0.5px     Titulos principales (Anton display)
+
+--------------------------------------------------------------------------------
+  Text-transform
+--------------------------------------------------------------------------------
+
+  Todo el texto UI basado en Oswald usa: text-transform: uppercase
+
+--------------------------------------------------------------------------------
+  Line-height
+--------------------------------------------------------------------------------
+
+  Valor     Contexto
+  --------  -------------------------------------------------------------
+  0.92      Hero title
+  0.94      QuienSoy title
+  0.98      SectionHeader / DenunciaCta / Tienda titles
+  1.2       ProductCard nombre
+  1.45      Hero subtitulo (750px)
+  1.5       Subtitulos en mobile, ProductCard descripcion
+  1.55      Hero subtitulo (base)
+  1.6       SectionHeader / DenunciaCta / Modal subtitulos
+  1.7       QuienSoy bio parrafos
+
+--------------------------------------------------------------------------------
+  Colores de texto por contexto
+--------------------------------------------------------------------------------
+
+  Sobre fondo OSCURO (navy):
+    Titulos:        #FFFFFF (blanco)
+    Subtitulos:     #C7D0E0 (azul-gris claro)
+    Labels/Tags:    #FFD200 (amarillo brand)
+    Labels (bg claro): #0C1A33 (navy oscuro)
+
+  Sobre fondo CLARO (crema):
+    Titulos:        #15130F (marron-negro oscuro)
+    Roles:          #6B6557 (marron medio)
+    Cuerpo:         #4A463E (marron oscuro)
+    Placeholders:   #A09884 (beige)
+
+================================================================================
+  3. BRANDING - PALETA DE COLORES
+================================================================================
+
+--------------------------------------------------------------------------------
+  COLORES PRINCIPALES
+--------------------------------------------------------------------------------
+
+  ROJO BRAND
+    Primario:       #E11D2A    Accent en titulos, lineas, links, CTA, focus
+    Hover:          #b81822    Estado hover en botones rojos
+
+  AMARILLO BRAND
+    Primario:       #FFD200    Labels, tags, texto sobre fondos oscuros
+
+--------------------------------------------------------------------------------
+  AZULES / NAVY
+--------------------------------------------------------------------------------
+
+  Navy oscuro:      #0C1A33    Fondos oscuros principales, upload button, tags
+  Navy medio:       #16294E    Centros de gradientes radiales, hover upload
+  Navy profundo:    #081428    Fin de gradientes radiales
+  Navy stripe:      #102146    Patrones alternos en placeholders de imagen
+  Azul-gris muted:  #8FA0BF    Texto en placeholders de imagen
+  Azul-gris claro:  #C7D0E0    Subtitulos sobre fondos oscuros, modal mensaje
+
+--------------------------------------------------------------------------------
+  CREMAS / BEIGES
+--------------------------------------------------------------------------------
+
+  Crema principal:  #F2EEE4    Fondos claros principales (QuienSoy, Denuncia, etc.)
+  Borde crema:      #E2DCCE    Bordes en cards, formularios, dividers
+  Borde crema osc:  #D4CEBE    Bordes en inputs
+  Crema stripe:     #EBE6D9    Patron accesorios (ProductCard)
+  Crema stripe alt: #E3DDCD    Patron accesorios alternado (ProductCard)
+  Placeholder beige: #A09884   Texto placeholder en inputs
+
+--------------------------------------------------------------------------------
+  MARRONES (texto sobre crema)
+--------------------------------------------------------------------------------
+
+  Marron-negro:     #15130F    Titulos sobre fondo claro
+  Marron medio:     #6B6557    Roles, descripciones, labels contacto
+  Marron oscuro:    #4A463E    Parrafos bio, subtitulos tienda
+
+--------------------------------------------------------------------------------
+  NEUTROS / UTILIDADES
+--------------------------------------------------------------------------------
+
+  Blanco:           #FFFFFF    Texto sobre oscuro, fondos cards, botones
+  Blanco 92%:       rgba(255,255,255,0.92)    Fondo contenedor .frame
+  Blanco 4%:        rgba(255,255,255,0.024)   Overlay rayas diagonales
+  Blanco 40%:       rgba(255,255,255,0.4)     Scroll dot
+  Blanco 12%:       rgba(255,255,255,0.12)    Borde modal
+  Gris body:        #808080    Fondo detras del frame
+  Overlay oscuro:   rgba(0,0,0,0.7)    Modal overlay
+  Shadow:           rgba(0,0,0,0.06)    Sombra cards formulario
+
+--------------------------------------------------------------------------------
+  COLORES FUNCIONALES
+--------------------------------------------------------------------------------
+
+  Verde (exito):    #22c55e    Icono modal exito
+  Rojo (error):     #ef4444    Icono modal error
+
+--------------------------------------------------------------------------------
+  GRADIENTES
+--------------------------------------------------------------------------------
+
+  Radial oscuro (SectionHeader, DenunciaCta):
+    radial-gradient(1200px 700px at 30% 50%, #16294E 0%, #0C1A33 55%, #081428 100%)
+
+  Lineal overlay (HeroSection):
+    linear-gradient(135deg, rgba(8,20,40,0.92) 0%, rgba(12,26,51,0.7) 40%, rgba(12,26,51,0.4) 100%)
+
+================================================================================
+  4. RESPONSIVIDAD - BREAKPOINTS
+================================================================================
+
+El proyecto usa media queries custom (no Tailwind). Todos los valores son max-width
+salvo indicacion contraria.
+
+  Breakpoint   Uso principal
+  ----------   -------------------------------------------------------------
+  1500px       Reduccion inicial de titulos (80->64px hero, 56->48px seccion)
+  1250px       Segunda reduccion de titulos, ajuste de padding
+  1024px       Tienda: grid de 3 a 2 columnas
+  1001px       EcommerceHero: carousel se convierte en grid estatico 3 col
+  1000px       Hero: 100vh -> auto, cambia imagen desktop -> mobile
+  768px        QuienSoy: grid 2 col -> 1 col, sin sticky
+  750px        Reduccion de padding y subtitulos, scroll indicator oculto
+  640px        Denuncia form: grid -> 1 col, tienda: 2 -> 1 col
+  600px        Labels/tags a 11-12px, letter-spacing apretado, CTA full-width
+  450px        Reduccion adicional padding/fonts, flechas mas pequenas
+  350px        Breakpoint minimo: titulos 20-28px, tags 10px
+
+--------------------------------------------------------------------------------
+  Contenedores max-width
+--------------------------------------------------------------------------------
+
+  Valor        Contexto
+  ----------   -------------------------------------------------------------
+  1920px       .frame contenedor exterior (globals.css)
+  1240px       Grid productos / contenedor Ecommerce
+  1080px       Contenedor QuienSoy
+  820px        Contenedor formulario Denuncia
+  720px        Contenido Hero, SectionHeader, DenunciaCta
+
+================================================================================
+  5. ARCHIVOS DE REFERENCIA
+================================================================================
+
+  globals.css             -> src/app/globals.css
+  layout.tsx (fuentes)    -> src/app/layout.tsx
+  HeroSection CSS         -> src/components/specific/HeroSection/HeroSection.module.css
+  QuienSoySection CSS     -> src/components/specific/QuienSoySection/QuienSoySection.module.css
+  DenunciaSection CSS     -> src/components/specific/DenunciaSection/DenunciaSection.module.css
+  DenunciaCtaSection CSS  -> src/components/specific/DenunciaCtaSection/DenunciaCtaSection.module.css
+  EcommerceHero CSS       -> src/components/specific/EcommerceHeroSection/EcommerceHeroSection.module.css
+  SectionHeader CSS       -> src/components/reusable/SectionHeader/SectionHeader.module.css
+  ProductCard CSS         -> src/components/reusable/ProductCard/ProductCard.module.css
+  Modal CSS               -> src/components/reusable/Modal/Modal.module.css
+  Tienda page CSS         -> src/app/tienda/page.module.css
+
+================================================================================

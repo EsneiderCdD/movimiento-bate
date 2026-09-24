@@ -3,6 +3,11 @@
   --foreground: #ededed;
   --spine: #1a1a1a;
   --container-width: 1333px;
+
+  --rojo: #E11D2A;
+  --amarillo: #FFD200;
+  --blanco: #FFFFFF;
+  --azul-gris: #C7D0E0;
 }
 
 * {
@@ -26,7 +31,7 @@ body {
   min-height: 100%;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-barlow), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

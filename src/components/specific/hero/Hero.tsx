@@ -19,14 +19,24 @@ export default function Hero({ onSelect, selected }: HeroProps) {
           priority
           className={styles.logoBg}
         />
-        <h1 className={styles.title}>Movimiento Bate</h1>
-        <p className={styles.text}>
-          El Movimiento del Bate nace del deseo de miles de ciudadanos de
-          recuperar el orden, la autoridad y el respeto por Medellín y Antioquia.
-          Surge como un símbolo de resistencia ciudadana, no de violencia, sino
-          de defensa frente al vandalismo, la corrupción y el miedo que han
-          intentado imponerse en las calles.
-        </p>
+        <div className={styles.content}>
+          <div className={styles.label}>
+            <span className={styles.line} />
+            <span className={styles.labelText}>Movimiento del Bate</span>
+          </div>
+          <h1 className={styles.title}>
+            MOVIMIENTO
+            <span className={styles.accent}>DEL BATE</span>
+          </h1>
+          <p className={styles.role}>Defensa Legítima</p>
+          <p className={styles.subtitle}>
+            El Movimiento del Bate nace del deseo de miles de ciudadanos de
+            recuperar el orden, la autoridad y el respeto por Medellín y
+            Antioquia. Surge como un símbolo de resistencia ciudadana, no de
+            violencia, sino de defensa frente al vandalismo, la corrupción y el
+            miedo que han intentado imponerse en las calles.
+          </p>
+        </div>
       </div>
       <div className={styles.imageWrapper}>
         <Image
