@@ -4,38 +4,42 @@ import styles from "./MovBateContent.module.css";
 export default function MovBateContent() {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.bentoGrid}>
-        <div className={styles.item1}>
-          <Image
-            src="/fondo2.jpg"
-            alt="Movimiento Bate"
-            fill
-            className={styles.bentoImage}
-          />
+      <div className={styles.bento}>
+        <div className={styles.leftColumn}>
+          <div className={styles.item1}>
+            <Image
+              src="/fondo2.jpg"
+              alt="Movimiento Bate"
+              fill
+              className={styles.bentoImage}
+            />
+          </div>
+          <div className={styles.item3}>
+            <Image
+              src="/fondo2.jpg"
+              alt="Movimiento Bate"
+              fill
+              className={styles.bentoImage}
+            />
+          </div>
         </div>
-        <div className={styles.item2}>
-          <Image
-            src="/fondo2.jpg"
-            alt="Movimiento Bate"
-            fill
-            className={styles.bentoImage}
-          />
-        </div>
-        <div className={styles.item3}>
-          <Image
-            src="/fondo2.jpg"
-            alt="Movimiento Bate"
-            fill
-            className={styles.bentoImage}
-          />
-        </div>
-        <div className={styles.item4}>
-          <Image
-            src="/fondo2.jpg"
-            alt="Movimiento Bate"
-            fill
-            className={styles.bentoImage}
-          />
+        <div className={styles.rightColumn}>
+          <div className={styles.item2}>
+            <Image
+              src="/fondo2.jpg"
+              alt="Movimiento Bate"
+              fill
+              className={styles.bentoImage}
+            />
+          </div>
+          <div className={styles.item4}>
+            <Image
+              src="/fondo2.jpg"
+              alt="Movimiento Bate"
+              fill
+              className={styles.bentoImage}
+            />
+          </div>
         </div>
       </div>
       <div className={styles.content}>

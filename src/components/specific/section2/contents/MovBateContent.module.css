@@ -5,45 +5,58 @@
   align-items: stretch;
 }
 
-.bentoGrid {
+.bento {
   flex: 1;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-areas:
-    "i1 i1 i1 i1 i2 i2"
-    "i1 i1 i1 i1 i2 i2"
-    "i1 i1 i1 i1 i2 i2"
-    "i1 i1 i1 i1 .  ."
-    ".  i3 i3 i3 i4 i4"
-    ".  i3 i3 i3 i4 i4";
+  display: flex;
   gap: 12px;
   height: 520px;
 }
 
-.item1 {
-  grid-area: i1;
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
+.leftColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
 }
 
-.item2 {
-  grid-area: i2;
+.rightColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.item1 {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
   position: relative;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .item3 {
-  grid-area: i3;
+  width: 65%;
+  height: 110px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.item2 {
+  width: 55%;
+  height: 130px;
   position: relative;
   border-radius: 8px;
   overflow: hidden;
 }
 
 .item4 {
-  grid-area: i4;
+  width: 85%;
+  flex: 1;
+  min-height: 0;
   position: relative;
   border-radius: 8px;
   overflow: hidden;
