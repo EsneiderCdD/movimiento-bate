@@ -1,6 +1,6 @@
 import SectionHeader from "@/components/reusables/sectionHeader/SectionHeader";
 import MovBateContent from "./contents/MovBateContent";
-import FormularioContent from "./contents/FormularioContent";
+import BateadoresContent from "./contents/BateadoresContent";
 import TiendaContent from "./contents/TiendaContent";
 import styles from "./Section2.module.css";
 
@@ -23,14 +23,14 @@ export default function Section2({ selected }: Section2Props) {
           <MovBateContent />
         </>
       )}
-      {selected === "Formulario" && (
+      {selected === "Los Bateadores" && (
         <>
           <SectionHeader
-            tag="Formulario"
-            title="Haz parte del cambio"
-            subtitle="Déjanos tus datos y únete a la causa ciudadana."
+            tag="Los Bateadores"
+            title="Sé parte del cambio"
+            subtitle="Formamos líderes que transforman sus comunidades desde adentro."
           />
-          <FormularioContent />
+          <BateadoresContent />
         </>
       )}
       {selected === "Tienda" && (

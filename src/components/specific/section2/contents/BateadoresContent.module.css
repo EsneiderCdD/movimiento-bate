@@ -1,0 +1,44 @@
+.wrapper {
+  display: flex;
+  gap: 32px;
+  padding: 0 32px;
+  align-items: stretch;
+}
+
+.imageContainer {
+  flex: 1;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 320px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.heading {
+  font-family: var(--font-oswald);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--blanco);
+  margin: 0;
+}
+
+.text {
+  font-family: var(--font-barlow);
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--azul-gris);
+  margin: 0;
+}

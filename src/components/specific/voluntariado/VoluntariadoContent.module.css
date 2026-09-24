@@ -1,0 +1,125 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding: 80px 32px;
+}
+
+.section {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-oswald);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--amarillo);
+}
+
+.sectionTitle {
+  font-family: var(--font-anton);
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 0.98;
+  text-transform: uppercase;
+  color: var(--blanco);
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.blockTitle {
+  font-family: var(--font-oswald);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--blanco);
+  margin: 0;
+}
+
+.text {
+  font-family: var(--font-barlow);
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--azul-gris);
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-family: var(--font-oswald);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--azul-gris);
+}
+
+.input,
+.textarea {
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  color: var(--blanco);
+  font-family: var(--font-barlow);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #555;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.button {
+  align-self: flex-start;
+  padding: 14px 32px;
+  background: var(--rojo);
+  color: var(--blanco);
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-oswald);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: #b81822;
+}

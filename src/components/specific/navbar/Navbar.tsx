@@ -4,7 +4,7 @@ import styles from "./Navbar.module.css";
 const routes = [
   { label: "Inicio", href: "/" },
   { label: "Nosotros", href: "/nosotros" },
-  { label: "Formulario", href: "/formulario" },
+  { label: "Los Bateadores", href: "/voluntariado" },
   { label: "Tienda", href: "/tienda" },
 ];
 
