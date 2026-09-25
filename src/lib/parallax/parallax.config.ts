@@ -5,7 +5,7 @@ export interface ParallaxLayerConfig {
 }
 
 export const PARALLAX_LAYERS: Record<ParallaxLayerId, ParallaxLayerConfig> = {
-  background: { translate: 140 },
+  background: { translate: 260 },
   logo: { translate: 60 },
   text: { translate: 20 },
 };
