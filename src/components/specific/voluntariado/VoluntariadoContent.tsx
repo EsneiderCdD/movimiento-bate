@@ -4,71 +4,103 @@ export default function VoluntariadoContent() {
   return (
     <div className={styles.page}>
       <section className={styles.section}>
-        <span className={styles.tag}>Los Bateadores</span>
+        <div className={styles.tag}>
+          <span className={styles.tagLine} />
+          <span className={styles.tagText}>Los Bateadores</span>
+        </div>
         <h2 className={styles.sectionTitle}>Escuela de líderes</h2>
-        <p className={styles.text}>
-          Los Bateadores es un programa de formación política y liderazgo
-          ciudadano creado por el Movimiento del Bate. No es un partido. No es
-          una maquinaria. Es una escuela donde ciudadanos comunes aprenden a
-          convertirse en líderes reales, capaces de transformar sus municipios
-          desde la alcaldía o el concejo.
-        </p>
+        <div className={styles.grid}>
+          <div className={styles.gridCol}>
+            <p className={styles.text}>
+              Los Bateadores es un programa de formación política y liderazgo
+              ciudadano creado por el Movimiento del Bate. No es un partido. No
+              es una maquinaria. Es una escuela donde ciudadanos comunes
+              aprenden a convertirse en líderes reales, capaces de transformar
+              sus municipios desde la alcaldía o el concejo.
+            </p>
+          </div>
+          <div className={styles.accentBlock}>
+            <p className={styles.accentQuote}>
+              &ldquo;El que no cuida lo suyo, no merece tenerlo.&rdquo;
+            </p>
+            <span className={styles.accentAuthor}>
+              — Sabiduría arriera
+            </span>
+          </div>
+        </div>
       </section>
 
       <section className={styles.section}>
-        <span className={styles.tag}>En qué consiste</span>
+        <div className={styles.tag}>
+          <span className={styles.tagLine} />
+          <span className={styles.tagText}>En qué consiste</span>
+        </div>
         <h2 className={styles.sectionTitle}>Te formamos para ganar</h2>
 
-        <div className={styles.block}>
-          <h3 className={styles.blockTitle}>Estructura de campaña</h3>
-          <p className={styles.text}>
-            Te enseñamos paso a paso cómo se construye una campaña política
-            desde cero. Desde el diagnóstico de tu municipio hasta el discurso
-            que conecta con la gente. Cómo se arma un equipo, cómo se organiza
-            el territorio, cómo se llega al votante real.
-          </p>
-        </div>
+        <div className={styles.blocks}>
+          <div className={styles.block}>
+            <h3 className={styles.blockTitle}>Estructura de campaña</h3>
+            <p className={styles.text}>
+              Te enseñamos paso a paso cómo se construye una campaña política
+              desde cero. Desde el diagnóstico de tu municipio hasta el discurso
+              que conecta con la gente. Cómo se arma un equipo, cómo se organiza
+              el territorio, cómo se llega al votante real.
+            </p>
+          </div>
 
-        <div className={styles.block}>
-          <h3 className={styles.blockTitle}>Comunicación y redes</h3>
-          <p className={styles.text}>
-            El mensaje lo es todo. Aprende a comunicar tu propuesta con
-            claridad, a manejar redes sociales como herramienta política, a
-            crear contenido que genere confianza y a enfrentar la opinión
-            pública sin perder el rumbo.
-          </p>
-        </div>
+          <div className={styles.block}>
+            <h3 className={styles.blockTitle}>Comunicación y redes</h3>
+            <p className={styles.text}>
+              El mensaje lo es todo. Aprende a comunicar tu propuesta con
+              claridad, a manejar redes sociales como herramienta política, a
+              crear contenido que genere confianza y a enfrentar la opinión
+              pública sin perder el rumbo.
+            </p>
+          </div>
 
-        <div className={styles.block}>
-          <h3 className={styles.blockTitle}>Liderazgo comunitario</h3>
-          <p className={styles.text}>
-            No se trata solo de ganar elecciones, sino de servir. Te formamos
-            en gestión pública, trabajo comunitario, resolución de conflictos y
-            construcción de redes ciudadanas. Un líder que no sirve no es
-            líder.
-          </p>
+          <div className={styles.block}>
+            <h3 className={styles.blockTitle}>Liderazgo comunitario</h3>
+            <p className={styles.text}>
+              No se trata solo de ganar elecciones, sino de servir. Te formamos
+              en gestión pública, trabajo comunitario, resolución de conflictos y
+              construcción de redes ciudadanas. Un líder que no sirve no es
+              líder.
+            </p>
+          </div>
         </div>
       </section>
 
       <section className={styles.section}>
-        <span className={styles.tag}>Para quién es</span>
+        <div className={styles.tag}>
+          <span className={styles.tagLine} />
+          <span className={styles.tagText}>Para quién es</span>
+        </div>
         <h2 className={styles.sectionTitle}>Si esto eres tú, inscríbete</h2>
-        <p className={styles.text}>
-          Si eres líder en tu barrio o municipio. Si tienes vocación de
-          servicio público. Si quieres aspirar a un cargo de elección popular —
-          concejal, alcalde, o cualquier espacio donde puedas servir a tu
-          comunidad. Si crees que la política se puede hacer diferente y estás
-          dispuesto a demostrarlo con hechos.
-        </p>
-        <p className={styles.text}>
-          No importa tu edad, tu experiencia política ni tu profesión. Lo que
-          importa es que tengas ganas de servir y la disposición de aprender.
-          Nosotros ponemos la escuela, tú pones el compromiso.
-        </p>
+        <div className={styles.grid}>
+          <div className={styles.gridCol}>
+            <p className={styles.text}>
+              Si eres líder en tu barrio o municipio. Si tienes vocación de
+              servicio público. Si quieres aspirar a un cargo de elección
+              popular — concejal, alcalde, o cualquier espacio donde puedas
+              servir a tu comunidad. Si crees que la política se puede hacer
+              diferente y estás dispuesto a demostrarlo con hechos.
+            </p>
+          </div>
+          <div className={styles.gridCol}>
+            <p className={styles.text}>
+              No importa tu edad, tu experiencia política ni tu profesión. Lo que
+              importa es que tengas ganas de servir y la disposición de aprender.
+              Nosotros ponemos la escuela, tú pones el compromiso.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section className={styles.section}>
-        <span className={styles.tag}>Inscripciones</span>
+      <section className={`${styles.section} ${styles.formSection}`}>
+        <div className={styles.tag}>
+          <span className={styles.tagLine} />
+          <span className={styles.tagText}>Inscripciones</span>
+        </div>
         <h2 className={styles.sectionTitle}>Haz parte del cambio</h2>
         <p className={styles.text}>
           Déjanos tus datos y cuéntanos sobre ti. Cuál es tu municipio, qué

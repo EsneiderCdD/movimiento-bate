@@ -1,26 +1,37 @@
 .page {
+  background: var(--crema);
   display: flex;
   flex-direction: column;
-  gap: 64px;
-  padding: 80px 32px;
 }
 
 .section {
-  max-width: 720px;
+  max-width: 1080px;
   margin: 0 auto;
+  padding: 104px 28px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 
 .tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tagLine {
+  width: 34px;
+  height: 3px;
+  background: var(--rojo);
+}
+
+.tagText {
   font-family: var(--font-oswald);
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--amarillo);
+  color: var(--navy-oscuro);
 }
 
 .sectionTitle {
@@ -29,9 +40,54 @@
   font-size: 56px;
   line-height: 0.98;
   text-transform: uppercase;
-  color: var(--blanco);
+  color: var(--marron-negro);
   letter-spacing: 0.5px;
   margin: 0;
+  max-width: 760px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.gridCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accentBlock {
+  border-left: 4px solid var(--rojo);
+  padding: 6px 0 6px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.accentQuote {
+  font-family: var(--font-anton);
+  font-size: 34px;
+  line-height: 1.1;
+  color: var(--marron-negro);
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+
+.accentAuthor {
+  font-family: var(--font-oswald);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7a746a;
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .block {
@@ -46,16 +102,24 @@
   font-size: 20px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--blanco);
+  color: var(--marron-negro);
   margin: 0;
 }
 
 .text {
   font-family: var(--font-barlow);
-  font-size: 18px;
-  line-height: 1.7;
-  color: var(--azul-gris);
+  font-size: 19px;
+  line-height: 1.65;
+  color: #2a2722;
   margin: 0;
+}
+
+.text strong {
+  font-weight: 600;
+}
+
+.formSection {
+  gap: 24px;
 }
 
 .form {
@@ -78,16 +142,16 @@
   font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--azul-gris);
+  color: #6b6557;
 }
 
 .input,
 .textarea {
   padding: 12px 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #2a2a2a;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #d4cebe;
   border-radius: 6px;
-  color: var(--blanco);
+  color: #15130f;
   font-family: var(--font-barlow);
   font-size: 15px;
   outline: none;
@@ -96,7 +160,7 @@
 
 .input:focus,
 .textarea:focus {
-  border-color: #555;
+  border-color: #a09884;
 }
 
 .textarea {
@@ -110,7 +174,7 @@
   background: var(--rojo);
   color: var(--blanco);
   border: none;
-  border-radius: 6px;
+  border-radius: 0;
   font-family: var(--font-oswald);
   font-weight: 700;
   font-size: 16px;
@@ -121,5 +185,5 @@
 }
 
 .button:hover {
-  background: #b81822;
+  background: var(--rojo-hover);
 }
