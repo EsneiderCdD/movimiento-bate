@@ -52,9 +52,7 @@ export default function Hero({ onSelect, selected }: HeroProps) {
               <p className={styles.subtitle}>
                 El Movimiento del Bate nace del deseo de miles de ciudadanos de
                 recuperar el orden, la autoridad y el respeto por Medellín y
-                Antioquia. Surge como un símbolo de resistencia ciudadana, no de
-                violencia, sino de defensa frente al vandalismo, la corrupción y
-                el miedo que han intentado imponerse en las calles.
+                Antioquia.
               </p>
             </div>
           </div>
