@@ -52,7 +52,6 @@
   flex: 1;
   position: relative;
   display: flex;
-  background: var(--background);
 }
 
 .bentoGrid {
@@ -61,7 +60,6 @@
   display: flex;
   gap: 12px;
   padding: 24px;
-  opacity: 0.55;
 }
 
 .leftColumn {
@@ -87,6 +85,7 @@
   position: relative;
   border-radius: 8px;
   overflow: hidden;
+  background: var(--background);
 }
 
 .item3 {
@@ -95,6 +94,7 @@
   position: relative;
   border-radius: 8px;
   overflow: hidden;
+  background: var(--background);
 }
 
 .item2 {
@@ -103,6 +103,7 @@
   position: relative;
   border-radius: 8px;
   overflow: hidden;
+  background: var(--background);
 }
 
 .item4 {
@@ -112,10 +113,12 @@
   position: relative;
   border-radius: 8px;
   overflow: hidden;
+  background: var(--background);
 }
 
 .bentoImage {
   object-fit: cover;
+  opacity: 0.55;
 }
 
 .content {
