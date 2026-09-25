@@ -1,10 +1,27 @@
 .hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 48px 32px;
   gap: 24px;
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -160px;
+  bottom: -160px;
+  z-index: -1;
+}
+
+.backgroundImage {
+  object-fit: cover;
+  opacity: 0.5;
 }
 
 .intro {
@@ -17,6 +34,13 @@
   overflow: hidden;
 }
 
+.logoLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .logoBg {
   position: absolute;
   top: 50%;
@@ -25,7 +49,7 @@
   width: 60%;
   max-width: 600px;
   height: auto;
-  opacity: 0.12;
+  opacity: 0.18;
   pointer-events: none;
 }
 
@@ -94,17 +118,4 @@
   color: var(--azul-gris);
   max-width: 540px;
   margin: 4px 0 6px;
-}
-
-.imageWrapper {
-  width: 75%;
-  padding: 0 32px;
-}
-
-.image {
-  width: 100%;
-  height: auto;
-  display: block;
-  opacity: 0.4;
-  border-radius: 8px;
 }
