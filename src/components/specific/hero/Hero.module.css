@@ -15,7 +15,7 @@
   position: absolute;
   left: 48px;
   right: 48px;
-  top: 0;
+  top: 32px;
   bottom: 0;
   overflow: hidden;
   border-radius: 50px;
@@ -32,7 +32,7 @@
 
 .backgroundImage {
   object-fit: cover;
-  opacity: 0.5;
+  opacity: 0.25;
 }
 
 .intro {
