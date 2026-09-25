@@ -63,6 +63,8 @@ export default function Hero({ onSelect, selected }: HeroProps) {
       </div>
 
       <Cards onSelect={onSelect} selected={selected} />
+
+      <div className={styles.strip} />
     </div>
   );
 }

@@ -1,15 +1,9 @@
-import Image from "next/image";
 import styles from "./Cards.module.css";
 
-export interface CardItem {
-  title: string;
-  image: string;
-}
-
-const items: CardItem[] = [
-  { title: "Mov Bate", image: "/logo.png" },
-  { title: "Los Bateadores", image: "/logo.png" },
-  { title: "Tienda", image: "/logo.png" },
+const items = [
+  { id: "Mov Bate", label: "Mov Bate", desc: "Defensa legítima" },
+  { id: "Los Bateadores", label: "Bateadores", desc: "Sé parte del cambio" },
+  { id: "Tienda", label: "Tienda", desc: "Lleva el bate puesto" },
 ];
 
 interface CardsProps {
@@ -21,20 +15,15 @@ export default function Cards({ onSelect, selected }: CardsProps) {
   return (
     <div className={styles.cards}>
       {items.map((item) => (
-        <div
-          key={item.title}
-          className={`${styles.card} ${selected === item.title ? styles.active : ""}`}
-          onClick={() => onSelect(item.title)}
+        <button
+          key={item.id}
+          type="button"
+          className={`${styles.card} ${selected === item.id ? styles.active : ""}`}
+          onClick={() => onSelect(item.id)}
         >
-          <Image
-            src={item.image}
-            alt={item.title}
-            width={1280}
-            height={1280}
-            className={styles.cardImage}
-          />
-          <span className={styles.cardTitle}>{item.title}</span>
-        </div>
+          <span className={styles.label}>{item.label}</span>
+          <span className={styles.desc}>{item.desc}</span>
+        </button>
       ))}
     </div>
   );
