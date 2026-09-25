@@ -1,15 +1,67 @@
-.wrapper {
+.container {
   display: flex;
-  gap: 32px;
-  padding: 0 32px;
-  align-items: stretch;
+  width: 100%;
+  min-height: 100vh;
 }
 
-.bento {
+.sidebar {
+  flex: 0 0 170px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a1e3a;
+  overflow: hidden;
+}
+
+.sidebarText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  transform: rotate(-90deg);
+  font-family: var(--font-anton);
+  font-weight: 700;
+  font-size: 34px;
+  letter-spacing: 4px;
+  line-height: 1;
+  color: var(--blanco);
+}
+
+.dots {
+  position: absolute;
+  right: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-columns: repeat(3, 7px);
+  grid-auto-rows: 7px;
+  gap: 4px;
+  z-index: 2;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--rojo);
+}
+
+.main {
   flex: 1;
+  position: relative;
+  display: flex;
+  background: var(--background);
+}
+
+.bentoGrid {
+  position: absolute;
+  inset: 0;
   display: flex;
   gap: 12px;
-  height: 520px;
+  padding: 24px;
+  opacity: 0.55;
 }
 
 .leftColumn {
@@ -67,27 +119,69 @@
 }
 
 .content {
-  flex: 1;
+  position: relative;
+  z-index: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 16px;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 48px 40px 48px 64px;
 }
 
-.heading {
-  font-family: var(--font-oswald);
-  font-weight: 600;
-  font-size: 20px;
-  letter-spacing: 1.5px;
+.tag {
+  align-self: flex-end;
+  font-family: var(--font-barlow);
+  font-size: 34px;
+  letter-spacing: 4px;
+  font-style: italic;
+  color: var(--rojo);
+  border-bottom: 4px solid var(--rojo);
+  line-height: 1.2;
+}
+
+.title {
+  font-family: var(--font-anton);
+  font-size: 96px;
+  line-height: 0.9;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
+  font-weight: 700;
   color: var(--blanco);
   margin: 0;
 }
 
-.text {
+.paragraph {
   font-family: var(--font-barlow);
-  font-size: 18px;
-  line-height: 1.7;
-  color: var(--azul-gris);
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--blanco);
   margin: 0;
+  max-width: 540px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    flex-basis: 64px;
+  }
+
+  .sidebarText {
+    font-size: 20px;
+  }
+
+  .content {
+    padding: 32px 24px;
+    gap: 16px;
+  }
+
+  .tag {
+    font-size: 24px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
 }
