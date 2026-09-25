@@ -5,9 +5,16 @@
   --container-width: 1333px;
 
   --rojo: #E11D2A;
+  --rojo-hover: #b81822;
   --amarillo: #FFD200;
   --blanco: #FFFFFF;
   --azul-gris: #C7D0E0;
+
+  --navy-oscuro: #0C1A33;
+  --navy-medio: #16294E;
+  --navy-profundo: #081428;
+
+  --crema: #F2EEE4;
 }
 
 * {

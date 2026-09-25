@@ -16,7 +16,7 @@ export default function Hero({ onSelect, selected }: HeroProps) {
   const heroRef = useRef<HTMLElement>(null);
 
   return (
-    <>
+    <div className={styles.page}>
       <ParallaxProvider target={heroRef}>
         <section ref={heroRef} className={styles.hero}>
           <div className={styles.backgroundClip}>
@@ -63,6 +63,6 @@ export default function Hero({ onSelect, selected }: HeroProps) {
       </div>
 
       <Cards onSelect={onSelect} selected={selected} />
-    </>
+    </div>
   );
 }

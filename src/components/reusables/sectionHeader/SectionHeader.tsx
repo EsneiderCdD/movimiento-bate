@@ -22,6 +22,7 @@ export default function SectionHeader({
 
   return (
     <section className={styles.section}>
+      <div className={styles.overlay} />
       <div className={styles.container}>
         <span className={styles.tag}>{tag}</span>
         <h2 className={styles.title}>

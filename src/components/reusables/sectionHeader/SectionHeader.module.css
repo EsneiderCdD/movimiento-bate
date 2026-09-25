@@ -1,6 +1,23 @@
 .section {
+  position: relative;
+  background: radial-gradient(1200px 700px at 30% 50%, var(--navy-medio) 0%, var(--navy-oscuro) 55%, var(--navy-profundo) 100%);
   padding: 100px 28px;
   overflow: hidden;
+  border-top: 4px solid var(--rojo);
+  border-bottom: 4px solid var(--amarillo);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.024) 0px,
+    rgba(255, 255, 255, 0.024) 2px,
+    transparent 2px,
+    transparent 22px
+  );
+  pointer-events: none;
 }
 
 .container {
@@ -60,5 +77,5 @@
 }
 
 .ctaBtn:hover {
-  background: #b81822;
+  background: var(--rojo-hover);
 }
