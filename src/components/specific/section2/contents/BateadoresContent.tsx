@@ -4,13 +4,43 @@ import styles from "./BateadoresContent.module.css";
 export default function BateadoresContent() {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.imageContainer}>
-        <Image
-          src="/fondo2.jpg"
-          alt="Los Bateadores"
-          fill
-          className={styles.image}
-        />
+      <div className={styles.bento}>
+        <div className={styles.leftColumn}>
+          <div className={styles.item1}>
+            <Image
+              src="/fondo2.jpg"
+              alt="Los Bateadores"
+              fill
+              className={styles.bentoImage}
+            />
+          </div>
+          <div className={styles.item3}>
+            <Image
+              src="/fondo2.jpg"
+              alt="Los Bateadores"
+              fill
+              className={styles.bentoImage}
+            />
+          </div>
+        </div>
+        <div className={styles.rightColumn}>
+          <div className={styles.item2}>
+            <Image
+              src="/fondo2.jpg"
+              alt="Los Bateadores"
+              fill
+              className={styles.bentoImage}
+            />
+          </div>
+          <div className={styles.item4}>
+            <Image
+              src="/fondo2.jpg"
+              alt="Los Bateadores"
+              fill
+              className={styles.bentoImage}
+            />
+          </div>
+        </div>
       </div>
       <div className={styles.content}>
         <h3 className={styles.heading}>Escuela de líderes</h3>

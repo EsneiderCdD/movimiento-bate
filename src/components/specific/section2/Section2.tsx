@@ -1,5 +1,5 @@
 import SectionHeader from "@/components/reusables/sectionHeader/SectionHeader";
-import MovBateContent from "./contents/MovBateContent";
+import NosotrosContent from "@/components/specific/nosotros/NosotrosContent";
 import BateadoresContent from "./contents/BateadoresContent";
 import TiendaContent from "./contents/TiendaContent";
 import styles from "./Section2.module.css";
@@ -20,7 +20,7 @@ export default function Section2({ selected }: Section2Props) {
             title="Conoce nuestra causa"
             subtitle="Somos un movimiento ciudadano comprometido con la defensa del orden, la libertad y el bienestar de nuestra gente."
           />
-          <MovBateContent />
+          <NosotrosContent />
         </>
       )}
       {selected === "Los Bateadores" && (
