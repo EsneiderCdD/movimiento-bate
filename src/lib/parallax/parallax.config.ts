@@ -1,4 +1,4 @@
-export type ParallaxLayerId = "background" | "logo" | "text";
+export type ParallaxLayerId = "background";
 
 export interface ParallaxLayerConfig {
   translate: number;
@@ -6,8 +6,6 @@ export interface ParallaxLayerConfig {
 
 export const PARALLAX_LAYERS: Record<ParallaxLayerId, ParallaxLayerConfig> = {
   background: { translate: 260 },
-  logo: { translate: 60 },
-  text: { translate: 20 },
 };
 
 export const PARALLAX_SPRING = {

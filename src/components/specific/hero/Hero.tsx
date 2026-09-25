@@ -30,18 +30,16 @@ export default function Hero({ onSelect, selected }: HeroProps) {
           </ParallaxLayer>
 
           <div className={styles.intro}>
-            <ParallaxLayer id="logo" className={styles.logoLayer}>
-              <Image
-                src="/logo.png"
-                alt="Movimiento Bate"
-                width={1280}
-                height={1280}
-                priority
-                className={styles.logoBg}
-              />
-            </ParallaxLayer>
+            <Image
+              src="/logo.png"
+              alt="Movimiento Bate"
+              width={1280}
+              height={1280}
+              priority
+              className={styles.logoBg}
+            />
 
-            <ParallaxLayer id="text" className={styles.content}>
+            <div className={styles.content}>
               <div className={styles.label}>
                 <span className={styles.line} />
                 <span className={styles.labelText}>Movimiento del Bate</span>
@@ -54,10 +52,11 @@ export default function Hero({ onSelect, selected }: HeroProps) {
               <p className={styles.subtitle}>
                 El Movimiento del Bate nace del deseo de miles de ciudadanos de
                 recuperar el orden, la autoridad y el respeto por Medellín y
-                Antioquia.
-
+                Antioquia. Surge como un símbolo de resistencia ciudadana, no de
+                violencia, sino de defensa frente al vandalismo, la corrupción y
+                el miedo que han intentado imponerse en las calles.
               </p>
-            </ParallaxLayer>
+            </div>
           </div>
         </section>
       </ParallaxProvider>
