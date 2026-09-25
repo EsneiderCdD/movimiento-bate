@@ -40,10 +40,7 @@ export default function Hero({ onSelect, selected }: HeroProps) {
             />
 
             <div className={styles.content}>
-              <div className={styles.label}>
-                <span className={styles.line} />
-                <span className={styles.labelText}>Movimiento del Bate</span>
-              </div>
+
               <h1 className={styles.title}>
                 MOVIMIENTO
                 <span className={styles.accent}>DEL BATE</span>
@@ -58,6 +55,11 @@ export default function Hero({ onSelect, selected }: HeroProps) {
           </div>
         </section>
       </ParallaxProvider>
+
+      <div className={styles.label}>
+                <span className={styles.line} />
+                <span className={styles.labelText}>Selecciona una opción</span>
+              </div>
 
       <Cards onSelect={onSelect} selected={selected} />
     </>
