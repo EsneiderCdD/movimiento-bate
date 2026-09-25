@@ -19,15 +19,17 @@ export default function Hero({ onSelect, selected }: HeroProps) {
     <>
       <ParallaxProvider target={heroRef}>
         <section ref={heroRef} className={styles.hero}>
-          <ParallaxLayer id="background" className={styles.background}>
-            <Image
-              src="/fondo2.jpg"
-              alt=""
-              fill
-              priority
-              className={styles.backgroundImage}
-            />
-          </ParallaxLayer>
+          <div className={styles.backgroundClip}>
+            <ParallaxLayer id="background" className={styles.background}>
+              <Image
+                src="/fondo2.jpg"
+                alt=""
+                fill
+                priority
+                className={styles.backgroundImage}
+              />
+            </ParallaxLayer>
+          </div>
 
           <div className={styles.intro}>
             <Image
