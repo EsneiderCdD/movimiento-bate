@@ -7,7 +7,10 @@ export default function NosotrosContent() {
   return (
     <section className={styles.container}>
       <aside className={styles.sidebar}>
-        <span className={styles.sidebarText}>MOVIMIENTO DEL BATE</span>
+        <div className={styles.sidebarText}>
+          <span>MOVIMIENTO</span>
+          <span>DEL BATE</span>
+        </div>
         <div className={styles.dots} aria-hidden="true">
           {DOTS.map((_, i) => (
             <span key={i} className={styles.dot} />
@@ -16,10 +19,14 @@ export default function NosotrosContent() {
       </aside>
 
       <div className={styles.main}>
-        <div className={styles.bgPlaceholder} aria-hidden="true" />
+        <div className={styles.bgImage} aria-hidden="true" />
         <div className={styles.content}>
           <span className={styles.manifesto}>MANIFIESTO</span>
-          <h1 className={styles.title}>MOVIMIENTO DEL BATE</h1>
+          <h1 className={styles.title}>
+            MOVIMIENTO
+            <br />
+            DEL BATE
+          </h1>
           <div className={styles.bottomRow}>
             <Image
               src="/logo.png"
