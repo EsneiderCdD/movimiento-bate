@@ -10,8 +10,16 @@
   top: 0;
   bottom: 0;
   width: 170px;
-  background: #0a1e3a;
   z-index: 0;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.024) 0px,
+      rgba(255, 255, 255, 0.024) 2px,
+      transparent 2px,
+      transparent 22px
+    ),
+    radial-gradient(1200px 700px at 30% 50%, var(--navy-medio) 0%, var(--navy-oscuro) 55%, var(--navy-profundo) 100%);
 }
 
 .hero {
