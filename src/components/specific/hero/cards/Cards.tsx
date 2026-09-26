@@ -18,7 +18,8 @@ export default function Cards({ onSelect, selected }: CardsProps) {
         <button
           key={item.id}
           type="button"
-          className={`${styles.card} ${selected === item.id ? styles.active : ""}`}
+          className={styles.card}
+          data-selected={selected === item.id}
           onClick={() => onSelect(item.id)}
         >
           <span className={styles.label}>{item.label}</span>
