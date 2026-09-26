@@ -3,16 +3,27 @@
   align-items: center;
   justify-content: space-between;
   padding: 24px 32px;
-  border-bottom: 1px solid #2a2a2a;
+  border-bottom: 1px solid rgba(21, 19, 15, 0.12);
+  background: var(--crema);
 }
 
 .logo {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--foreground);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   cursor: pointer;
+}
+
+.logoCd {
+  display: block;
+  height: 44px;
+  width: auto;
+}
+
+.logoImage {
+  display: block;
+  height: 46px;
+  width: auto;
 }
 
 .links {
@@ -23,14 +34,36 @@
 
 .link {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--foreground);
+  color: var(--marron-negro);
   opacity: 0.7;
   transition: opacity 0.2s;
 }
 
 .link:hover {
   opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .logoImage {
+    height: 34px;
+  }
+
+  .logoCd {
+    height: 32px;
+  }
+
+  .links {
+    gap: 16px;
+  }
+
+  .link {
+    font-size: 12px;
+  }
 }
