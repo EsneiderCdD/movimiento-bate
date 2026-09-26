@@ -3,7 +3,7 @@
   flex-direction: column;
   width: min(400px, 100%);
   margin-left: auto;
-  padding: 0 40px 32px;
+  padding: 0 40px;
 }
 
 .card {
@@ -12,7 +12,7 @@
   align-items: flex-start;
   gap: 2px;
   width: 100%;
-  padding: 0px 16px;
+  padding: 10px 16px;
   text-align: left;
   background: transparent;
   border: none;
@@ -44,7 +44,7 @@
 @media (max-width: 768px) {
   .cards {
     width: 100%;
-    padding: 0 24px 40px;
+    padding: 0 24px;
   }
 
   .label {
