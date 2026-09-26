@@ -1,7 +1,7 @@
 .section {
   position: relative;
   background: radial-gradient(1200px 700px at 30% 50%, var(--navy-medio) 0%, var(--navy-oscuro) 55%, var(--navy-profundo) 100%);
-  padding: 100px 28px;
+  padding: 33px 28px;
   overflow: hidden;
   border-top: 4px solid var(--rojo);
   border-bottom: 4px solid var(--amarillo);
