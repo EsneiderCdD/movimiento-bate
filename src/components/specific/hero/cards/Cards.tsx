@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./Cards.module.css";
 
 const items = [
@@ -14,18 +15,33 @@ interface CardsProps {
 export default function Cards({ onSelect, selected }: CardsProps) {
   return (
     <div className={styles.cards}>
-      {items.map((item) => (
-        <button
-          key={item.id}
-          type="button"
-          className={styles.card}
-          data-selected={selected === item.id}
-          onClick={() => onSelect(item.id)}
-        >
-          <span className={styles.label}>{item.label}</span>
-          <span className={styles.desc}>{item.desc}</span>
-        </button>
-      ))}
+      {items.map((item) => {
+        const isSelected = selected === item.id;
+
+        return (
+          <button
+            key={item.id}
+            type="button"
+            className={styles.card}
+            data-selected={isSelected}
+            onClick={() => onSelect(item.id)}
+          >
+            {isSelected && (
+              <Image
+                src="/bate.png"
+                alt=""
+                width={866}
+                height={288}
+                className={styles.bate}
+              />
+            )}
+            <span className={styles.texts}>
+              <span className={styles.label}>{item.label}</span>
+              <span className={styles.desc}>{item.desc}</span>
+            </span>
+          </button>
+        );
+      })}
     </div>
   );
 }

@@ -7,10 +7,11 @@
 }
 
 .card {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
   width: 100%;
   padding: 10px 16px;
   text-align: left;
@@ -22,6 +23,22 @@
 
 .card:first-child {
   border-top: 1px solid rgba(21, 19, 15, 0.14);
+}
+
+.bate {
+  position: absolute;
+  right: calc(100% + 14px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: auto;
+  height: 30px;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .label {
@@ -49,6 +66,12 @@
 
   .label {
     font-size: 18px;
+  }
+
+  .bate {
+    position: static;
+    transform: none;
+    height: 24px;
   }
 
   .desc {
