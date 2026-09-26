@@ -2,6 +2,7 @@
   position: relative;
   isolation: isolate;
   background: var(--crema);
+  padding-right: 170px;
 }
 
 .strip {
@@ -144,4 +145,14 @@
   color: var(--azul-gris);
   max-width: 560px;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding-right: 64px;
+  }
+
+  .strip {
+    width: 64px;
+  }
 }
