@@ -1,77 +1,81 @@
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 32px 28px 48px;
+  display: flex;
+  flex-direction: column;
+  width: min(400px, 100%);
+  margin-left: auto;
+  padding: 8px 40px 56px;
 }
 
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 34px 28px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+  padding: 16px 20px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(21, 19, 15, 0.14);
+  border-radius: 0;
   cursor: pointer;
-  overflow: hidden;
-  background:
-    repeating-linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.024) 0px,
-      rgba(255, 255, 255, 0.024) 2px,
-      transparent 2px,
-      transparent 22px
-    ),
-    #122242;
-  transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.card:first-child {
+  border-top: 1px solid rgba(21, 19, 15, 0.14);
 }
 
 .card:hover {
-  border-color: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
-  background:
-    repeating-linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.04) 0px,
-      rgba(255, 255, 255, 0.04) 2px,
-      transparent 2px,
-      transparent 22px
-    ),
-    #16294e;
+  background: rgba(21, 19, 15, 0.05);
 }
 
 .label {
   font-family: var(--font-oswald);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 22px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: var(--blanco);
+  color: var(--marron-negro);
   line-height: 1.2;
 }
 
 .desc {
-  font-family: var(--font-barlow);
-  font-size: 14px;
+  font-family: var(--font-shadows), cursive;
+  font-size: 18px;
   line-height: 1.4;
-  color: #a9b5cd;
+  color: rgba(21, 19, 15, 0.6);
 }
 
-.active {
-  background: var(--rojo);
-  border-color: var(--rojo);
+.card.active {
+  background: rgba(225, 29, 42, 0.07);
+  box-shadow: inset 4px 0 0 var(--rojo);
 }
 
-.active .desc {
-  color: rgba(255, 255, 255, 0.8);
+.card.active .label {
+  color: var(--rojo);
 }
 
-.active:hover {
-  background: var(--rojo-hover);
-  border-color: var(--rojo-hover);
-  box-shadow: 0 2px 16px rgba(225, 29, 42, 0.35);
+.card.active .desc {
+  color: var(--rojo);
+}
+
+.card.active:hover {
+  background: rgba(225, 29, 42, 0.12);
+}
+
+@media (max-width: 768px) {
+  .cards {
+    width: 100%;
+    padding: 8px 24px 40px;
+  }
+
+  .label {
+    font-size: 18px;
+  }
+
+  .desc {
+    font-size: 16px;
+  }
 }

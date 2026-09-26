@@ -1,7 +1,7 @@
 import styles from "./Cards.module.css";
 
 const items = [
-  { id: "Mov Bate", label: "Mov Bate", desc: "Defensa legítima" },
+  { id: "Mov Bate", label: "Movimiento del Bate", desc: "Defensa legítima" },
   { id: "Los Bateadores", label: "Bateadores", desc: "Sé parte del cambio" },
   { id: "Tienda", label: "Tienda", desc: "Lleva el bate puesto" },
 ];

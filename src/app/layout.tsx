@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Anton, Oswald, Barlow } from "next/font/google";
+import { Anton, Oswald, Barlow, Shadows_Into_Light } from "next/font/google";
 import Navbar from "@/components/specific/navbar/Navbar";
 import Footer from "@/components/specific/footer/Footer";
 import "./globals.css";
@@ -25,6 +25,13 @@ const barlow = Barlow({
   display: "swap",
 });
 
+const shadowsIntoLight = Shadows_Into_Light({
+  weight: "400",
+  variable: "--font-shadows",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "Movimiento del Bate",
   description: "Movimiento del bate",
@@ -34,7 +41,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${anton.variable} ${oswald.variable} ${barlow.variable}`}
+      className={`${anton.variable} ${oswald.variable} ${barlow.variable} ${shadowsIntoLight.variable}`}
     >
       <body>
         <div className={styles.spine}>
