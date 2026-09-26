@@ -33,7 +33,7 @@
   align-items: center;
   text-align: center;
   padding: 146px 32px 0;
-  gap: 24px;
+  
 }
 
 .backgroundClip {
@@ -46,6 +46,7 @@
   border-radius: 50px;
   z-index: -1;
   background: var(--background);
+  
 }
 
 .background {
@@ -133,15 +134,7 @@
   display: block;
 }
 
-.role {
-  font-family: var(--font-oswald);
-  font-weight: 600;
-  font-size: 17px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--amarillo);
-  margin: 4px 0 0;
-}
+
 
 .subtitle {
   font-family: var(--font-barlow);

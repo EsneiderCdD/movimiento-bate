@@ -46,7 +46,6 @@ export default function Hero({ onSelect, selected }: HeroProps) {
                 MOVIMIENTO
                 <span className={styles.accent}>DEL BATE</span>
               </h1>
-              <p className={styles.role}>Defensa Legítima</p>
               <p className={styles.subtitle}>
                 El Movimiento del Bate nace del deseo de miles de ciudadanos de
                 recuperar el orden, la autoridad y el respeto por Medellín y
