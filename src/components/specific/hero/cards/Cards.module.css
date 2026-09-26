@@ -55,7 +55,7 @@
   font-family: var(--font-shadows), cursive;
   font-size: 18px;
   line-height: 1.4;
-  color: rgba(21, 19, 15, 0.6);
+  color: var(--rojo);
 }
 
 @media (max-width: 768px) {
