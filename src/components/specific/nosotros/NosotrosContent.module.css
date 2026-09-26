@@ -11,7 +11,6 @@
   align-items: center;
   justify-content: center;
   background: #0a1e3a;
-  overflow: hidden;
 }
 
 .sidebarText {
@@ -31,19 +30,19 @@
 
 .dots {
   position: absolute;
-  right: -8px;
+  right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(50%);
   display: grid;
-  grid-template-columns: repeat(3, 7px);
-  grid-auto-rows: 7px;
-  gap: 4px;
+  grid-template-columns: repeat(3, 6px);
+  grid-auto-rows: 6px;
+  gap: 9px;
   z-index: 2;
 }
 
 .dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--rojo);
 }
