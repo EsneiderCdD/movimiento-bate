@@ -1,9 +1,77 @@
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.sidebar {
+  flex: 0 0 170px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.024) 0px,
+      rgba(255, 255, 255, 0.024) 2px,
+      transparent 2px,
+      transparent 22px
+    ),
+    radial-gradient(
+      1200px 700px at 30% 50%,
+      var(--navy-medio) 0%,
+      var(--navy-oscuro) 55%,
+      var(--navy-profundo) 100%
+    );
+}
+
+.sidebarText {
+  position: absolute;
+  left: 50%;
+  bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  white-space: nowrap;
+  writing-mode: vertical-rl;
+  transform: translateX(-50%) rotate(180deg);
+  font-family: var(--font-anton);
+  font-weight: 700;
+  font-size: 64px;
+  letter-spacing: 4px;
+  line-height: 1;
+  color: var(--blanco);
+}
+
+.dots {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(50%);
+  display: grid;
+  grid-template-columns: repeat(3, 6px);
+  grid-auto-rows: 6px;
+  gap: 9px;
+  z-index: 2;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--rojo);
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 40px;
   padding: 0 32px;
+  flex: 1;
+  min-width: 0;
 }
 
 .grid {
@@ -133,4 +201,14 @@
 
 .ctaBtn:hover {
   background: #b81822;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    flex-basis: 64px;
+  }
+
+  .sidebarText {
+    font-size: 20px;
+  }
 }
