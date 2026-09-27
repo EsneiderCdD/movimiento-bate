@@ -65,60 +65,11 @@
   position: absolute;
   inset: 0;
   display: flex;
-  gap: 12px;
-  padding: 24px;
 }
 
-.leftColumn {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: flex-end;
-}
-
-.rightColumn {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  align-items: flex-start;
-}
-
-.item1 {
-  width: 100%;
-  flex: 1;
-  min-height: 0;
+.bentoItem {
   position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  background: var(--background);
-}
-
-.item3 {
-  width: 100%;
-  height: 110px;
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  background: var(--background);
-}
-
-.item2 {
-  width: 100%;
-  height: 130px;
-  position: relative;
-  border-radius: 8px;
-  overflow: hidden;
-  background: var(--background);
-}
-
-.item4 {
-  width: 85%;
   flex: 1;
-  min-height: 0;
-  position: relative;
-  border-radius: 8px;
   overflow: hidden;
   background: var(--background);
 }

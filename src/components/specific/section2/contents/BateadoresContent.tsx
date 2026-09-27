@@ -21,41 +21,21 @@ export default function BateadoresContent() {
       <div className={styles.main}>
         <div className={styles.spacer} aria-hidden="true" />
         <div className={styles.bentoGrid} aria-hidden="true">
-          <div className={styles.leftColumn}>
-            <div className={styles.item1}>
-              <Image
-                src="/fondo2.jpg"
-                alt=""
-                fill
-                className={styles.bentoImage}
-              />
-            </div>
-            <div className={styles.item3}>
-              <Image
-                src="/fondo2.jpg"
-                alt=""
-                fill
-                className={styles.bentoImage}
-              />
-            </div>
+          <div className={styles.bentoItem}>
+            <Image
+              src="/escueladelideres(1).jpg"
+              alt=""
+              fill
+              className={styles.bentoImage}
+            />
           </div>
-          <div className={styles.rightColumn}>
-            <div className={styles.item2}>
-              <Image
-                src="/fondo2.jpg"
-                alt=""
-                fill
-                className={styles.bentoImage}
-              />
-            </div>
-            <div className={styles.item4}>
-              <Image
-                src="/fondo2.jpg"
-                alt=""
-                fill
-                className={styles.bentoImage}
-              />
-            </div>
+          <div className={styles.bentoItem}>
+            <Image
+              src="/lider.jpg"
+              alt=""
+              fill
+              className={styles.bentoImage}
+            />
           </div>
         </div>
 
