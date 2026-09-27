@@ -19,6 +19,7 @@ export default function BateadoresContent() {
       </aside>
 
       <div className={styles.main}>
+        <div className={styles.spacer} aria-hidden="true" />
         <div className={styles.bentoGrid} aria-hidden="true">
           <div className={styles.leftColumn}>
             <div className={styles.item1}>

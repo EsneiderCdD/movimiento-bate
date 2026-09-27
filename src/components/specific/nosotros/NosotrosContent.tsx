@@ -19,6 +19,7 @@ export default function NosotrosContent() {
       </aside>
 
       <div className={styles.main}>
+        <div className={styles.spacer} aria-hidden="true" />
         <div className={styles.bgImage} aria-hidden="true" />
         <div className={styles.content}>
           <span className={styles.manifesto}>MANIFIESTO</span>
