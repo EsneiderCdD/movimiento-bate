@@ -16,7 +16,6 @@ export default function Section2({ selected }: Section2Props) {
       {selected === "Mov Bate" && (
         <>
           <SectionHeader
-            tag="Mov Bate"
             title="Conoce nuestra causa"
             subtitle="Somos un movimiento ciudadano comprometido con la defensa del orden, la libertad y el bienestar de nuestra gente."
           />
@@ -26,7 +25,6 @@ export default function Section2({ selected }: Section2Props) {
       {selected === "Los Bateadores" && (
         <>
           <SectionHeader
-            tag="Los Bateadores"
             title="Sé parte del cambio"
             subtitle="Formamos líderes que transforman sus comunidades desde adentro."
           />
@@ -36,7 +34,6 @@ export default function Section2({ selected }: Section2Props) {
       {selected === "Tienda" && (
         <>
           <SectionHeader
-            tag="Tienda oficial"
             title="Lleva el bate puesto"
             subtitle="Envíos a toda Colombia."
           />

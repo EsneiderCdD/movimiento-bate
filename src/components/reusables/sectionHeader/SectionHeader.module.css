@@ -26,17 +26,6 @@
   text-align: center;
 }
 
-.tag {
-  display: inline-block;
-  font-family: var(--font-oswald);
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--amarillo);
-  margin-bottom: 16px;
-}
-
 .title {
   font-family: var(--font-anton);
   font-weight: 400;

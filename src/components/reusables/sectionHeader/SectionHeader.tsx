@@ -2,7 +2,6 @@ import Link from "next/link";
 import styles from "./SectionHeader.module.css";
 
 interface SectionHeaderProps {
-  tag: string;
   title: string;
   accent?: string;
   subtitle: string;
@@ -11,7 +10,6 @@ interface SectionHeaderProps {
 }
 
 export default function SectionHeader({
-  tag,
   title,
   accent,
   subtitle,
@@ -24,7 +22,6 @@ export default function SectionHeader({
     <section className={styles.section}>
       <div className={styles.overlay} />
       <div className={styles.container}>
-        <span className={styles.tag}>{tag}</span>
         <h2 className={styles.title}>
           {accent ? (
             <>
