@@ -4,7 +4,9 @@ import styles from "./NosotrosPageContent.module.css";
 export default function NosotrosPageContent() {
   return (
     <div className={styles.page}>
-      <SectionHeader title="Prólogo" subtitle="La tierra donde surgió" />
+      <div className={styles.chapterHeader}>
+        <SectionHeader title="Prólogo" subtitle="La tierra donde surgió" />
+      </div>
       <section className={styles.section}>
         <div className={styles.grid}>
           <div className={styles.gridCol}>
@@ -35,10 +37,12 @@ export default function NosotrosPageContent() {
         </div>
       </section>
 
-      <SectionHeader
-        title="I. El Diagnóstico"
-        subtitle="La ciudad sitiada"
-      />
+      <div className={styles.chapterHeader}>
+        <SectionHeader
+          title="I. El Diagnóstico"
+          subtitle="La ciudad sitiada"
+        />
+      </div>
       <section className={styles.section}>
         <div className={styles.grid}>
           <div className={styles.gridCol}>
@@ -78,7 +82,9 @@ export default function NosotrosPageContent() {
         </p>
       </section>
 
-      <SectionHeader title="II. El Símbolo" subtitle="El bate" />
+      <div className={styles.chapterHeader}>
+        <SectionHeader title="II. El Símbolo" subtitle="El bate" />
+      </div>
       <section className={styles.section}>
         <div className={styles.grid}>
           <div className={styles.gridCol}>
@@ -125,10 +131,12 @@ export default function NosotrosPageContent() {
         </div>
       </section>
 
-      <SectionHeader
-        title="III. Nuestros Principios"
-        subtitle="Sobre el bate, una sola palabra: diálogo"
-      />
+      <div className={styles.chapterHeader}>
+        <SectionHeader
+          title="III. Nuestros Principios"
+          subtitle="Sobre el bate, una sola palabra: diálogo"
+        />
+      </div>
       <section className={styles.section}>
         <div className={styles.blocks}>
           <div className={styles.block}>
@@ -189,10 +197,12 @@ export default function NosotrosPageContent() {
         </div>
       </section>
 
-      <SectionHeader
-        title="IV. Nuestra genealogía histórica"
-        subtitle="No somos los primeros en defender lo propio"
-      />
+      <div className={styles.chapterHeader}>
+        <SectionHeader
+          title="IV. Nuestra genealogía histórica"
+          subtitle="No somos los primeros en defender lo propio"
+        />
+      </div>
       <section className={styles.section}>
         <div className={styles.grid}>
           <div className={styles.gridCol}>
@@ -220,10 +230,12 @@ export default function NosotrosPageContent() {
         </div>
       </section>
 
-      <SectionHeader
-        title="V. A los que nos critican"
-        subtitle="Respuesta a la crítica"
-      />
+      <div className={styles.chapterHeader}>
+        <SectionHeader
+          title="V. A los que nos critican"
+          subtitle="Respuesta a la crítica"
+        />
+      </div>
       <section className={styles.section}>
         <div className={styles.grid}>
           <div className={styles.accentBlock}>
@@ -245,10 +257,12 @@ export default function NosotrosPageContent() {
         </div>
       </section>
 
-      <SectionHeader
-        title="VI. Nuestra convocatoria"
-        subtitle="No están solos"
-      />
+      <div className={styles.chapterHeader}>
+        <SectionHeader
+          title="VI. Nuestra convocatoria"
+          subtitle="No están solos"
+        />
+      </div>
       <section className={styles.section}>
         <div className={styles.grid}>
           <div className={styles.gridCol}>
@@ -270,7 +284,9 @@ export default function NosotrosPageContent() {
         </div>
       </section>
 
-      <SectionHeader title="Epílogo" subtitle="Lo que viene" />
+      <div className={styles.chapterHeader}>
+        <SectionHeader title="Epílogo" subtitle="Lo que viene" />
+      </div>
       <section className={styles.section}>
         <div className={styles.grid}>
           <div className={styles.gridCol}>

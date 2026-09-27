@@ -13,6 +13,11 @@
   gap: 30px;
 }
 
+.chapterHeader p {
+  font-family: var(--font-shadows), cursive;
+  color: var(--rojo);
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
