@@ -166,7 +166,7 @@
 
 .outlineText {
   margin: 0;
-  max-width: 540px;
+  width: min(960px, 100%);
   font-family: var(--font-barlow);
   font-size: 22px;
   line-height: 1.4;
