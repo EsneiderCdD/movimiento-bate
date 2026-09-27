@@ -1,7 +1,6 @@
 .container {
   display: flex;
   width: 100%;
-  min-height: 100vh;
 }
 
 .sidebar {
@@ -69,7 +68,7 @@
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  padding: 0 32px;
+  padding: 32px;
   flex: 1;
   min-width: 0;
 }
@@ -176,30 +175,6 @@
 }
 
 .btn:hover {
-  background: #b81822;
-}
-
-.cta {
-  display: flex;
-  justify-content: center;
-}
-
-.ctaBtn {
-  display: inline-block;
-  background: #E11D2A;
-  color: #FFFFFF;
-  font-family: var(--font-oswald);
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 14px 32px;
-  border-radius: 6px;
-  transition: background 0.2s;
-}
-
-.ctaBtn:hover {
   background: #b81822;
 }
 

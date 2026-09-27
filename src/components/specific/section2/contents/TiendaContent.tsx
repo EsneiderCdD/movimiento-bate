@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./TiendaContent.module.css";
 
 const DOTS = Array.from({ length: 9 });
@@ -70,11 +69,6 @@ export default function TiendaContent() {
               </div>
             </div>
           ))}
-        </div>
-        <div className={styles.cta}>
-          <Link href="/tienda" className={styles.ctaBtn}>
-            Saber más
-          </Link>
         </div>
       </div>
     </div>
