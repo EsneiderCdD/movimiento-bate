@@ -13,39 +13,6 @@
   gap: 30px;
 }
 
-.tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.tagLine {
-  width: 34px;
-  height: 3px;
-  background: var(--rojo);
-}
-
-.tagText {
-  font-family: var(--font-oswald);
-  font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--navy-oscuro);
-}
-
-.sectionTitle {
-  font-family: var(--font-anton);
-  font-weight: 400;
-  font-size: 56px;
-  line-height: 0.98;
-  text-transform: uppercase;
-  color: var(--marron-negro);
-  letter-spacing: 0.5px;
-  margin: 0;
-  max-width: 760px;
-}
-
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

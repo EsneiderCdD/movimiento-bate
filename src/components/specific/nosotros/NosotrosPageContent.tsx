@@ -1,14 +1,11 @@
+import SectionHeader from "@/components/reusables/sectionHeader/SectionHeader";
 import styles from "./NosotrosPageContent.module.css";
 
 export default function NosotrosPageContent() {
   return (
     <div className={styles.page}>
+      <SectionHeader title="Prólogo" subtitle="La tierra donde surgió" />
       <section className={styles.section}>
-        <div className={styles.tag}>
-          <span className={styles.tagLine} />
-          <span className={styles.tagText}>Prólogo</span>
-        </div>
-        <h2 className={styles.sectionTitle}>La tierra donde surgió</h2>
         <div className={styles.grid}>
           <div className={styles.gridCol}>
             <p className={styles.text}>
@@ -38,12 +35,11 @@ export default function NosotrosPageContent() {
         </div>
       </section>
 
+      <SectionHeader
+        title="I. El Diagnóstico"
+        subtitle="La ciudad sitiada"
+      />
       <section className={styles.section}>
-        <div className={styles.tag}>
-          <span className={styles.tagLine} />
-          <span className={styles.tagText}>I. El Diagnóstico</span>
-        </div>
-        <h2 className={styles.sectionTitle}>La ciudad sitiada</h2>
         <div className={styles.grid}>
           <div className={styles.gridCol}>
             <p className={styles.text}>
@@ -82,12 +78,8 @@ export default function NosotrosPageContent() {
         </p>
       </section>
 
+      <SectionHeader title="II. El Símbolo" subtitle="El bate" />
       <section className={styles.section}>
-        <div className={styles.tag}>
-          <span className={styles.tagLine} />
-          <span className={styles.tagText}>II. El Símbolo</span>
-        </div>
-        <h2 className={styles.sectionTitle}>El bate</h2>
         <div className={styles.grid}>
           <div className={styles.gridCol}>
             <p className={styles.text}>
@@ -133,15 +125,11 @@ export default function NosotrosPageContent() {
         </div>
       </section>
 
+      <SectionHeader
+        title="III. Nuestros Principios"
+        subtitle="Sobre el bate, una sola palabra: diálogo"
+      />
       <section className={styles.section}>
-        <div className={styles.tag}>
-          <span className={styles.tagLine} />
-          <span className={styles.tagText}>III. Nuestros Principios</span>
-        </div>
-        <h2 className={styles.sectionTitle}>
-          Sobre el bate, una sola palabra: diálogo
-        </h2>
-
         <div className={styles.blocks}>
           <div className={styles.block}>
             <h3 className={styles.blockTitle}>
@@ -201,15 +189,11 @@ export default function NosotrosPageContent() {
         </div>
       </section>
 
+      <SectionHeader
+        title="IV. Nuestra genealogía histórica"
+        subtitle="No somos los primeros en defender lo propio"
+      />
       <section className={styles.section}>
-        <div className={styles.tag}>
-          <span className={styles.tagLine} />
-          <span className={styles.tagText}>IV. Nuestra genealogía histórica</span>
-        </div>
-        <h2 className={styles.sectionTitle}>
-          No somos los primeros en defender lo propio
-        </h2>
-
         <div className={styles.grid}>
           <div className={styles.gridCol}>
             <p className={styles.text}>
@@ -236,13 +220,11 @@ export default function NosotrosPageContent() {
         </div>
       </section>
 
+      <SectionHeader
+        title="V. A los que nos critican"
+        subtitle="Respuesta a la crítica"
+      />
       <section className={styles.section}>
-        <div className={styles.tag}>
-          <span className={styles.tagLine} />
-          <span className={styles.tagText}>V. A los que nos critican</span>
-        </div>
-        <h2 className={styles.sectionTitle}>Respuesta a la crítica</h2>
-
         <div className={styles.grid}>
           <div className={styles.accentBlock}>
             <p className={styles.accentQuote}>¿Fascistas?</p>
@@ -263,12 +245,11 @@ export default function NosotrosPageContent() {
         </div>
       </section>
 
+      <SectionHeader
+        title="VI. Nuestra convocatoria"
+        subtitle="No están solos"
+      />
       <section className={styles.section}>
-        <div className={styles.tag}>
-          <span className={styles.tagLine} />
-          <span className={styles.tagText}>VI. Nuestra convocatoria</span>
-        </div>
-        <h2 className={styles.sectionTitle}>No están solos</h2>
         <div className={styles.grid}>
           <div className={styles.gridCol}>
             <p className={styles.text}>
@@ -289,12 +270,8 @@ export default function NosotrosPageContent() {
         </div>
       </section>
 
+      <SectionHeader title="Epílogo" subtitle="Lo que viene" />
       <section className={styles.section}>
-        <div className={styles.tag}>
-          <span className={styles.tagLine} />
-          <span className={styles.tagText}>Epílogo</span>
-        </div>
-        <h2 className={styles.sectionTitle}>Lo que viene</h2>
         <div className={styles.grid}>
           <div className={styles.gridCol}>
             <p className={styles.text}>
