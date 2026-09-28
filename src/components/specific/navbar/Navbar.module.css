@@ -78,3 +78,18 @@
     font-size: 11px;
   }
 }
+@media (max-width: 400px) {
+  .logoCd {
+    height: 1.25rem;
+  }
+
+  .logoImage {
+    height: 1.25rem;
+  }
+
+  .links {
+    font-size: 11px;
+    gap: 0.5rem;
+    
+  }
+}
