@@ -148,6 +148,9 @@
 }
 
 @media (max-width: 1000px) {
+  .hero {
+    padding: 150px 32px 0;
+  }
   
   .page {
     padding-right: 140px;
@@ -162,7 +165,8 @@
   }
 
   .subtitle {
-    font-size: 1.25rem;
+    font-size: 1rem;
+    transform: translateY(-20px);
   }
 
   .logoBg {
@@ -199,5 +203,37 @@
   .background {
     top: -260px;
     bottom: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 175px 32px 0;
+  }
+
+  .page {
+    padding-right: 100px;
+  }
+
+  .strip {
+    width: 100px;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    font-size: 1.11rem;
+  }
+
+  .logoBg {
+    width: 250px;
+    top: 40%;
+  }
+
+  .backgroundClip {
+    left: 32px;
+    right: 32px;
   }
 }
