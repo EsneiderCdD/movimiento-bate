@@ -291,10 +291,14 @@
     font-size: 2.5rem;
   }
 
+  .intro {
+    padding-inline: 8px;
+  }
+
   .subtitle {
     font-size: 0.9rem;
     transform: translateY(-20px);
-    margin-inline: -32px;
+    overflow-wrap: break-word;
   }
 
   .logoBg {
