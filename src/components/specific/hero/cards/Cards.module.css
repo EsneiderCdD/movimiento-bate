@@ -55,26 +55,7 @@
   font-family: var(--font-shadows), cursive;
   font-size: 18px;
   line-height: 1.4;
+  letter-spacing: 1px;
   color: var(--rojo);
-}
-
-@media (max-width: 768px) {
-  .cards {
-    width: 100%;
-    padding: 0 24px 44px;
-  }
-
-  .label {
-    font-size: 18px;
-  }
-
-  .bate {
-    position: static;
-    transform: none;
-    height: 24px;
-  }
-
-  .desc {
-    font-size: 16px;
-  }
+  -webkit-text-stroke: 0.5px currentColor;
 }
