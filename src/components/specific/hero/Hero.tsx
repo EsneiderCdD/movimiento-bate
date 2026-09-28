@@ -47,9 +47,7 @@ export default function Hero({ onSelect, selected }: HeroProps) {
                 <span className={styles.accent}>DEL BATE</span>
               </h1>
               <p className={styles.subtitle}>
-                El Movimiento del Bate nace del deseo de miles de ciudadanos de
-                recuperar el orden, la autoridad y el respeto por Medellín y
-                Antioquia.
+              Somos un movimiento ciudadano comprometido con la defensa del orden, la libertad y el bienestar de nuestra gente.
               </p>
             </div>
           </div>
