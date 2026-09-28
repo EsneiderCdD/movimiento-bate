@@ -172,6 +172,10 @@
   .logoBg {
     width: 300px;
   }
+
+  .label {
+    padding: 40px 32px 32px;
+  }
 }
 
 @media (max-width: 750px) {
