@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 32px;
+  padding: 24px 2.4%;
   border-bottom: 1px solid rgba(21, 19, 15, 0.12);
   background: var(--crema);
 }
@@ -28,42 +28,33 @@
 
 .links {
   display: flex;
-  gap: 32px;
+  gap: 2.29em;
   list-style: none;
+  font-size: 14px;
 }
 
 .link {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-family: var(--font-oswald);
+  font-weight: 700;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--marron-negro);
-  opacity: 0.7;
-  transition: opacity 0.2s;
 }
 
-.link:hover {
-  opacity: 1;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 750px) {
   .navbar {
-    padding: 16px 20px;
+    padding-block: 1.25rem;
   }
 
-  .logoImage {
-    height: 34px;
+  .logo {
+    gap: 0.625rem;
   }
 
   .logoCd {
-    height: 32px;
+    height: 2.375rem;
   }
 
-  .links {
-    gap: 16px;
-  }
-
-  .link {
-    font-size: 12px;
+  .logoImage {
+    height: 2.5rem;
   }
 }
