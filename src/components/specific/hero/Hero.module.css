@@ -28,7 +28,7 @@
   isolation: isolate;
   z-index: 1;
   overflow: hidden;
-  min-height: 85vh;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
