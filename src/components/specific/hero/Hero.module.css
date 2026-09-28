@@ -256,6 +256,7 @@
 
   .subtitle {
     font-size: 1rem;
+    transform: translateY(-35px);
   }
 
   .logoBg {
