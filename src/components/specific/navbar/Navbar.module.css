@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 24px 2.4%;
-  border-bottom: 1px solid rgba(21, 19, 15, 0.12);
+  border-bottom: 4px solid var(--amarillo);
   background: var(--crema);
 }
 
@@ -80,11 +80,11 @@
 }
 @media (max-width: 400px) {
   .logoCd {
-    height: 1.25rem;
+    height: 1.33rem;
   }
 
   .logoImage {
-    height: 1.25rem;
+    height: 1.5rem;
   }
 
   .links {
