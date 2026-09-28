@@ -13,6 +13,75 @@
   gap: 30px;
 }
 
+.sectionWrap {
+  position: relative;
+  width: 100%;
+}
+
+.onRight {
+  padding-right: 170px;
+}
+
+.onLeft {
+  padding-left: 170px;
+}
+
+.franja {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 170px;
+  background:
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.024) 0px,
+      rgba(255, 255, 255, 0.024) 2px,
+      transparent 2px,
+      transparent 22px
+    ),
+    radial-gradient(
+      1200px 700px at 30% 50%,
+      var(--navy-medio) 0%,
+      var(--navy-oscuro) 55%,
+      var(--navy-profundo) 100%
+    );
+}
+
+.onRight .franja {
+  right: 0;
+}
+
+.onLeft .franja {
+  left: 0;
+}
+
+.dots {
+  position: absolute;
+  top: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 6px);
+  grid-auto-rows: 6px;
+  gap: 9px;
+  z-index: 2;
+}
+
+.onRight .dots {
+  left: 0;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.onLeft .dots {
+  right: 0;
+  transform: translateY(-50%) translateX(50%);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--rojo);
+}
+
 .chapterHeader p {
   font-family: var(--font-shadows), cursive;
   color: var(--rojo);
@@ -95,4 +164,18 @@
   height: 1px;
   background: #e2dcce;
   margin: 24px 0;
+}
+
+@media (max-width: 768px) {
+  .onRight {
+    padding-right: 64px;
+  }
+
+  .onLeft {
+    padding-left: 64px;
+  }
+
+  .franja {
+    width: 64px;
+  }
 }
