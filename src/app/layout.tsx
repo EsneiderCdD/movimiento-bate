@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Anton, Oswald, Barlow, Shadows_Into_Light } from "next/font/google";
-import Navbar from "@/components/specific/navbar/Navbar";
+import Navbar from "@/components/reusables/navbar/Navbar";
 import Footer from "@/components/specific/footer/Footer";
 import "./globals.css";
 import styles from "./layout.module.css";
