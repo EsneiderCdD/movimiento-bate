@@ -96,3 +96,21 @@
   }
 
 }
+
+@media (max-width: 500px) {
+  .cards {
+    width: min(225px, 100%);
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+
+  .bate {
+    height: 24px;
+  }
+}

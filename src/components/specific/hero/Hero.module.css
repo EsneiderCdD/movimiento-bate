@@ -288,6 +288,10 @@
       top: -120px;
       bottom: -40px;
     }
+
+    .labelText {
+      font-size: 11px;
+    }
   }
 
   @media (max-width: 400px) {
