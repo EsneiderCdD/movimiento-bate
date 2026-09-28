@@ -64,3 +64,17 @@
     gap: 1em;
   }
 }
+
+@media (max-width: 500px) {
+  .logoCd {
+    height: 2rem;
+  }
+
+  .logoImage {
+    height: 2rem;
+  }
+
+  .links {
+    font-size: 11px;
+  }
+}
