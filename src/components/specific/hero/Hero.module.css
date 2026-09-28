@@ -237,3 +237,33 @@
     right: 32px;
   }
 }
+
+@media (max-width: 500px) {
+  .hero {
+    padding: 200px 32px 0;
+  }
+  .page {
+    padding-right: 80px;
+  }
+
+  .strip {
+    width: 80px;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .logoBg {
+    width: 250px;
+    top: 35%;
+  }
+  .backgroundClip {
+    left: 20px;
+    right: 20px;
+  }
+}
