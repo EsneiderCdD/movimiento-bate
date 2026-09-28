@@ -88,3 +88,11 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 600px) {
+  .cards {
+    width: min(300px, 100%);
+    padding: 0 24px 36px;
+  }
+
+}

@@ -13,13 +13,11 @@
   width: 170px;
   z-index: 0;
   background:
-    repeating-linear-gradient(
-      135deg,
+    repeating-linear-gradient(135deg,
       rgba(255, 255, 255, 0.024) 0px,
       rgba(255, 255, 255, 0.024) 2px,
       transparent 2px,
-      transparent 22px
-    ),
+      transparent 22px),
     radial-gradient(1200px 700px at 30% 50%, var(--navy-medio) 0%, var(--navy-oscuro) 55%, var(--navy-profundo) 100%);
 }
 
@@ -34,7 +32,7 @@
   align-items: center;
   text-align: center;
   padding: 125px 32px 0;
-  
+
 }
 
 .backgroundClip {
@@ -47,7 +45,7 @@
   border-radius: 50px;
   z-index: -1;
   background: var(--background);
-  
+
 }
 
 .background {
@@ -151,7 +149,7 @@
   .hero {
     padding: 150px 32px 0;
   }
-  
+
   .page {
     padding-right: 140px;
   }
@@ -182,7 +180,7 @@
 
   .hero {
     padding: 150px 32px 0;
-    
+
   }
   .page {
     padding-right: 120px;
@@ -244,82 +242,93 @@
     left: 32px;
     right: 32px;
   }
-}
 
-@media (max-width: 500px) {
-  .hero {
-    padding: 200px 32px 0;
-  }
-  .page {
-    padding-right: 80px;
+  .label {
+    padding: 32px 24px 28px;
   }
 
-  .strip {
-    width: 80px;
+  .labelText {
+    font-size: 12px;
+
   }
 
-  .title {
-    font-size: 3rem;
+  @media (max-width: 500px) {
+    .hero {
+      padding: 200px 32px 0;
+    }
+
+    .page {
+      padding-right: 80px;
+    }
+
+    .strip {
+      width: 80px;
+    }
+
+    .title {
+      font-size: 3rem;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      transform: translateY(-35px);
+    }
+
+    .logoBg {
+      width: 250px;
+      top: 35%;
+    }
+
+    .backgroundClip {
+      left: 20px;
+      right: 20px;
+    }
+
+    .background {
+      top: -120px;
+      bottom: -40px;
+    }
   }
 
-  .subtitle {
-    font-size: 1rem;
-    transform: translateY(-35px);
-  }
+  @media (max-width: 400px) {
+    .hero {
+      padding: 225px 32px 0;
+    }
 
-  .logoBg {
-    width: 250px;
-    top: 35%;
-  }
-  .backgroundClip {
-    left: 20px;
-    right: 20px;
-  }
+    .page {
+      padding-right: 60px;
+    }
 
-  .background {
-    top: -120px;
-    bottom: -40px;
-  }
-}
+    .strip {
+      width: 60px;
+    }
 
-@media (max-width: 400px) {
-  .hero {
-    padding: 225px 32px 0;
-  }
+    .title {
+      font-size: 2.5rem;
+    }
 
-  .page {
-    padding-right: 60px;
-  }
+    .intro {
+      padding-inline: 8px;
+    }
 
-  .strip {
-    width: 60px;
-  }
+    .subtitle {
+      font-size: 0.9rem;
+      transform: translateY(-20px);
+      overflow-wrap: break-word;
+    }
 
-  .title {
-    font-size: 2.5rem;
-  }
+    .logoBg {
+      width: 225px;
+    }
 
-  .intro {
-    padding-inline: 8px;
-  }
+    .backgroundClip {
+      left: 12px;
+      right: 12px;
+    }
 
-  .subtitle {
-    font-size: 0.9rem;
-    transform: translateY(-20px);
-    overflow-wrap: break-word;
-  }
-
-  .logoBg {
-    width: 225px;
-  }
-
-  .backgroundClip {
-    left: 12px;
-    right: 12px;
-  }
-
-  .background {
-    top: -90px;
-    bottom: -30px;
+    .background {
+      top: -90px;
+      bottom: -30px;
+    }
   }
 }
