@@ -148,6 +148,7 @@
 }
 
 @media (max-width: 1000px) {
+  
   .page {
     padding-right: 140px;
   }
@@ -166,5 +167,37 @@
 
   .logoBg {
     width: 300px;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .hero {
+    padding: 150px 32px 0;
+    
+  }
+  .page {
+    padding-right: 120px;
+  }
+
+  .strip {
+    width: 120px;
+  }
+
+  .title {
+    font-size: 4.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.11rem;
+  }
+
+  .logoBg {
+    width: 275px;
+  }
+
+  .background {
+    top: -260px;
+    bottom: 0px;
   }
 }
