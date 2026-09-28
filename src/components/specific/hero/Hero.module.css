@@ -208,6 +208,10 @@
     top: -260px;
     bottom: 0px;
   }
+
+  .label {
+    padding: 36px 24px 28px;
+  }
 }
 
 @media (max-width: 600px) {

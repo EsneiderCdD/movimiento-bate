@@ -73,3 +73,18 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: 750px) {
+  .cards {
+    width: min(340px, 100%);
+    padding: 0 24px 36px;
+  }
+
+  .label {
+    font-size: 18px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+}
