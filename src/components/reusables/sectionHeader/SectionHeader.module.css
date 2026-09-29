@@ -68,3 +68,31 @@
 .ctaBtn:hover {
   background: var(--rojo-hover);
 }
+
+@media (max-width: 1000px) {
+  .section {
+    padding: 40px 24px 20px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 750px) {
+  .section {
+    padding: 34px 20px 16px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+  }
+}
