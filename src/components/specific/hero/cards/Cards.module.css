@@ -114,3 +114,15 @@
     height: 24px;
   }
 }
+
+@media (max-width: 400px) {
+  .cards {
+    padding-right: 12px;
+    width: min(200px, 100%);
+  }
+
+  .card {
+    padding-left: 0px;
+    padding-right: 6px;
+  }
+}
