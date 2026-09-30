@@ -291,6 +291,10 @@
     font-size: 48px;
   }
 
+  .spacer {
+    flex-basis: 35%;
+  }
+
   .content {
     padding: 32px;
   }
