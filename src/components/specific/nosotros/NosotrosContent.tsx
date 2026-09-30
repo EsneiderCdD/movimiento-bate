@@ -69,6 +69,10 @@ export default function NosotrosContent() {
         </div>
 
         <div className={styles.outline}>
+          <div className={styles.label}>
+            <span className={styles.line} />
+            <span className={styles.labelText}>Selecciona una opción</span>
+          </div>
           <ul className={styles.index}>
             {CHAPTERS.map((chapter) => (
               <li key={chapter} className={styles.indexItem}>
