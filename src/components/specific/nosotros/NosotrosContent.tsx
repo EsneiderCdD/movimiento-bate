@@ -75,11 +75,12 @@ export default function NosotrosContent() {
                 {chapter}
               </li>
             ))}
+            <li>
+              <Link href="/nosotros" className={styles.cta}>
+                Conocer
+              </Link>
+            </li>
           </ul>
-
-          <Link href="/nosotros" className={styles.cta}>
-            Conocer
-          </Link>
         </div>
       </div>
     </section>
