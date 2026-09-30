@@ -229,16 +229,3 @@
   background: var(--rojo-hover);
 }
 
-@media (max-width: 768px) {
-  .onRight {
-    padding-right: 64px;
-  }
-
-  .onLeft {
-    padding-left: 64px;
-  }
-
-  .franja {
-    width: 64px;
-  }
-}
