@@ -335,7 +335,7 @@
 
   .content {
     padding: 24px;
-    padding-left: 0px ;
+    padding-left: 0px;
   }
 
   .manifesto {
@@ -361,4 +361,48 @@
   .author {
     font-size: 16px;
   }
+
+  @media (max-width: 500px) {
+    .sidebar {
+      flex-basis: 80px;
+    }
+
+    .sidebarText {
+      font-size: 32px;
+    }
+
+    .spacer {
+      flex-basis: 15%;
+    }
+
+    .content {
+      padding: 20px;
+      padding-left: 0px;
+    }
+
+    .manifesto {
+      font-size: 40px;
+    }
+
+    .title {
+      font-size: 44px;
+    }
+
+    .logo {
+      width: 100px;
+    }
+
+    .bottomRow {
+      gap: 6px;
+    }
+
+    .quote {
+      font-size: 16px;
+    }
+
+    .author {
+      font-size: 16px;
+    }
+  }
+
 }
