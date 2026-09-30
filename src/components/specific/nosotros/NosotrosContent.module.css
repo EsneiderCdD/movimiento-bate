@@ -119,14 +119,20 @@
 }
 
 .title {
+  position: relative;
   font-family: var(--font-anton);
-  font-size: 75px;
-  line-height: 1;
-  letter-spacing: 5px;
+  font-size: 96px;
+  line-height: 0.9;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   font-weight: 700;
   color: var(--blanco);
   margin: 0;
+}
+
+.titleLine {
+  position: relative;
+  display: inline-block;
 }
 
 .bottomRow {
@@ -137,16 +143,17 @@
 }
 
 .logo {
-  width: 145px;
+  width: 150px;
   height: auto;
   display: block;
 }
 
 .arrow {
-  font-size: 52px;
-  line-height: 1;
-  color: var(--rojo);
-  transform: rotate(45deg);
+  position: absolute;
+  left: calc(100% + 4px);
+  top: 50%;
+  width: 0.7em;
+  height: auto;
 }
 
 .quote {

@@ -39,7 +39,16 @@ export default function NosotrosContent() {
             <h1 className={styles.title}>
               MOVIMIENTO
               <br />
-              DEL BATE
+              <span className={styles.titleLine}>
+                DEL BATE
+                <Image
+                  src="/flecha.png"
+                  alt=""
+                  width={386}
+                  height={646}
+                  className={styles.arrow}
+                />
+              </span>
             </h1>
             <div className={styles.bottomRow}>
               <Image
@@ -49,9 +58,6 @@ export default function NosotrosContent() {
                 height={1280}
                 className={styles.logo}
               />
-              <span className={styles.arrow} aria-hidden="true">
-                →
-              </span>
               <blockquote className={styles.quote}>
                 El que no cuida lo suyo, no merece tenerlo.
                 <span className={styles.author}>(Sabiduría arriera)</span>
