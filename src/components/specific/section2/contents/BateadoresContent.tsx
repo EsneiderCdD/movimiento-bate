@@ -31,14 +31,6 @@ export default function BateadoresContent() {
                 className={styles.bentoImage}
               />
             </div>
-            <div className={styles.bentoItem}>
-              <Image
-                src="/escueladelideres(2).webp"
-                alt=""
-                fill
-                className={styles.bentoImage}
-              />
-            </div>
           </div>
 
           <div className={styles.content}>

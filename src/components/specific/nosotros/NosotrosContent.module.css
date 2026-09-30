@@ -251,3 +251,38 @@
 .cta:hover {
   background: var(--rojo-hover);
 }
+
+@media (max-width: 1000px) {
+  .sidebar {
+    flex-basis: 140px;
+  }
+
+  .sidebarText {
+    font-size: 56px;
+  }
+
+  .content {
+    padding: 40px 32px 40px 48px;
+    gap: 32px;
+  }
+
+  .manifesto {
+    font-size: 48px;
+  }
+
+  .title {
+    font-size: 64px;
+  }
+
+  .logo {
+    width: 130px;
+  }
+
+  .quote {
+    font-size: 20px;
+  }
+
+  .author {
+    font-size: 18px;
+  }
+}
