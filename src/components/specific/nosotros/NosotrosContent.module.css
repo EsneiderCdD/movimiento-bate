@@ -98,7 +98,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 20px;
+  gap: 40px;
   padding: 48px 40px 48px 64px;
 }
 
@@ -120,9 +120,9 @@
 
 .title {
   font-family: var(--font-anton);
-  font-size: 96px;
-  line-height: 0.9;
-  letter-spacing: 0.5px;
+  font-size: 75px;
+  line-height: 1;
+  letter-spacing: 5px;
   text-transform: uppercase;
   font-weight: 700;
   color: var(--blanco);
@@ -137,7 +137,7 @@
 }
 
 .logo {
-  width: 90px;
+  width: 145px;
   height: auto;
   display: block;
 }
@@ -215,57 +215,4 @@
 
 .cta:hover {
   background: var(--rojo-hover);
-}
-
-@media (max-width: 768px) {
-  .sidebar {
-    flex-basis: 64px;
-  }
-
-  .sidebarText {
-    font-size: 20px;
-  }
-
-  .content {
-    padding: 32px 24px;
-    gap: 16px;
-  }
-
-  .manifesto {
-    font-size: 24px;
-  }
-
-  .title {
-    font-size: 48px;
-  }
-
-  .bottomRow {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  .outline {
-    padding: 32px 24px 40px;
-    gap: 24px;
-  }
-
-  .index {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0 16px;
-  }
-
-  .indexItem {
-    font-size: 15px;
-    padding: 8px 10px;
-  }
-
-  .cta {
-    padding: 10px 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .index {
-    grid-template-columns: minmax(0, 1fr);
-  }
 }
