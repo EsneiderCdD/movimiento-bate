@@ -46,7 +46,16 @@ export default function BateadoresContent() {
             <h1 className={styles.title}>
               ESCUELA
               <br />
-              DE LÍDERES
+              <span className={styles.titleLine}>
+                DE LÍDERES
+                <Image
+                  src="/flecha.png"
+                  alt=""
+                  width={386}
+                  height={646}
+                  className={styles.arrow}
+                />
+              </span>
             </h1>
             <div className={styles.bottomRow}>
               <Image
@@ -56,11 +65,10 @@ export default function BateadoresContent() {
                 height={1280}
                 className={styles.logo}
               />
-              <span className={styles.arrow} aria-hidden="true">
-                →
-              </span>
               <blockquote className={styles.quote}>
-                El que no cuida lo suyo, no merece tenerlo.
+                El que no cuida lo suyo,
+                <br />
+                no merece tenerlo.
                 <span className={styles.author}>(Sabiduría arriera)</span>
               </blockquote>
             </div>

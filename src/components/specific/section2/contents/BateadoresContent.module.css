@@ -106,30 +106,41 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 20px;
+  gap: 40px;
   padding: 48px 40px 48px 64px;
 }
 
 .tag {
   align-self: flex-start;
-  font-family: var(--font-barlow);
-  font-size: 34px;
+  font-family: var(--font-shadows), cursive;
+  font-size: 60px;
   letter-spacing: 4px;
   font-style: italic;
   color: var(--rojo);
-  border-bottom: 4px solid var(--rojo);
   line-height: 1.2;
+  padding-bottom: 16px;
+  background-image: url("/trazo.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100% auto;
+  -webkit-text-stroke: 0.5px currentColor;
 }
 
 .title {
+  position: relative;
   font-family: var(--font-anton);
-  font-size: 96px;
-  line-height: 0.9;
-  letter-spacing: 0.5px;
+  font-size: 80px;
+  line-height: 1;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
   font-weight: 700;
   color: var(--blanco);
   margin: 0;
+}
+
+.titleLine {
+  position: relative;
+  display: inline-block;
 }
 
 .bottomRow {
@@ -140,32 +151,35 @@
 }
 
 .logo {
-  width: 90px;
+  width: 160px;
   height: auto;
   display: block;
 }
 
 .arrow {
-  font-size: 52px;
-  line-height: 1;
-  color: var(--rojo);
-  transform: rotate(45deg);
+  position: absolute;
+  left: calc(100% + 4px);
+  top: 50%;
+  width: 0.7em;
+  height: auto;
 }
 
 .quote {
   font-family: var(--font-barlow);
   font-size: 22px;
-  line-height: 1.4;
+  line-height: 1;
   font-weight: 400;
+  font-style: italic;
   color: var(--blanco);
   margin: 0;
 }
 
 .author {
   display: block;
-  margin-top: 8px;
-  font-size: 18px;
+  margin-top: 16px;
+  font-size: 20px;
   font-weight: 700;
+  font-style: normal;
   color: #e6e6e6;
 }
 
