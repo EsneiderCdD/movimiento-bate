@@ -330,7 +330,7 @@
   }
 
   .spacer {
-    flex-basis: 30%;
+    flex-basis: 25%;
   }
 
   .content {
@@ -347,7 +347,11 @@
   }
 
   .logo {
-    width: 105px;
+    width: 115px;
+  }
+
+  .bottomRow {
+    gap: 16px;
   }
 
   .quote {
