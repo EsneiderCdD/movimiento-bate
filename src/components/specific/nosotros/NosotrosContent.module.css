@@ -178,9 +178,9 @@
 .outline {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 28px;
-  padding: 44px 40px 56px;
+  padding: 40px 44px;
 }
 
 .index {
@@ -190,6 +190,8 @@
   width: min(960px, 100%);
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
   gap: 0 24px;
   border-top: 1px solid rgba(21, 19, 15, 0.14);
 }
