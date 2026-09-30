@@ -105,12 +105,17 @@
 .manifesto {
   align-self: flex-start;
   font-family: var(--font-shadows), cursive;
-  font-size: 34px;
+  font-size: 60px;
   letter-spacing: 4px;
   font-style: italic;
   color: var(--rojo);
-  border-bottom: 4px solid var(--rojo);
   line-height: 1.2;
+  padding-bottom: 16px;
+  background-image: url("/trazo.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100% auto;
+  -webkit-text-stroke: 0.5px currentColor;
 }
 
 .title {
