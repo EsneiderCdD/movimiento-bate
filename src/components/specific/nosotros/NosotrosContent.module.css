@@ -136,6 +136,7 @@
   align-items: center;
   gap: 24px;
   margin-top: -4px;
+  
 }
 
 .logo {
@@ -420,23 +421,24 @@
   }
 
   .content {
-    padding: 16px;
+    padding: 0px;
     padding-left: 0px;
   }
 
   .manifesto {
-    font-size: 34px;
-  }
-
-  .title {
     font-size: 38px;
   }
 
+  .title {
+    font-size: 44px;
+  }
+
   .logo {
-    width: 85px;
+    width: 95px;
   }
 
   .bottomRow {
     gap: 6px;
+    margin-left: -12px;
   }
 }
