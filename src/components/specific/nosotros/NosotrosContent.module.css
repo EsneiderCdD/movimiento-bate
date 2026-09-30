@@ -11,19 +11,15 @@
   align-items: center;
   justify-content: center;
   background:
-    repeating-linear-gradient(
-      135deg,
+    repeating-linear-gradient(135deg,
       rgba(255, 255, 255, 0.024) 0px,
       rgba(255, 255, 255, 0.024) 2px,
       transparent 2px,
-      transparent 22px
-    ),
-    radial-gradient(
-      1200px 700px at 30% 50%,
+      transparent 22px),
+    radial-gradient(1200px 700px at 30% 50%,
       var(--navy-medio) 0%,
       var(--navy-oscuro) 55%,
-      var(--navy-profundo) 100%
-    );
+      var(--navy-profundo) 100%);
 }
 
 .sidebarText {
@@ -221,7 +217,7 @@
 }
 
 .indexItem {
-  padding:  16px;
+  padding: 16px;
   font-family: var(--font-oswald);
   font-weight: 700;
   font-size: 22px;
@@ -261,28 +257,61 @@
     font-size: 56px;
   }
 
-  .content {
-    padding: 40px 32px 40px 48px;
-    gap: 32px;
-  }
-
   .manifesto {
-    font-size: 48px;
+    font-size: 55px;
   }
 
   .title {
     font-size: 64px;
   }
 
+  .content {
+    padding: 40px;
+  }
+
   .logo {
-    width: 130px;
+    width: 145px;
   }
 
   .quote {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .author {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 750px) {
+  .sidebar {
+    flex-basis: 120px;
+  }
+
+  .sidebarText {
+    font-size: 48px;
+  }
+
+  .content {
+    padding: 32px;
+  }
+
+  .manifesto {
+    font-size: 50px;
+  }
+
+  .title {
+    font-size: 58px;
+  }
+
+  .logo {
+    width: 125px;
+  }
+
+  .quote {
+    font-size: 16px;
+  }
+
+  .author {
+    font-size: 16px;
   }
 }
