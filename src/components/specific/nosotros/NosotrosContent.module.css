@@ -406,3 +406,38 @@
   }
 
 }
+
+@media (max-width: 400px) {
+  .sidebar {
+    flex-basis: 60px;
+  }
+
+  .sidebarText {
+    font-size: 24px;
+  }
+
+  .spacer {
+    flex-basis: 10%;
+  }
+
+  .content {
+    padding: 16px;
+    padding-left: 0px;
+  }
+
+  .manifesto {
+    font-size: 34px;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .logo {
+    width: 85px;
+  }
+
+  .bottomRow {
+    gap: 6px;
+  }
+}
