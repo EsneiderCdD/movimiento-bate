@@ -188,7 +188,8 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 44px 40px 36px;
+  width: min(960px, 100%);
+  padding-bottom: 16px;
 }
 
 .line {
