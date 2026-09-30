@@ -292,7 +292,7 @@
   }
 
   .spacer {
-    flex-basis: 35%;
+    flex-basis: 30%;
   }
 
   .content {
@@ -309,6 +309,45 @@
 
   .logo {
     width: 125px;
+  }
+
+  .quote {
+    font-size: 16px;
+  }
+
+  .author {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    flex-basis: 100px;
+  }
+
+  .sidebarText {
+    font-size: 40px;
+  }
+
+  .spacer {
+    flex-basis: 30%;
+  }
+
+  .content {
+    padding: 24px;
+    padding-left: 0px ;
+  }
+
+  .manifesto {
+    font-size: 44px;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .logo {
+    width: 105px;
   }
 
   .quote {
