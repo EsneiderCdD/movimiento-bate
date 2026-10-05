@@ -19,7 +19,7 @@ export default function NosotrosPageContent() {
   return (
     <div className={styles.page}>
       <div className={styles.chapterHeader}>
-        <SectionHeader title="Prólogo" subtitle="La tierra donde surgió" />
+        <SectionHeader title="Prólogo" onlyRedBottom />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onRight}`}>
         <Franja />
@@ -331,7 +331,7 @@ export default function NosotrosPageContent() {
       </div>
 
       <div className={styles.chapterHeader}>
-        <SectionHeader title="Epílogo" subtitle="Lo que viene" />
+        <SectionHeader title="Epílogo" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onLeft}`}>
         <Franja />
