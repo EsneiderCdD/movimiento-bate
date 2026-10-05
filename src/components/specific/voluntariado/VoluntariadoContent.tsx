@@ -19,11 +19,12 @@ export default function VoluntariadoContent() {
   return (
     <div className={styles.page}>
       <div className={styles.chapterHeader}>
-        <SectionHeader title="Los Bateadores" subtitle="Escuela de líderes" />
+        <SectionHeader title="Los Bateadores" onlyRedBottom />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onRight}`}>
         <Franja />
         <section className={styles.section}>
+          <p className={styles.sectionSubtitle}>Escuela de líderes</p>
           <div className={styles.grid}>
             <div className={styles.gridCol}>
               <p className={styles.text}>
@@ -47,14 +48,12 @@ export default function VoluntariadoContent() {
       </div>
 
       <div className={styles.chapterHeader}>
-        <SectionHeader
-          title="En qué consiste"
-          subtitle="Te formamos para ganar"
-        />
+        <SectionHeader title="En qué consiste" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onLeft}`}>
         <Franja />
         <section className={styles.section}>
+          <p className={styles.sectionSubtitle}>Te formamos para ganar</p>
           <div className={styles.blocks}>
             <div className={styles.block}>
               <h3 className={styles.blockTitle}>Estructura de campaña</h3>
@@ -90,14 +89,12 @@ export default function VoluntariadoContent() {
       </div>
 
       <div className={styles.chapterHeader}>
-        <SectionHeader
-          title="Para quién es"
-          subtitle="Si esto eres tú, inscríbete"
-        />
+        <SectionHeader title="Para quién es" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onRight}`}>
         <Franja />
         <section className={styles.section}>
+          <p className={styles.sectionSubtitle}>Si esto eres tú, inscríbete</p>
           <div className={styles.grid}>
             <div className={styles.gridCol}>
               <p className={styles.text}>
@@ -120,14 +117,12 @@ export default function VoluntariadoContent() {
       </div>
 
       <div className={styles.chapterHeader}>
-        <SectionHeader
-          title="Inscripciones"
-          subtitle="Haz parte del cambio"
-        />
+        <SectionHeader title="Inscripciones" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onLeft}`}>
         <Franja />
         <section className={`${styles.section} ${styles.formSection}`}>
+          <p className={styles.sectionSubtitle}>Haz parte del cambio</p>
           <p className={styles.text}>
             Déjanos tus datos y cuéntanos sobre ti. Cuál es tu municipio, qué
             aspiración tienes y por qué quieres ser parte de Los Bateadores. Nos
