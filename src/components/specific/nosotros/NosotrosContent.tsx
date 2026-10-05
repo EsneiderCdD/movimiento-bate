@@ -1,18 +1,17 @@
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./NosotrosContent.module.css";
 
 const DOTS = Array.from({ length: 9 });
 
 const CHAPTERS = [
-  "PRÓLOGO:",
-  "I. EL DIAGNÓSTICO:",
-  "II. EL SÍMBOLO:",
-  "III. NUESTROS PRINCIPIOS",
-  "IV. NUESTRA GENEALOGÍA HISTÓRICA",
-  "V. A LOS QUE NOS CRITICA",
-  "VI. NUESTRA CONVOCATORIA",
-  "EPÍLOGO: LO QUE VIENE",
+  { code: "PRÓLOGO", title: "" },
+  { code: "I.", title: "El diagnóstico" },
+  { code: "II.", title: "El símbolo" },
+  { code: "III.", title: "Nuestros principios" },
+  { code: "IV.", title: "Nuestra genealogía histórica" },
+  { code: "V.", title: "A los que nos critica" },
+  { code: "VI.", title: "Nuestra convocatoria" },
+  { code: "EPÍLOGO", title: "Lo que viene" },
 ];
 
 export default function NosotrosContent() {
@@ -74,16 +73,12 @@ export default function NosotrosContent() {
             <span className={styles.labelText}>Selecciona una opción</span>
           </div>
           <ul className={styles.index}>
-            {CHAPTERS.map((chapter) => (
-              <li key={chapter} className={styles.indexItem}>
-                {chapter}
+            {CHAPTERS.map(({ code, title }) => (
+              <li key={code} className={styles.indexItem}>
+                <span className={styles.itemLabel}>{code}</span>
+                {title && <span className={styles.itemDesc}>{title}</span>}
               </li>
             ))}
-            <li>
-              <Link href="/nosotros" className={styles.cta}>
-                Conocer
-              </Link>
-            </li>
           </ul>
         </div>
       </div>
