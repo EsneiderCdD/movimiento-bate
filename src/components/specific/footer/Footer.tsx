@@ -10,33 +10,22 @@ const contacts = [
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.top}>
-        <Link href="/" className={styles.logo}>
-          <Image
-            src="/logo-cd.jpeg"
-            alt="Movimiento del Bate"
-            width={149}
-            height={143}
-            className={styles.logoCd}
-          />
-          <Image
-            src="/logo-nombre.png"
-            alt="Movimiento del Bate"
-            width={2039}
-            height={771}
-            className={styles.logoImage}
-          />
-        </Link>
-        <ul className={styles.contacts}>
-          {contacts.map((contact) => (
-            <li key={contact.label}>
-              <a href={contact.href} className={styles.contactLink}>
-                {contact.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Link href="/" className={styles.logo}>
+        <Image
+          src="/logo-cd.jpeg"
+          alt="Movimiento del Bate"
+          width={149}
+          height={143}
+          className={styles.logoCd}
+        />
+        <Image
+          src="/logo-nombre.png"
+          alt="Movimiento del Bate"
+          width={2039}
+          height={771}
+          className={styles.logoImage}
+        />
+      </Link>
 
       <p className={styles.creed}>
         <span className={styles.lineAmarillo}>
@@ -47,6 +36,16 @@ export default function Footer() {
           Somos Colombia que no se rinde.
         </span>
       </p>
+
+      <ul className={styles.contacts}>
+        {contacts.map((contact) => (
+          <li key={contact.label}>
+            <a href={contact.href} className={styles.contactLink}>
+              {contact.label}
+            </a>
+          </li>
+        ))}
+      </ul>
     </footer>
   );
 }
