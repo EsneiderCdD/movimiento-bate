@@ -166,16 +166,144 @@
   margin: 24px 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
+  .franja {
+    width: 140px;
+  }
+
   .onRight {
-    padding-right: 64px;
+    padding-right: 140px;
   }
 
   .onLeft {
-    padding-left: 64px;
+    padding-left: 140px;
   }
 
+  .text {
+    font-size: 19px;
+  }
+
+  .accentQuote {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 750px) {
   .franja {
-    width: 64px;
+    width: 120px;
+  }
+
+  .onRight {
+    padding-right: 120px;
+  }
+
+  .onLeft {
+    padding-left: 120px;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  .accentQuote {
+    font-size: 30px;
+  }
+
+  .accentAuthor {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  .franja {
+    width: 100px;
+  }
+
+  .onRight {
+    padding-right: 100px;
+  }
+
+  .onLeft {
+    padding-left: 100px;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+
+  .accentQuote {
+    font-size: 28px;
+  }
+
+  .accentAuthor {
+    font-size: 13px;
+  }
+
+  .section {
+    padding: 72px 24px;
+  }
+
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .accentBlock {
+    border-left: none;
+    border-top: 4px solid var(--rojo);
+    padding: 24px 0 6px 0;
+  }
+
+  @media (max-width: 500px) {
+    .franja {
+      width: 80px;
+    }
+
+    .onRight {
+      padding-right: 80px;
+    }
+
+    .onLeft {
+      padding-left: 80px;
+    }
+
+    .text {
+      font-size: 17px;
+    }
+
+    .accentQuote {
+      font-size: 26px;
+    }
+
+    .accentAuthor {
+      font-size: 12px;
+    }
+  }
+
+}
+
+@media (max-width: 400px) {
+  .franja {
+    width: 60px;
+  }
+
+  .onRight {
+    padding-right: 60px;
+  }
+
+  .onLeft {
+    padding-left: 60px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .accentQuote {
+    font-size: 24px;
+  }
+
+  .accentAuthor {
+    font-size: 12px;
   }
 }
