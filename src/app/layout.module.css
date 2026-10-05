@@ -1,7 +1,6 @@
 .spine {
   width: 100%;
   max-width: var(--container-width);
-  min-height: 100vh;
   margin: 0 auto;
   background-color: var(--spine);
   display: flex;
