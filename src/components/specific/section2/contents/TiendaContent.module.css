@@ -178,3 +178,53 @@
   background: #b81822;
 }
 
+@media (max-width: 1000px) {
+  .sidebar {
+    flex-basis: 140px;
+  }
+
+  .sidebarText {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 750px) {
+  .sidebar {
+    flex-basis: 120px;
+  }
+
+  .sidebarText {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    flex-basis: 100px;
+  }
+
+  .sidebarText {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .sidebar {
+    flex-basis: 80px;
+  }
+
+  .sidebarText {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    flex-basis: 60px;
+  }
+
+  .sidebarText {
+    font-size: 24px;
+  }
+}
+
