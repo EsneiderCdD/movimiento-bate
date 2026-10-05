@@ -1,17 +1,20 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./NosotrosContent.module.css";
 
 const DOTS = Array.from({ length: 9 });
 
 const CHAPTERS = [
-  { code: "PRÓLOGO", title: "" },
-  { code: "I.", title: "El diagnóstico" },
-  { code: "II.", title: "El símbolo" },
-  { code: "III.", title: "Nuestros principios" },
-  { code: "IV.", title: "Nuestra genealogía histórica" },
-  { code: "V.", title: "A los que nos critica" },
-  { code: "VI.", title: "Nuestra convocatoria" },
-  { code: "EPÍLOGO", title: "Lo que viene" },
+  { code: "PRÓLOGO", title: "", anchor: "prologo" },
+  { code: "I.", title: "El diagnóstico", anchor: "cap-i" },
+  { code: "II.", title: "El símbolo", anchor: "cap-ii" },
+  { code: "III.", title: "Nuestros principios", anchor: "cap-iii" },
+  { code: "IV.", title: "Nuestra genealogía histórica", anchor: "cap-iv" },
+  { code: "V.", title: "A los que nos critica", anchor: "cap-v" },
+  { code: "VI.", title: "Nuestra convocatoria", anchor: "cap-vi" },
+  { code: "EPÍLOGO", title: "Lo que viene", anchor: "epilogo" },
 ];
 
 export default function NosotrosContent() {
@@ -73,10 +76,12 @@ export default function NosotrosContent() {
             <span className={styles.labelText}>Selecciona una opción</span>
           </div>
           <ul className={styles.index}>
-            {CHAPTERS.map(({ code, title }) => (
+            {CHAPTERS.map(({ code, title, anchor }) => (
               <li key={code} className={styles.indexItem}>
-                <span className={styles.itemLabel}>{code}</span>
-                {title && <span className={styles.itemDesc}>{title}</span>}
+                <Link href={`/nosotros#${anchor}`} className={styles.indexLink}>
+                  <span className={styles.itemLabel}>{code}</span>
+                  {title && <span className={styles.itemDesc}>{title}</span>}
+                </Link>
               </li>
             ))}
           </ul>

@@ -18,7 +18,7 @@ function Franja() {
 export default function NosotrosPageContent() {
   return (
     <div className={styles.page}>
-      <div className={styles.chapterHeader}>
+      <div className={styles.chapterHeader} id="prologo">
         <SectionHeader title="Prólogo" onlyRedBottom />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onRight}`}>
@@ -56,7 +56,7 @@ export default function NosotrosPageContent() {
         </section>
       </div>
 
-      <div className={styles.chapterHeader}>
+      <div className={styles.chapterHeader} id="cap-i">
         <SectionHeader title="I. El Diagnóstico" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onLeft}`}>
@@ -104,7 +104,7 @@ export default function NosotrosPageContent() {
         </section>
       </div>
 
-      <div className={styles.chapterHeader}>
+      <div className={styles.chapterHeader} id="cap-ii">
         <SectionHeader title="II. El Símbolo" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onRight}`}>
@@ -161,7 +161,7 @@ export default function NosotrosPageContent() {
         </section>
       </div>
 
-      <div className={styles.chapterHeader}>
+      <div className={styles.chapterHeader} id="cap-iii">
         <SectionHeader title="III. Nuestros Principios" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onLeft}`}>
@@ -231,7 +231,7 @@ export default function NosotrosPageContent() {
         </section>
       </div>
 
-      <div className={styles.chapterHeader}>
+      <div className={styles.chapterHeader} id="cap-iv">
         <SectionHeader title="IV. Nuestra genealogía histórica" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onRight}`}>
@@ -268,7 +268,7 @@ export default function NosotrosPageContent() {
         </section>
       </div>
 
-      <div className={styles.chapterHeader}>
+      <div className={styles.chapterHeader} id="cap-v">
         <SectionHeader title="V. A los que nos critican" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onLeft}`}>
@@ -296,7 +296,7 @@ export default function NosotrosPageContent() {
         </section>
       </div>
 
-      <div className={styles.chapterHeader}>
+      <div className={styles.chapterHeader} id="cap-vi">
         <SectionHeader title="VI. Nuestra convocatoria" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onRight}`}>
@@ -326,7 +326,7 @@ export default function NosotrosPageContent() {
         </section>
       </div>
 
-      <div className={styles.chapterHeader}>
+      <div className={styles.chapterHeader} id="epilogo">
         <SectionHeader title="Epílogo" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onLeft}`}>

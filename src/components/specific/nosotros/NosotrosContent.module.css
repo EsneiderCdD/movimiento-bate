@@ -225,6 +225,14 @@
   border-bottom: 1px solid rgba(21, 19, 15, 0.14);
 }
 
+.indexLink {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-decoration: none;
+  color: inherit;
+}
+
 .itemLabel {
   font-family: var(--font-oswald);
   font-weight: 700;
