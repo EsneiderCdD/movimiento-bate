@@ -109,7 +109,7 @@
 
 .accentQuote {
   font-family: var(--font-anton);
-  font-size: 34px;
+  font-size: 36px;
   line-height: 1.1;
   color: var(--marron-negro);
   text-transform: uppercase;
@@ -149,8 +149,8 @@
 
 .text {
   font-family: var(--font-barlow);
-  font-size: 19px;
-  line-height: 1.65;
+  font-size: 20px;
+  line-height: 1.7;
   color: #2a2722;
   margin: 0;
 }
