@@ -222,43 +222,197 @@
   background: var(--rojo-hover);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .sidebar {
-    flex-basis: 64px;
+    flex-basis: 140px;
   }
 
   .sidebarText {
-    font-size: 20px;
-  }
-
-  .content {
-    padding: 32px 24px;
-    gap: 16px;
+    font-size: 56px;
   }
 
   .tag {
-    font-size: 24px;
+    font-size: 55px;
   }
 
   .title {
-    font-size: 48px;
+    font-size: 64px;
   }
 
-  .bottomRow {
-    flex-wrap: wrap;
-    gap: 16px;
+  .content {
+    padding: 40px;
   }
 
-  .outline {
-    padding: 32px 24px 40px;
-    gap: 24px;
+  .logo {
+    width: 145px;
   }
 
-  .outlineText {
+  .quote {
     font-size: 18px;
   }
 
-  .cta {
-    padding: 10px 24px;
+  .author {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 750px) {
+  .sidebar {
+    flex-basis: 120px;
+  }
+
+  .sidebarText {
+    font-size: 48px;
+  }
+
+  .spacer {
+    flex-basis: 30%;
+  }
+
+  .content {
+    padding: 32px;
+  }
+
+  .tag {
+    font-size: 50px;
+  }
+
+  .title {
+    font-size: 58px;
+  }
+
+  .logo {
+    width: 125px;
+  }
+
+  .quote {
+    font-size: 16px;
+  }
+
+  .author {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    flex-basis: 100px;
+  }
+
+  .sidebarText {
+    font-size: 40px;
+  }
+
+  .spacer {
+    flex-basis: 25%;
+  }
+
+  .content {
+    padding: 24px;
+    padding-left: 0px;
+  }
+
+  .tag {
+    font-size: 44px;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .logo {
+    width: 115px;
+  }
+
+  .bottomRow {
+    gap: 16px;
+  }
+
+  .quote {
+    font-size: 16px;
+  }
+
+  .author {
+    font-size: 16px;
+  }
+
+  @media (max-width: 500px) {
+    .sidebar {
+      flex-basis: 80px;
+    }
+
+    .sidebarText {
+      font-size: 32px;
+    }
+
+    .spacer {
+      flex-basis: 15%;
+    }
+
+    .content {
+      padding: 20px;
+      padding-left: 0px;
+    }
+
+    .tag {
+      font-size: 40px;
+    }
+
+    .title {
+      font-size: 44px;
+    }
+
+    .logo {
+      width: 100px;
+    }
+
+    .bottomRow {
+      gap: 6px;
+    }
+
+    .quote {
+      font-size: 16px;
+    }
+
+    .author {
+      font-size: 16px;
+    }
+  }
+
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    flex-basis: 60px;
+  }
+
+  .sidebarText {
+    font-size: 24px;
+  }
+
+  .spacer {
+    flex-basis: 10%;
+  }
+
+  .content {
+    padding: 0px;
+    padding-left: 0px;
+  }
+
+  .tag {
+    font-size: 38px;
+  }
+
+  .title {
+    font-size: 44px;
+  }
+
+  .logo {
+    width: 95px;
+  }
+
+  .bottomRow {
+    gap: 6px;
+    margin-left: -12px;
   }
 }
