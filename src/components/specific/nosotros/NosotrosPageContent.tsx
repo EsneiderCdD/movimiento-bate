@@ -24,6 +24,7 @@ export default function NosotrosPageContent() {
       <div className={`${styles.sectionWrap} ${styles.onRight}`}>
         <Franja />
         <section className={styles.section}>
+          <p className={styles.sectionSubtitle}>La tierra donde surgió</p>
           <div className={styles.grid}>
             <div className={styles.gridCol}>
               <p className={styles.text}>
@@ -56,14 +57,12 @@ export default function NosotrosPageContent() {
       </div>
 
       <div className={styles.chapterHeader}>
-        <SectionHeader
-          title="I. El Diagnóstico"
-          subtitle="La ciudad sitiada"
-        />
+        <SectionHeader title="I. El Diagnóstico" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onLeft}`}>
         <Franja />
         <section className={styles.section}>
+          <p className={styles.sectionSubtitle}>La ciudad sitiada</p>
           <div className={styles.grid}>
             <div className={styles.gridCol}>
               <p className={styles.text}>
@@ -106,11 +105,12 @@ export default function NosotrosPageContent() {
       </div>
 
       <div className={styles.chapterHeader}>
-        <SectionHeader title="II. El Símbolo" subtitle="El bate" />
+        <SectionHeader title="II. El Símbolo" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onRight}`}>
         <Franja />
         <section className={styles.section}>
+          <p className={styles.sectionSubtitle}>El bate</p>
           <div className={styles.grid}>
             <div className={styles.gridCol}>
               <p className={styles.text}>
@@ -162,14 +162,14 @@ export default function NosotrosPageContent() {
       </div>
 
       <div className={styles.chapterHeader}>
-        <SectionHeader
-          title="III. Nuestros Principios"
-          subtitle="Sobre el bate, una sola palabra: diálogo"
-        />
+        <SectionHeader title="III. Nuestros Principios" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onLeft}`}>
         <Franja />
         <section className={styles.section}>
+          <p className={styles.sectionSubtitle}>
+            Sobre el bate, una sola palabra: diálogo
+          </p>
           <div className={styles.blocks}>
             <div className={styles.block}>
               <h3 className={styles.blockTitle}>
@@ -232,14 +232,14 @@ export default function NosotrosPageContent() {
       </div>
 
       <div className={styles.chapterHeader}>
-        <SectionHeader
-          title="IV. Nuestra genealogía histórica"
-          subtitle="No somos los primeros en defender lo propio"
-        />
+        <SectionHeader title="IV. Nuestra genealogía histórica" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onRight}`}>
         <Franja />
         <section className={styles.section}>
+          <p className={styles.sectionSubtitle}>
+            No somos los primeros en defender lo propio
+          </p>
           <div className={styles.grid}>
             <div className={styles.gridCol}>
               <p className={styles.text}>
@@ -269,14 +269,12 @@ export default function NosotrosPageContent() {
       </div>
 
       <div className={styles.chapterHeader}>
-        <SectionHeader
-          title="V. A los que nos critican"
-          subtitle="Respuesta a la crítica"
-        />
+        <SectionHeader title="V. A los que nos critican" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onLeft}`}>
         <Franja />
         <section className={styles.section}>
+          <p className={styles.sectionSubtitle}>Respuesta a la crítica</p>
           <div className={styles.grid}>
             <div className={styles.accentBlock}>
               <p className={styles.accentQuote}>¿Fascistas?</p>
@@ -299,14 +297,12 @@ export default function NosotrosPageContent() {
       </div>
 
       <div className={styles.chapterHeader}>
-        <SectionHeader
-          title="VI. Nuestra convocatoria"
-          subtitle="No están solos"
-        />
+        <SectionHeader title="VI. Nuestra convocatoria" />
       </div>
       <div className={`${styles.sectionWrap} ${styles.onRight}`}>
         <Franja />
         <section className={styles.section}>
+          <p className={styles.sectionSubtitle}>No están solos</p>
           <div className={styles.grid}>
             <div className={styles.gridCol}>
               <p className={styles.text}>
@@ -336,6 +332,7 @@ export default function NosotrosPageContent() {
       <div className={`${styles.sectionWrap} ${styles.onLeft}`}>
         <Franja />
         <section className={styles.section}>
+          <p className={styles.sectionSubtitle}>Lo que viene</p>
           <div className={styles.grid}>
             <div className={styles.gridCol}>
               <p className={styles.text}>

@@ -82,9 +82,17 @@
   background: var(--rojo);
 }
 
-.chapterHeader p {
+.chapterHeader h2 {
+  margin-bottom: 0;
+}
+
+.sectionSubtitle {
   font-family: var(--font-shadows), cursive;
+  font-size: 18px;
+  line-height: 1.6;
   color: var(--rojo);
+  margin: 0;
+  -webkit-text-stroke: 0.5px currentColor;
 }
 
 .grid {
@@ -186,6 +194,10 @@
   .accentQuote {
     font-size: 32px;
   }
+
+  .sectionSubtitle {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -211,6 +223,10 @@
 
   .accentAuthor {
     font-size: 13px;
+  }
+
+  .sectionSubtitle {
+    font-size: 14px;
   }
 }
 
@@ -278,6 +294,10 @@
     .accentAuthor {
       font-size: 12px;
     }
+
+    .sectionSubtitle {
+      font-size: 12px;
+    }
   }
 
 }
@@ -304,6 +324,10 @@
   }
 
   .accentAuthor {
+    font-size: 12px;
+  }
+
+  .sectionSubtitle {
     font-size: 12px;
   }
 }
