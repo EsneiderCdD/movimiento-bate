@@ -1,27 +1,52 @@
+import Link from "next/link";
+import Image from "next/image";
 import styles from "./Footer.module.css";
+
+const contacts = [
+  { label: "Instagram", href: "#" },
+  { label: "WhatsApp", href: "#" },
+];
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.brand}>
-        <span className={styles.logo}>Movimiento Bate</span>
-        <p className={styles.description}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+      <div className={styles.top}>
+        <Link href="/" className={styles.logo}>
+          <Image
+            src="/logo-cd.jpeg"
+            alt="Movimiento del Bate"
+            width={149}
+            height={143}
+            className={styles.logoCd}
+          />
+          <Image
+            src="/logo-nombre.png"
+            alt="Movimiento del Bate"
+            width={2039}
+            height={771}
+            className={styles.logoImage}
+          />
+        </Link>
+        <ul className={styles.contacts}>
+          {contacts.map((contact) => (
+            <li key={contact.label}>
+              <a href={contact.href} className={styles.contactLink}>
+                {contact.label}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className={styles.social}>
-        <li>
-          <a href="#" className={styles.socialLink} aria-label="Instagram">
-            IG
-          </a>
-        </li>
-        <li>
-          <a href="#" className={styles.socialLink} aria-label="WhatsApp">
-            WPP
-          </a>
-        </li>
-      </ul>
+
+      <p className={styles.creed}>
+        <span className={styles.lineAmarillo}>
+          Somos el Movimiento del Bate.
+        </span>
+        <span className={styles.lineAzul}>Somos Antioquia de pie.</span>
+        <span className={styles.lineRojo}>
+          Somos Colombia que no se rinde.
+        </span>
+      </p>
     </footer>
   );
 }
