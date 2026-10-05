@@ -178,12 +178,3 @@
   background: #b81822;
 }
 
-@media (max-width: 768px) {
-  .sidebar {
-    flex-basis: 64px;
-  }
-
-  .sidebarText {
-    font-size: 20px;
-  }
-}
