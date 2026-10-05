@@ -25,7 +25,7 @@ export default function BateadoresContent() {
           <div className={styles.bentoGrid} aria-hidden="true">
             <div className={styles.bentoItem}>
               <Image
-                src="/escueladelideres(2).webp"
+                src="/escuela_lideres.png"
                 alt=""
                 fill
                 className={styles.bentoImage}
