@@ -281,6 +281,10 @@
   .author {
     font-size: 18px;
   }
+
+  .indexItem {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -318,6 +322,10 @@
 
   .author {
     font-size: 16px;
+  }
+
+  .indexItem {
+    font-size: 18px;
   }
 }
 
@@ -362,7 +370,14 @@
   .author {
     font-size: 16px;
   }
-}
+
+  .indexItem {
+    font-size: 18px;
+  }
+
+  .labelText {
+    font-size: 12px;
+  }
 
   @media (max-width: 500px) {
     .sidebar {
@@ -405,7 +420,17 @@
     .author {
       font-size: 16px;
     }
+
+    .indexItem {
+      font-size: 16px;
+    }
+
+    .labelText {
+      font-size: 11px;
+    }
   }
+
+}
 
 @media (max-width: 400px) {
   .sidebar {
