@@ -117,6 +117,9 @@
 
 .accentBlockBg {
   position: relative;
+  justify-content: flex-end;
+  padding-bottom: 64px;
+  margin-right: -28px;
 }
 
 .accentBlockBg::before {
@@ -138,13 +141,6 @@
 .accentBlockBg > .accentAuthor {
   color: #000;
   text-align: right;
-}
-
-@media (min-width: 601px) {
-  .accentBlockBg {
-    justify-content: flex-end;
-    padding-bottom: 64px;
-  }
 }
 
 .accentQuote {
@@ -300,6 +296,11 @@
     border-left: none;
     border-top: 4px solid var(--rojo);
     padding: 24px 0 6px 0;
+  }
+
+  .accentBlockBg {
+    justify-content: center;
+    margin-right: -24px;
   }
 
   @media (max-width: 500px) {

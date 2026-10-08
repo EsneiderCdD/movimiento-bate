@@ -43,6 +43,13 @@ export default function NosotrosPageContent() {
                 no es nostalgia:{" "}
                 <strong>es doctrina.</strong>
               </p>
+              <p className={styles.text}>
+                De esa estirpe somos. Del hombre que suda, que construye, que
+                honra su palabra, que protege a su familia, que respeta al
+                vecino, pero no se deja pisotear. Somos hijos del arriero, y
+                como tales, cuando el camino se llena de bandidos, no bajamos la
+                cabeza: <strong>levantamos el zurriago.</strong>
+              </p>
             </div>
             <div className={`${styles.accentBlock} ${styles.accentBlockBg}`}>
               <p className={styles.accentQuote}>
@@ -157,6 +164,10 @@ export default function NosotrosPageContent() {
               Porque en Colombia, el que no habla desde una posición de firmeza
               no es escuchado.
             </span>
+            <span className={styles.accentAuthor}>
+              Porque la historia ha demostrado que con el terrorismo no se
+              dialoga desde la debilidad, se dialoga desde la dignidad.
+            </span>
           </div>
         </section>
       </div>
@@ -240,6 +251,10 @@ export default function NosotrosPageContent() {
           <p className={styles.sectionSubtitle}>
             No somos los primeros en defender lo propio
           </p>
+          <p className={styles.text}>
+            No somos el primer movimiento en la historia del mundo que nace de
+            la necesidad de defender lo propio cuando el orden se rompe.
+          </p>
           <div className={styles.grid}>
             <div className={styles.gridCol}>
               <p className={styles.text}>
@@ -265,6 +280,9 @@ export default function NosotrosPageContent() {
               </span>
             </div>
           </div>
+          <p className={styles.text}>
+            <strong>Ese es nuestro antecedente más honrado.</strong>
+          </p>
         </section>
       </div>
 
@@ -351,6 +369,10 @@ export default function NosotrosPageContent() {
               </p>
             </div>
           </div>
+          <p className={styles.text}>
+            Mientras el Estado recobra su temple,{" "}
+            <strong>nosotros guardaremos el nuestro.</strong>
+          </p>
           <div className={styles.accentBlock}>
             <p className={styles.accentQuote}>
               Somos el Movimiento del Bate. Somos Antioquia de pie. Somos
