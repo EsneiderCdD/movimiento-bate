@@ -119,6 +119,7 @@
   position: relative;
   justify-content: flex-end;
   padding-bottom: 64px;
+  padding-right: 32px;
   margin-right: calc(
     -28px - max(0px, (min(100vw, var(--container-width)) - 1080px - 170px) / 2)
   );
@@ -225,6 +226,10 @@
     font-size: 32px;
   }
 
+  .accentBlockBg {
+    padding-right: 28px;
+  }
+
   .sectionSubtitle {
     font-size: 16px;
   }
@@ -253,6 +258,10 @@
 
   .accentAuthor {
     font-size: 13px;
+  }
+
+  .accentBlockBg {
+    padding-right: 24px;
   }
 
   .sectionSubtitle {
@@ -302,6 +311,7 @@
 
   .accentBlockBg {
     justify-content: center;
+    padding-right: 20px;
     margin-right: -24px;
   }
 
@@ -328,6 +338,10 @@
 
     .accentAuthor {
       font-size: 12px;
+    }
+
+    .accentBlockBg {
+      padding-right: 16px;
     }
 
     .sectionSubtitle {
@@ -360,6 +374,10 @@
 
   .accentAuthor {
     font-size: 12px;
+  }
+
+  .accentBlockBg {
+    padding-right: 12px;
   }
 
   .sectionSubtitle {
