@@ -132,7 +132,7 @@
   background-image: url("/arriero-mov.jpg");
   background-size: cover;
   background-position: center;
-  opacity: 0.75;
+  opacity: 0.5;
   z-index: 0;
 }
 
@@ -310,7 +310,8 @@
   }
 
   .accentBlockBg {
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 12px ;
     padding-right: 20px;
     margin-right: -24px;
     margin-bottom: -72px;
@@ -343,7 +344,7 @@
     }
 
     .accentBlockBg {
-      padding-right: 16px;
+      padding: 10px ;
     }
 
     .sectionSubtitle {
@@ -379,7 +380,7 @@
   }
 
   .accentBlockBg {
-    padding-right: 12px;
+    padding: 8px ;
   }
 
   .sectionSubtitle {
