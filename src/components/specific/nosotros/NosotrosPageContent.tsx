@@ -44,7 +44,7 @@ export default function NosotrosPageContent() {
                 <strong>es doctrina.</strong>
               </p>
             </div>
-            <div className={styles.accentBlock}>
+            <div className={`${styles.accentBlock} ${styles.accentBlockBg}`}>
               <p className={styles.accentQuote}>
                 &ldquo;El que no cuida lo suyo, no merece tenerlo.&rdquo;
               </p>

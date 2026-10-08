@@ -115,6 +115,26 @@
   justify-content: center;
 }
 
+.accentBlockBg {
+  position: relative;
+}
+
+.accentBlockBg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/arriero-mov.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.accentBlockBg > * {
+  position: relative;
+  z-index: 1;
+}
+
 .accentQuote {
   font-family: var(--font-anton);
   font-size: 36px;
