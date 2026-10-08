@@ -135,6 +135,11 @@
   z-index: 1;
 }
 
+.accentBlockBg > .accentAuthor {
+  color: #000;
+  text-align: right;
+}
+
 .accentQuote {
   font-family: var(--font-anton);
   font-size: 36px;
