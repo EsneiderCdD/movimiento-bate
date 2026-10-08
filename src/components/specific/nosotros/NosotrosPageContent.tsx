@@ -269,8 +269,13 @@ export default function NosotrosPageContent() {
                 entendieron que la libertad no se regala:{" "}
                 <strong>se defiende.</strong>
               </p>
+              <p className={styles.text}>
+                <strong>Ese es nuestro antecedente más honrado.</strong>
+              </p>
             </div>
-            <div className={styles.accentBlock}>
+            <div
+              className={`${styles.accentBlock} ${styles.accentBlockBg} ${styles.accentBlockBg2}`}
+            >
               <p className={styles.accentQuote}>
                 El arriero que bajaba café por trochas infestadas de bandoleros
                 no esperaba escolta.
@@ -280,9 +285,6 @@ export default function NosotrosPageContent() {
               </span>
             </div>
           </div>
-          <p className={styles.text}>
-            <strong>Ese es nuestro antecedente más honrado.</strong>
-          </p>
         </section>
       </div>
 
