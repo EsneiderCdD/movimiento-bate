@@ -120,6 +120,7 @@
   justify-content: flex-end;
   padding-bottom: 64px;
   padding-right: 32px;
+  border-left-color: var(--amarillo);
   margin-right: calc(
     -28px - max(0px, (min(100vw, var(--container-width)) - 1080px - 170px) / 2)
   );
@@ -313,6 +314,7 @@
     justify-content: flex-end;
     padding: 12px ;
     padding-right: 20px;
+    border-top-color: var(--amarillo);
     margin-right: -24px;
     margin-bottom: -72px;
     min-height: 320px;
