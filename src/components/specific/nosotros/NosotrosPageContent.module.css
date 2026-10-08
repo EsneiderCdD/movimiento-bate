@@ -119,7 +119,9 @@
   position: relative;
   justify-content: flex-end;
   padding-bottom: 64px;
-  margin-right: -28px;
+  margin-right: calc(
+    -28px - max(0px, (min(100vw, var(--container-width)) - 1080px - 170px) / 2)
+  );
 }
 
 .accentBlockBg::before {
