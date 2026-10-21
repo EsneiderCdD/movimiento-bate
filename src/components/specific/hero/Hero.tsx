@@ -14,6 +14,7 @@ interface HeroProps {
   accent?: string;
   subtitle?: string;
   backgroundSrc?: string;
+  backgroundOpacity?: number;
   showLogo?: boolean;
   items?: CardItem[];
   label?: string;
@@ -26,6 +27,7 @@ export default function Hero({
   accent = "DEL BATE",
   subtitle = "Somos un movimiento ciudadano comprometido con la defensa del orden, la libertad y el bienestar de nuestra gente.",
   backgroundSrc = "/fondo2.jpg",
+  backgroundOpacity,
   showLogo = true,
   items,
   label = "Selecciona una opción",
@@ -44,6 +46,11 @@ export default function Hero({
                 fill
                 priority
                 className={styles.backgroundImage}
+                style={
+                  backgroundOpacity !== undefined
+                    ? { opacity: backgroundOpacity }
+                    : undefined
+                }
               />
             </ParallaxLayer>
           </div>
