@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeader from "@/components/reusables/sectionHeader/SectionHeader";
 import styles from "./NosotrosPageContent.module.css";
 
@@ -156,18 +157,21 @@ export default function NosotrosPageContent() {
               </p>
             </div>
           </div>
+          <Image
+            src="/mov_rep.jpg"
+            alt="Bate"
+            width={1238}
+            height={848}
+            className={styles.bateImage}
+          />
           <div className={styles.accentBlock}>
-            <p className={styles.accentQuote}>
-              Sobre ese bate escribimos una sola palabra: DIÁLOGO.
+            <p className={styles.text}>
+              Sobre ese bate escribimos una sola palabra:{" "}
+              <strong>DIÁLOGO</strong>. Porque en Colombia, el que no habla desde
+              una posición de firmeza no es escuchado. Porque la historia ha
+              demostrado que con el terrorismo no se dialoga desde la debilidad,
+              se dialoga desde la dignidad.
             </p>
-            <span className={styles.accentAuthor}>
-              Porque en Colombia, el que no habla desde una posición de firmeza
-              no es escuchado.
-            </span>
-            <span className={styles.accentAuthor}>
-              Porque la historia ha demostrado que con el terrorismo no se
-              dialoga desde la debilidad, se dialoga desde la dignidad.
-            </span>
           </div>
         </section>
       </div>
