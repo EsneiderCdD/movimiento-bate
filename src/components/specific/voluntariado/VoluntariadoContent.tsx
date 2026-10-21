@@ -41,7 +41,8 @@ export default function VoluntariadoContent() {
         accent="de líderes"
         subtitle={DESCRIPTION}
         backgroundSrc="/escuela_lider.jpg"
-        backgroundOpacity={0.71}
+        backgroundOpacity={0.55}
+        backgroundPosition="center 10%"
         showLogo={false}
         items={OPTIONS}
       />
