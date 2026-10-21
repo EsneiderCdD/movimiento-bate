@@ -107,7 +107,7 @@ export default function VoluntariadoContent() {
             <div className={styles.chapterHeader}>
               <SectionHeader title="Para quién es" />
             </div>
-            <div className={`${styles.sectionWrap} ${styles.onRight}`}>
+            <div className={`${styles.sectionWrap} ${styles.onLeft}`}>
               <Franja />
               <section className={styles.section}>
                 <p className={styles.sectionSubtitle}>
