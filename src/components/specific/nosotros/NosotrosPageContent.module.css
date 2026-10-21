@@ -88,7 +88,7 @@
 
 .sectionSubtitle {
   font-family: var(--font-shadows), cursive;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.6;
   letter-spacing: 5px;
   color: var(--rojo);
@@ -244,7 +244,7 @@
   }
 
   .sectionSubtitle {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
 
@@ -278,7 +278,7 @@
   }
 
   .sectionSubtitle {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
@@ -304,7 +304,7 @@
   }
 
   .accentAuthor {
-    font-size: 13px;
+    font-size: 16px;
   }
 
   .section {
@@ -362,7 +362,7 @@
     }
 
     .sectionSubtitle {
-      font-size: 12px;
+      font-size: 16px;
     }
   }
 
@@ -398,6 +398,6 @@
   }
 
   .sectionSubtitle {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
