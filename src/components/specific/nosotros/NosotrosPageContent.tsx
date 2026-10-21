@@ -264,27 +264,23 @@ export default function NosotrosPageContent() {
                 sesenta segundos, no eran paramilitares: eran la encarnación
                 del deber cívico.
               </p>
+            </div>
+            <div className={styles.gridCol}>
               <p className={styles.text}>
                 Los Carabineros del Risorgimento italiano, que protegían aldeas
                 de las bandas que las saqueaban en nombre de una ideología,
                 entendieron que la libertad no se regala:{" "}
                 <strong>se defiende.</strong>
               </p>
-              <p className={styles.text}>
-                <strong>Ese es nuestro antecedente más honrado.</strong>
-              </p>
             </div>
-            <div
-              className={`${styles.accentBlock} ${styles.accentBlockBg} ${styles.accentBlockBg2}`}
-            >
-              <p className={styles.accentQuote}>
-                El arriero que bajaba café por trochas infestadas de bandoleros
-                no esperaba escolta.
-              </p>
-              <span className={styles.accentAuthor}>
-                Silbaba a su perro, amarraba bien su machete, y seguía.
-              </span>
-            </div>
+          </div>
+          <div className={styles.accentBlock}>
+            <p className={styles.accentQuote}>
+              Y en nuestra propia tierra: el arriero que bajaba café por trochas
+              infestadas de bandoleros no esperaba escolta. Silbaba a su perro,
+              amarraba bien su machete, y seguía. Ese es nuestro antecedente más
+              honrado.
+            </p>
           </div>
         </section>
       </div>
@@ -378,8 +374,11 @@ export default function NosotrosPageContent() {
           </p>
           <div className={styles.accentBlock}>
             <p className={styles.accentQuote}>
-              Somos el Movimiento del Bate. Somos Antioquia de pie. Somos
-              Colombia que no se rinde.
+              Somos el Movimiento del Bate.
+              <br />
+              Somos Antioquia de pie.
+              <br />
+              Somos Colombia que no se rinde.
             </p>
           </div>
         </section>
