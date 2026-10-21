@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Hero from "@/components/specific/hero/Hero";
+import HeroCarousel from "@/components/specific/hero/carousel/HeroCarousel";
 import SectionHeader from "@/components/reusables/sectionHeader/SectionHeader";
 import type { CardItem } from "@/components/specific/hero/cards/Cards";
 import styles from "./VoluntariadoContent.module.css";
@@ -39,11 +40,9 @@ export default function VoluntariadoContent() {
         selected={selected}
         title=""
         subtitle=""
-        backgroundSrc="/escuela_lider.jpg"
-        backgroundOpacity={0.55}
-        backgroundPosition="center 10%"
         showLogo={false}
         items={OPTIONS}
+        backgroundContent={<HeroCarousel />}
         afterHero={
           <div className={styles.heroIntro}>
             <h1 className={styles.heroTitle}>

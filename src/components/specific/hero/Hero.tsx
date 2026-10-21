@@ -20,6 +20,7 @@ interface HeroProps {
   items?: CardItem[];
   label?: string;
   afterHero?: ReactNode;
+  backgroundContent?: ReactNode;
 }
 
 export default function Hero({
@@ -35,6 +36,7 @@ export default function Hero({
   items,
   label = "Selecciona una opción",
   afterHero,
+  backgroundContent,
 }: HeroProps) {
   const heroRef = useRef<HTMLElement>(null);
 
@@ -43,23 +45,29 @@ export default function Hero({
       <ParallaxProvider target={heroRef}>
         <section ref={heroRef} className={styles.hero}>
           <div className={styles.backgroundClip}>
-            <ParallaxLayer id="background" className={styles.background}>
-              <Image
-                src={backgroundSrc}
-                alt=""
-                fill
-                priority
-                className={styles.backgroundImage}
-                style={{
-                  ...(backgroundOpacity !== undefined
-                    ? { opacity: backgroundOpacity }
-                    : {}),
-                  ...(backgroundPosition
-                    ? { objectPosition: backgroundPosition }
-                    : {}),
-                }}
-              />
-            </ParallaxLayer>
+            {backgroundContent ? (
+              <div className={styles.backgroundCarousel}>
+                {backgroundContent}
+              </div>
+            ) : (
+              <ParallaxLayer id="background" className={styles.background}>
+                <Image
+                  src={backgroundSrc}
+                  alt=""
+                  fill
+                  priority
+                  className={styles.backgroundImage}
+                  style={{
+                    ...(backgroundOpacity !== undefined
+                      ? { opacity: backgroundOpacity }
+                      : {}),
+                    ...(backgroundPosition
+                      ? { objectPosition: backgroundPosition }
+                      : {}),
+                  }}
+                />
+              </ParallaxLayer>
+            )}
           </div>
 
           <div className={styles.intro}>
