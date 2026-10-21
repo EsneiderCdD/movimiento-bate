@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, type ReactNode } from "react";
 import Image from "next/image";
 import Cards, { type CardItem } from "./cards/Cards";
 import styles from "./Hero.module.css";
@@ -19,6 +19,7 @@ interface HeroProps {
   showLogo?: boolean;
   items?: CardItem[];
   label?: string;
+  afterHero?: ReactNode;
 }
 
 export default function Hero({
@@ -33,6 +34,7 @@ export default function Hero({
   showLogo = true,
   items,
   label = "Selecciona una opción",
+  afterHero,
 }: HeroProps) {
   const heroRef = useRef<HTMLElement>(null);
 
@@ -73,15 +75,19 @@ export default function Hero({
             )}
 
             <div className={styles.content}>
-              <h1 className={styles.title}>
-                {title}
-                <span className={styles.accent}>{accent}</span>
-              </h1>
-              <p className={styles.subtitle}>{subtitle}</p>
+              {title ? (
+                <h1 className={styles.title}>
+                  {title}
+                  <span className={styles.accent}>{accent}</span>
+                </h1>
+              ) : null}
+              {subtitle ? <p className={styles.subtitle}>{subtitle}</p> : null}
             </div>
           </div>
         </section>
       </ParallaxProvider>
+
+      {afterHero}
 
       <div className={styles.label}>
         <span className={styles.line} />

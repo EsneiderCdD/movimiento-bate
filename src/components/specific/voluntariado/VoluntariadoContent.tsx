@@ -37,14 +37,22 @@ export default function VoluntariadoContent() {
       <Hero
         onSelect={setSelected}
         selected={selected}
-        title="Escuela"
-        accent="de líderes"
-        subtitle={DESCRIPTION}
+        title=""
+        subtitle=""
         backgroundSrc="/escuela_lider.jpg"
         backgroundOpacity={0.55}
         backgroundPosition="center 10%"
         showLogo={false}
         items={OPTIONS}
+        afterHero={
+          <div className={styles.heroIntro}>
+            <h1 className={styles.heroTitle}>
+              Escuela
+              <span className={styles.heroTitleAccent}>de líderes</span>
+            </h1>
+            <p className={styles.description}>{DESCRIPTION}</p>
+          </div>
+        }
       />
 
       <div className={styles.page}>
