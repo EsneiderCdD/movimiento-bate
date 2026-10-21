@@ -190,13 +190,14 @@
 }
 
 .blockTitle {
-  font-family: var(--font-oswald);
-  font-weight: 600;
-  font-size: 20px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--marron-negro);
+  font-family: var(--font-shadows), cursive;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.6;
+  letter-spacing: 5px;
+  color: var(--rojo);
   margin: 0;
+  -webkit-text-stroke: 0.5px currentColor;
 }
 
 .text {
@@ -254,6 +255,10 @@
   .sectionSubtitle {
     font-size: 20px;
   }
+
+  .blockTitle {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -286,6 +291,10 @@
   }
 
   .sectionSubtitle {
+    font-size: 18px;
+  }
+
+  .blockTitle {
     font-size: 18px;
   }
 }
@@ -372,6 +381,10 @@
     .sectionSubtitle {
       font-size: 16px;
     }
+
+    .blockTitle {
+      font-size: 16px;
+    }
   }
 
 }
@@ -406,6 +419,10 @@
   }
 
   .sectionSubtitle {
+    font-size: 16px;
+  }
+
+  .blockTitle {
     font-size: 16px;
   }
 }

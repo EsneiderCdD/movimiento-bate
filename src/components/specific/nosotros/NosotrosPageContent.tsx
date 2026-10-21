@@ -182,9 +182,6 @@ export default function NosotrosPageContent() {
       <div className={`${styles.sectionWrap} ${styles.onLeft}`}>
         <Franja />
         <section className={styles.section}>
-          <p className={styles.sectionSubtitle}>
-            Sobre el bate, una sola palabra: diálogo
-          </p>
           <div className={styles.blocks}>
             <div className={styles.block}>
               <h3 className={styles.blockTitle}>
