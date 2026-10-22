@@ -376,7 +376,9 @@ export default function NosotrosPageContent() {
             <p className={styles.accentQuote}>
               Somos el Movimiento del Bate.
               <br />
+              <br />
               Somos Antioquia de pie.
+              <br />
               <br />
               Somos Colombia que no se rinde.
             </p>
