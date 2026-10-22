@@ -153,14 +153,16 @@ export default function VoluntariadoContent() {
                 <div className={styles.modules}>
                   {MODULES.map((module) => (
                     <article key={module.n} className={styles.module}>
-                      <Image
-                        src={`/${Number(module.n)}.png`}
-                        alt=""
-                        width={457}
-                        height={546}
-                        className={styles.moduleIcon}
-                      />
-                      <h3 className={styles.blockTitle}>{module.title}</h3>
+                      <div className={styles.moduleHead}>
+                        <h3 className={styles.blockTitle}>{module.title}</h3>
+                        <Image
+                          src={`/${Number(module.n)}.png`}
+                          alt=""
+                          width={457}
+                          height={546}
+                          className={styles.moduleIcon}
+                        />
+                      </div>
                       <p className={styles.text}>{module.body}</p>
                     </article>
                   ))}

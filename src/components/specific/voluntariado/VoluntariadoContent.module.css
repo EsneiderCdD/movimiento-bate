@@ -520,12 +520,20 @@
   padding-top: 18px;
 }
 
+.moduleHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
 .moduleIcon {
+  flex: 0 0 auto;
   display: block;
-  align-self: flex-end;
   width: 48px;
   height: 48px;
   object-fit: contain;
+  margin: -12px 8px -6px 0;
 }
 
 .audienceGrid {
