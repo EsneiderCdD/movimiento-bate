@@ -237,7 +237,8 @@ export default function VoluntariadoContent() {
                   <strong>No necesitas una gran maquinaria para comenzar.</strong>
                 </p>
 
-                <form className={styles.form}>
+                <div className={styles.formBackdrop}>
+                  <form className={styles.form}>
                   <div className={styles.field}>
                     <label className={styles.label} htmlFor="nombre">
                       Nombre completo
@@ -318,6 +319,7 @@ export default function VoluntariadoContent() {
                     Únete a RED BATE
                   </button>
                 </form>
+                </div>
 
                 <div className={styles.contactBlock}>
                   <p className={styles.contactTitle}>

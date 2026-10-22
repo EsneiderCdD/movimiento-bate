@@ -209,6 +209,18 @@
   gap: 24px;
 }
 
+.formBackdrop {
+  width: auto;
+  margin-inline: calc(
+    -24px - max(0px, (min(100vw, var(--container-width)) - 170px - 1080px) / 2)
+  );
+  padding: 32px 24px;
+  background-image: url("/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0;
+}
+
 .form {
   display: flex;
   flex-direction: column;
