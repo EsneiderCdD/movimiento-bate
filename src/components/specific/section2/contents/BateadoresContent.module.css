@@ -262,6 +262,15 @@
 }
 
 @media (max-width: 750px) {
+  .container {
+    min-height: 800px;
+  }
+
+  .main {
+    min-height: 800px;
+    max-height: 800px;
+  }
+
   .sidebar {
     flex-basis: 120px;
   }
@@ -304,6 +313,15 @@
 }
 
 @media (max-width: 600px) {
+  .container {
+    min-height: 700px;
+  }
+
+  .main {
+    min-height: 700px;
+    max-height: 700px;
+  }
+
   .sidebar {
     flex-basis: 100px;
   }
@@ -350,6 +368,15 @@
   }
 
   @media (max-width: 500px) {
+    .container {
+      min-height: 600px;
+    }
+
+    .main {
+      min-height: 600px;
+      max-height: 600px;
+    }
+
     .sidebar {
       flex-basis: 40px;
     }
@@ -399,6 +426,15 @@
 }
 
 @media (max-width: 400px) {
+  .container {
+    min-height: 500px;
+  }
+
+  .main {
+    min-height: 500px;
+    max-height: 500px;
+  }
+
   .sidebar {
     flex-basis: 20px;
   }
