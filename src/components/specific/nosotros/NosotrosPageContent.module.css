@@ -90,7 +90,7 @@
   font-family: var(--font-shadows), cursive;
   font-size: 22px;
   line-height: 1.6;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   color: var(--rojo);
   margin: 0;
   -webkit-text-stroke: 0.5px currentColor;
@@ -183,7 +183,7 @@
   font-weight: 400;
   font-size: 22px;
   line-height: 1.6;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   color: var(--rojo);
   margin: 0;
   -webkit-text-stroke: 0.5px currentColor;
