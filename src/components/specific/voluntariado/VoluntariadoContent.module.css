@@ -530,13 +530,13 @@
 .audienceGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 40px;
+  gap: 48px;
 }
 
 .audienceCol {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .checkList {
@@ -553,7 +553,7 @@
   padding-left: 24px;
   font-family: var(--font-barlow);
   font-size: 18px;
-  line-height: 1.55;
+  line-height: 1.7;
   color: #2a2722;
 }
 
@@ -572,7 +572,7 @@
   font-family: var(--font-barlow);
   font-size: 20px;
   line-height: 1.7;
-  color: var(--marron-negro);
+  color: #2a2722;
   margin: 0;
 }
 
@@ -670,14 +670,12 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 750px) {
   .audienceGrid {
     grid-template-columns: minmax(0, 1fr);
     gap: 32px;
   }
-}
 
-@media (max-width: 750px) {
   .modules {
     grid-template-columns: minmax(0, 1fr);
     gap: 28px;
@@ -718,6 +716,10 @@
 
 @media (max-width: 400px) {
   .lead {
+    font-size: 16px;
+  }
+
+  .checkList li {
     font-size: 16px;
   }
 
