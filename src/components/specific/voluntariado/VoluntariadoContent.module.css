@@ -382,6 +382,11 @@
     padding: 32px 24px;
   }
 
+  .form {
+    gap: 18px;
+    padding: 12px;
+  }
+
   .grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 32px;
