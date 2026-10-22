@@ -41,7 +41,11 @@ export default function Hero({
   const heroRef = useRef<HTMLElement>(null);
 
   return (
-    <div className={styles.page}>
+    <div
+      className={`${styles.page} ${
+        backgroundContent ? styles.pageCarousel : ""
+      }`}
+    >
       <ParallaxProvider target={heroRef}>
         <section ref={heroRef} className={styles.hero}>
           <div

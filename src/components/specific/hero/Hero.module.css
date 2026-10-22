@@ -35,6 +35,10 @@
 
 }
 
+.pageCarousel .hero {
+  padding: 32px 24px 0;
+}
+
 .backgroundClip {
   position: absolute;
   left: 48px;
