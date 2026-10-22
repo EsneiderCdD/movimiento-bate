@@ -378,15 +378,15 @@
 
   @media (max-width: 500px) {
     .franja {
-      width: 80px;
+      width: 40px;
     }
 
     .onRight {
-      padding-right: 80px;
+      padding-right: 40px;
     }
 
     .onLeft {
-      padding-left: 80px;
+      padding-left: 40px;
     }
 
     .text {
@@ -410,15 +410,15 @@
 
 @media (max-width: 400px) {
   .franja {
-    width: 60px;
+    width: 20px;
   }
 
   .onRight {
-    padding-right: 60px;
+    padding-right: 20px;
   }
 
   .onLeft {
-    padding-left: 60px;
+    padding-left: 20px;
   }
 
   .text {

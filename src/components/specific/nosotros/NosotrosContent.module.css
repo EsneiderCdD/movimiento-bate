@@ -429,7 +429,7 @@
 
   @media (max-width: 500px) {
     .sidebar {
-      flex-basis: 80px;
+      flex-basis: 40px;
     }
 
     .sidebarText {
@@ -494,7 +494,7 @@
 
 @media (max-width: 400px) {
   .sidebar {
-    flex-basis: 60px;
+    flex-basis: 20px;
   }
 
   .sidebarText {
