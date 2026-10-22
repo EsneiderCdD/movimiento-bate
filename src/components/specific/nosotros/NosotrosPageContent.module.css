@@ -329,13 +329,21 @@
   }
 
   .accentBlockBg {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 768 / 1369;
+    margin: 0 auto;
+    padding: 12px 20px;
     justify-content: flex-end;
-    padding: 12px ;
-    padding-right: 20px;
     border-top-color: var(--amarillo);
-    margin-right: -24px;
-    margin-bottom: -72px;
-    min-height: 320px;
+    min-height: 0;
+  }
+
+  .accentBlockBg::before {
+    inset: 0;
+    height: auto;
+    background-size: cover;
+    background-position: center;
   }
 
   @media (max-width: 500px) {
@@ -364,7 +372,8 @@
     }
 
     .accentBlockBg {
-      padding: 10px ;
+      max-width: 280px;
+      padding: 10px;
     }
 
     .sectionSubtitle {
@@ -404,7 +413,8 @@
   }
 
   .accentBlockBg {
-    padding: 8px ;
+    max-width: 260px;
+    padding: 8px;
   }
 
   .sectionSubtitle {
