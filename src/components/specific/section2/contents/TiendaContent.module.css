@@ -247,6 +247,10 @@
     font-size: 40px;
   }
 
+  .card {
+    flex: 0 0 325px;
+  }
+
   .name {
     font-size: 16px;
   }
@@ -275,6 +279,10 @@
 
   .sidebarText {
     font-size: 32px;
+  }
+
+  .card {
+    flex: 0 0 300px;
   }
 
   .name {
@@ -307,5 +315,28 @@
     font-size: 24px;
   }
 
+  .card {
+    flex: 0 0 275px;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 19px;
+  }
+
+  .btn {
+    font-size: 11px;
+  }
+
+  .tag {
+    font-size: 10px;
+  }
 }
 

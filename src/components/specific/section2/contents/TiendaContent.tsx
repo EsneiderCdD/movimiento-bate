@@ -44,7 +44,6 @@ export default function TiendaContent() {
                   fill
                   style={{ objectFit: product.fit }}
                 />
-                <span className={styles.tag}>{product.tag}</span>
               </div>
               <div className={styles.body}>
                 <h3 className={styles.name}>{product.name}</h3>
