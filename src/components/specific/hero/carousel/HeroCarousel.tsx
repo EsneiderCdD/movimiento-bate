@@ -2,9 +2,8 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
 import styles from "./HeroCarousel.module.css";
 
 const SLIDES = [
@@ -17,9 +16,9 @@ const SLIDES = [
 export default function HeroCarousel() {
   return (
     <Swiper
-      modules={[Navigation]}
+      modules={[Autoplay]}
+      autoplay={{ delay: 5000, disableOnInteraction: false }}
       loop
-      navigation
       className={styles.swiper}
     >
       {SLIDES.map((src) => (
