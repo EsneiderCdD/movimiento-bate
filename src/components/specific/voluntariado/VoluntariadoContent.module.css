@@ -396,6 +396,8 @@
   }
 
   .form {
+    width: auto;
+    margin-inline: -12px;
     gap: 18px;
     padding: 12px;
   }
