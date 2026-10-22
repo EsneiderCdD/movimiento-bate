@@ -275,7 +275,7 @@ export default function NosotrosPageContent() {
             </div>
           </div>
           <div className={styles.accentBlock}>
-            <p className={styles.accentQuote}>
+            <p className={styles.text}>
               Y en nuestra propia tierra: el arriero que bajaba café por trochas
               infestadas de bandoleros no esperaba escolta. Silbaba a su perro,
               amarraba bien su machete, y seguía. Ese es nuestro antecedente más
