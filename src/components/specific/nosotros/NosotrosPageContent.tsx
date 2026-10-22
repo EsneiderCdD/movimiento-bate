@@ -164,7 +164,7 @@ export default function NosotrosPageContent() {
               </p>
             </div>
           </div>
-          <div className={styles.accentBlock}>
+          <div className={`${styles.accentBlock} ${styles.accentBlockYellow}`}>
             <p className={styles.text}>
               Sobre ese bate escribimos una sola palabra:{" "}
               <strong>DIÁLOGO</strong>. Porque en Colombia, el que no habla desde
@@ -274,7 +274,7 @@ export default function NosotrosPageContent() {
               </p>
             </div>
           </div>
-          <div className={styles.accentBlock}>
+          <div className={`${styles.accentBlock} ${styles.accentBlockYellow}`}>
             <p className={styles.text}>
               Y en nuestra propia tierra: el arriero que bajaba café por trochas
               infestadas de bandoleros no esperaba escolta. Silbaba a su perro,

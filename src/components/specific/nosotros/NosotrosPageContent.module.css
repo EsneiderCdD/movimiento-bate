@@ -116,6 +116,10 @@
   justify-content: center;
 }
 
+.accentBlockYellow {
+  border-left-color: var(--amarillo);
+}
+
 .accentBlockBg {
   position: relative;
   justify-content: flex-end;
@@ -326,6 +330,10 @@
     border-left: none;
     border-top: 4px solid var(--rojo);
     padding: 24px 0 6px 0;
+  }
+
+  .accentBlockYellow {
+    border-top-color: var(--amarillo);
   }
 
   .bateImage {
