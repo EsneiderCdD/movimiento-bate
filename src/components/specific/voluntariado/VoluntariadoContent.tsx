@@ -89,6 +89,17 @@ const AUDIENCE = [
   },
 ];
 
+const ROLES = [
+  "Quiero ser líder de mi barrio/comuna",
+  "Quiero ser edil",
+  "Quiero ser concejal",
+  "Me interesa una alcaldía",
+  "Quiero trabajar en comunicaciones",
+  "Quiero organizar territorio",
+  "Quiero aprender de política",
+  "Quiero apoyar a otros líderes",
+];
+
 function Franja() {
   return (
     <aside className={styles.franja} aria-hidden="true">
@@ -272,15 +283,19 @@ export default function VoluntariadoContent() {
                     />
                   </div>
                   <div className={styles.field}>
-                    <label className={styles.label} htmlFor="aspiracion">
-                      ¿Qué cargo te interesa?
+                    <label className={styles.label} htmlFor="cargo">
+                      ¿Qué quieres hacer?
                     </label>
-                    <input
-                      className={styles.input}
-                      type="text"
-                      id="aspiracion"
-                      placeholder="Concejal, Alcalde, otro"
-                    />
+                    <select className={styles.select} id="cargo" defaultValue="">
+                      <option value="" disabled>
+                        Selecciona una opción
+                      </option>
+                      {ROLES.map((role) => (
+                        <option key={role} value={role}>
+                          {role}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                   <div className={styles.field}>
                     <label className={styles.label} htmlFor="mensaje">

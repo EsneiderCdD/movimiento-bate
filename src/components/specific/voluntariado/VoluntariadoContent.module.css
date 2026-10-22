@@ -238,6 +238,7 @@
 }
 
 .input,
+.select,
 .textarea {
   width: 100%;
   padding: 12px 14px;
@@ -251,12 +252,17 @@
   outline: none;
 }
 
+.select {
+  cursor: pointer;
+}
+
 .input::placeholder,
 .textarea::placeholder {
   color: #a09884;
 }
 
 .input:focus,
+.select:focus,
 .textarea:focus {
   border-color: var(--rojo);
 }
