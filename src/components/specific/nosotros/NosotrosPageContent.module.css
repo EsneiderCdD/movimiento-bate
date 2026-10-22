@@ -329,10 +329,10 @@
   }
 
   .accentBlockBg {
-    width: 100%;
-    max-width: 300px;
+    width: auto;
+    max-width: none;
     aspect-ratio: 768 / 1369;
-    margin: 0 auto;
+    margin: 0 -24px -32px;
     padding: 12px 20px;
     justify-content: flex-end;
     border-top-color: var(--amarillo);
@@ -372,7 +372,6 @@
     }
 
     .accentBlockBg {
-      max-width: 280px;
       padding: 10px;
     }
 
@@ -413,7 +412,6 @@
   }
 
   .accentBlockBg {
-    max-width: 260px;
     padding: 8px;
   }
 
