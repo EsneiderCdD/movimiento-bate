@@ -43,7 +43,7 @@
 .section {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 104px 28px;
+  padding: 32px 24px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -55,8 +55,9 @@
 
 .sectionSubtitle {
   font-family: var(--font-shadows), cursive;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.6;
+  letter-spacing: 4px;
   color: var(--rojo);
   margin: 0;
   -webkit-text-stroke: 0.5px currentColor;
@@ -184,7 +185,8 @@
 .blockTitle {
   font-family: var(--font-oswald);
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22px;
+  line-height: 1.6;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--marron-negro);
@@ -302,7 +304,11 @@
   }
 
   .sectionSubtitle {
-    font-size: 16px;
+    font-size: 20px;
+  }
+
+  .blockTitle {
+    font-size: 20px;
   }
 }
 
@@ -332,7 +338,11 @@
   }
 
   .sectionSubtitle {
-    font-size: 14px;
+    font-size: 18px;
+  }
+
+  .blockTitle {
+    font-size: 18px;
   }
 }
 
@@ -362,7 +372,7 @@
   }
 
   .section {
-    padding: 72px 24px;
+    padding: 32px 24px;
   }
 
   .grid {
@@ -402,7 +412,11 @@
     }
 
     .sectionSubtitle {
-      font-size: 12px;
+      font-size: 16px;
+    }
+
+    .blockTitle {
+      font-size: 16px;
     }
   }
 
@@ -434,7 +448,11 @@
   }
 
   .sectionSubtitle {
-    font-size: 12px;
+    font-size: 16px;
+  }
+
+  .blockTitle {
+    font-size: 16px;
   }
 }
 
@@ -482,11 +500,10 @@
 
 .lead {
   font-family: var(--font-barlow);
-  font-size: 21px;
+  font-size: 20px;
   line-height: 1.7;
-  color: var(--marron-negro);
+  color: #2a2722;
   margin: 0;
-  max-width: 780px;
 }
 
 .modules {
@@ -554,7 +571,7 @@
 .closingText {
   font-family: var(--font-barlow);
   font-size: 20px;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--marron-negro);
   margin: 0;
 }
@@ -643,6 +660,16 @@
   font-weight: 600;
 }
 
+@media (max-width: 1000px) {
+  .lead {
+    font-size: 19px;
+  }
+
+  .closingText {
+    font-size: 19px;
+  }
+}
+
 @media (max-width: 900px) {
   .audienceGrid {
     grid-template-columns: minmax(0, 1fr);
@@ -657,7 +684,7 @@
   }
 
   .lead {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .closingText {
@@ -667,7 +694,7 @@
 
 @media (max-width: 500px) {
   .lead {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .checkList li {
@@ -686,6 +713,16 @@
 
   .closingText {
     font-size: 17px;
+  }
+}
+
+@media (max-width: 400px) {
+  .lead {
+    font-size: 16px;
+  }
+
+  .closingText {
+    font-size: 16px;
   }
 }
 
