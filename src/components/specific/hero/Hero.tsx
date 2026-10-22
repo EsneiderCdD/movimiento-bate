@@ -44,7 +44,11 @@ export default function Hero({
     <div className={styles.page}>
       <ParallaxProvider target={heroRef}>
         <section ref={heroRef} className={styles.hero}>
-          <div className={styles.backgroundClip}>
+          <div
+            className={`${styles.backgroundClip} ${
+              backgroundContent ? styles.backgroundClipCarousel : ""
+            }`}
+          >
             {backgroundContent ? (
               <div className={styles.backgroundCarousel}>
                 {backgroundContent}

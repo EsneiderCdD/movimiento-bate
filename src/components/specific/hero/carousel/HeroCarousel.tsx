@@ -25,7 +25,7 @@ export default function HeroCarousel() {
     >
       {SLIDES.map((src) => (
         <SwiperSlide key={src} className={styles.slide}>
-          <div className={styles.frame} data-swiper-parallax="-8%">
+          <div className={styles.frame} data-swiper-parallax-scale="1.12">
             <Image
               src={src}
               alt=""

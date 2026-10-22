@@ -5,6 +5,10 @@ import styles from "./Footer.module.css";
 const contacts = [
   { label: "Instagram", href: "#" },
   { label: "WhatsApp", href: "#" },
+  {
+    label: "Escríbenos",
+    href: "mailto:redbate@movimientodelbate.com",
+  },
 ];
 
 export default function Footer() {

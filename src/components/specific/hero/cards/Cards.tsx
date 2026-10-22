@@ -9,7 +9,7 @@ export interface CardItem {
 
 const defaultItems: CardItem[] = [
   { id: "Mov Bate", label: "Movimiento del Bate", desc: "Defensa legítima" },
-  { id: "Los Bateadores", label: "Bateadores", desc: "Sé parte del cambio" },
+  { id: "Los Bateadores", label: "Bateadores", desc: "Únete a RED BATE" },
   { id: "Tienda", label: "Tienda", desc: "Lleva el bate puesto" },
 ];
 

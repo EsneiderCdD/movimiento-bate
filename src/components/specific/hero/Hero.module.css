@@ -342,3 +342,13 @@
       bottom: -30px;
     }
   }
+
+  .backgroundClipCarousel {
+    left: 50%;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    width: min(calc(100% - 24px), 454px);
+    aspect-ratio: 4 / 5;
+    transform: translate(-50%, -50%);
+  }
