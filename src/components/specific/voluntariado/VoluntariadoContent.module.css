@@ -520,11 +520,12 @@
   padding-top: 18px;
 }
 
-.moduleNumber {
-  font-family: var(--font-anton);
-  font-size: 26px;
-  line-height: 1;
-  color: var(--rojo);
+.moduleIcon {
+  display: block;
+  align-self: flex-end;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
 }
 
 .audienceGrid {

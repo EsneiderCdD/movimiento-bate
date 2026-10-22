@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Hero from "@/components/specific/hero/Hero";
 import HeroCarousel from "@/components/specific/hero/carousel/HeroCarousel";
 import SectionHeader from "@/components/reusables/sectionHeader/SectionHeader";
@@ -152,9 +153,13 @@ export default function VoluntariadoContent() {
                 <div className={styles.modules}>
                   {MODULES.map((module) => (
                     <article key={module.n} className={styles.module}>
-                      <span className={styles.moduleNumber}>
-                        {module.n}
-                      </span>
+                      <Image
+                        src={`/${Number(module.n)}.png`}
+                        alt=""
+                        width={457}
+                        height={546}
+                        className={styles.moduleIcon}
+                      />
                       <h3 className={styles.blockTitle}>{module.title}</h3>
                       <p className={styles.text}>{module.body}</p>
                     </article>
