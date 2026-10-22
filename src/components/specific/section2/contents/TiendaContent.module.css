@@ -186,6 +186,26 @@
   .sidebarText {
     font-size: 56px;
   }
+
+  .name {
+    font-size: 17px;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 23px;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+
+  .tag {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -195,6 +215,26 @@
 
   .sidebarText {
     font-size: 48px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 22px;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+
+  .tag {
+    font-size: 10px;
   }
 }
 
@@ -206,6 +246,26 @@
   .sidebarText {
     font-size: 40px;
   }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 22px;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+
+  .tag {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -215,6 +275,26 @@
 
   .sidebarText {
     font-size: 32px;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .btn {
+    font-size: 11px;
+  }
+
+  .tag {
+    font-size: 10px;
   }
 }
 
@@ -226,5 +306,6 @@
   .sidebarText {
     font-size: 24px;
   }
+
 }
 
