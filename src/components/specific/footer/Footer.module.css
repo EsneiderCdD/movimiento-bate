@@ -1,7 +1,7 @@
 .footer {
   background: var(--crema);
   border-top: 4px solid var(--amarillo);
-  padding: 32px 2.4% 48px;
+  padding: 24px 2.4%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -24,7 +24,7 @@
 
 .logoImage {
   display: block;
-  height: 46px;
+  height: 52px;
   width: auto;
 }
 
@@ -58,9 +58,9 @@
 
 .contacts {
   display: flex;
-  gap: 2.29em;
+  gap: 2.5em;
   list-style: none;
-  font-size: 14px;
+  font-size: 24px;
 }
 
 .contactLink {
@@ -74,4 +74,97 @@
 
 .contactLink:hover {
   color: var(--rojo);
+}
+
+.instagramIcon {
+  display: block;
+  height: 48px;
+  width: auto;
+}
+
+@media (max-width: 750px) {
+  .footer {
+    padding-block: 1.25rem;
+  }
+
+  .logo {
+    gap: 0.625rem;
+  }
+
+  .logoCd {
+    height: 2.375rem;
+  }
+
+  .logoImage {
+    height: 3rem;
+  }
+
+  .instagramIcon {
+    height: 2.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .logoImage {
+    height: 2.75rem;
+  }
+
+  .instagramIcon {
+    height: 2.5rem;
+  }
+
+  .creed span {
+    font-size: 18px;
+  }
+
+  .contacts {
+    gap: 2em;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logoCd {
+    height: 2rem;
+  }
+
+  .logoImage {
+    height: 2.5rem;
+  }
+
+  .instagramIcon {
+    height: 2.25rem;
+  }
+
+  .creed span {
+    font-size: 14px;
+  }
+
+  .contacts {
+    font-size: 14px;
+    gap: 1.5em;
+  }
+}
+
+@media (max-width: 400px) {
+  .logoCd {
+    height: 1.75rem;
+  }
+
+  .logoImage {
+    height: 2.5rem;
+  }
+
+  .instagramIcon {
+    height: 2rem;
+  }
+
+  .creed span {
+    font-size: 12px;
+  }
+
+  .contacts {
+    font-size: 12px;
+    gap: 1em;
+  }
 }
