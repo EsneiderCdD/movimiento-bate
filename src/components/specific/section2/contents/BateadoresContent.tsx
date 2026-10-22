@@ -8,10 +8,6 @@ export default function BateadoresContent() {
   return (
     <section className={styles.container}>
       <aside className={styles.sidebar}>
-        <div className={styles.sidebarText}>
-          <span>LOS</span>
-          <span>BATEADORES</span>
-        </div>
         <div className={styles.dots} aria-hidden="true">
           {DOTS.map((_, i) => (
             <span key={i} className={styles.dot} />
@@ -34,6 +30,7 @@ export default function BateadoresContent() {
         </div>
 
         <div className={styles.outline}>
+          <h2 className={styles.outlineTitle}>GENERACIÓN DE-BATE</h2>
           <p className={styles.outlineText}>
             Formamos líderes que transforman sus comunidades desde adentro. No
             es un partido — es una escuela donde el ciudadano común se convierte

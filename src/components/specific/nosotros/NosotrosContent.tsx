@@ -21,10 +21,6 @@ export default function NosotrosContent() {
   return (
     <section className={styles.container}>
       <aside className={styles.sidebar}>
-        <div className={styles.sidebarText}>
-          <span>MOVIMIENTO</span>
-          <span>DEL BATE</span>
-        </div>
         <div className={styles.dots} aria-hidden="true">
           {DOTS.map((_, i) => (
             <span key={i} className={styles.dot} />

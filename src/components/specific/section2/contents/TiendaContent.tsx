@@ -26,9 +26,6 @@ export default function TiendaContent() {
   return (
     <div className={styles.container}>
       <aside className={styles.sidebar}>
-        <div className={styles.sidebarText}>
-          <span>TIENDA</span>
-        </div>
         <div className={styles.dots} aria-hidden="true">
           {DOTS.map((_, i) => (
             <span key={i} className={styles.dot} />

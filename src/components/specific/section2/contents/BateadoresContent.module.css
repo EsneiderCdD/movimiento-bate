@@ -192,6 +192,18 @@
   padding: 44px 40px 56px;
 }
 
+.outlineTitle {
+  margin: 0;
+  width: min(960px, 100%);
+  font-family: var(--font-shadows), cursive;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.6;
+  letter-spacing: 5px;
+  color: var(--rojo);
+  -webkit-text-stroke: 0.5px currentColor;
+}
+
 .outlineText {
   margin: 0;
   width: min(960px, 100%);
@@ -256,6 +268,10 @@
     font-size: 18px;
   }
 
+  .outlineTitle {
+    font-size: 20px;
+  }
+
   .outlineText {
     font-size: 19px;
   }
@@ -305,6 +321,10 @@
 
   .author {
     font-size: 16px;
+  }
+
+  .outlineTitle {
+    font-size: 18px;
   }
 
   .outlineText {
@@ -363,6 +383,10 @@
     font-size: 16px;
   }
 
+  .outlineTitle {
+    font-size: 18px;
+  }
+
   .outlineText {
     font-size: 18px;
   }
@@ -418,6 +442,10 @@
       font-size: 16px;
     }
 
+    .outlineTitle {
+      font-size: 16px;
+    }
+
     .outlineText {
       font-size: 17px;
     }
@@ -467,6 +495,10 @@
   .bottomRow {
     gap: 6px;
     margin-left: -12px;
+  }
+
+  .outlineTitle {
+    font-size: 16px;
   }
 
   .outlineText {
