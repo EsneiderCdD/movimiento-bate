@@ -145,11 +145,10 @@ export default function VoluntariadoContent() {
         subtitle=""
         showLogo={false}
         items={OPTIONS}
-        label="Elige por dónde empezar"
+        label="Selecciona una opción"
         backgroundContent={<HeroCarousel />}
         afterHero={
           <div className={styles.heroIntro}>
-            <span className={styles.eyebrow}>RED BATEADORES</span>
             <h1 className={styles.heroTitle}>
               Escuela
               <span className={styles.heroTitleAccent}>de líderes</span>
@@ -161,11 +160,8 @@ export default function VoluntariadoContent() {
             </p>
             <p className={styles.description}>
               RED Bateadores nace para conectar a esas personas: personas con
-              ideas, liderazgo y vocación de servicio que quieren prepararse
-              para participar en la vida pública de su territorio. No es un
-              partido. No es una maquinaria. Es una escuela donde aprendes a
-              liderar, comunicar, organizar equipos, conocer tu municipio y
-              construir comunidad.
+              ideas. Es una escuela donde aprendes a liderar, comunicar,
+              organizar equipos, conocer tu municipio y construir comunidad.
             </p>
           </div>
         }

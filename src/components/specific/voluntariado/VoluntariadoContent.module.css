@@ -480,15 +480,6 @@
   }
 }
 
-.eyebrow {
-  font-family: var(--font-oswald);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  color: var(--rojo);
-}
-
 .lead {
   font-family: var(--font-barlow);
   font-size: 21px;
