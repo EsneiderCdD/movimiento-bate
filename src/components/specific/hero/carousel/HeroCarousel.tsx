@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Parallax } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import styles from "./HeroCarousel.module.css";
@@ -17,15 +17,14 @@ const SLIDES = [
 export default function HeroCarousel() {
   return (
     <Swiper
-      modules={[Navigation, Parallax]}
-      parallax
+      modules={[Navigation]}
       loop
       navigation
       className={styles.swiper}
     >
       {SLIDES.map((src) => (
         <SwiperSlide key={src} className={styles.slide}>
-          <div className={styles.frame} data-swiper-parallax-scale="1.12">
+          <div className={styles.frame}>
             <Image
               src={src}
               alt=""

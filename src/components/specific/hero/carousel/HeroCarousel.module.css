@@ -16,9 +16,8 @@
 .frame {
   position: relative;
   height: 100%;
-  width: auto;
-  aspect-ratio: 4 / 5;
-  flex: 0 0 auto;
+  width: 100%;
+  flex: 1 1 auto;
 }
 
 .image {
