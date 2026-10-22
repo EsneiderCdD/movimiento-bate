@@ -218,6 +218,7 @@
 }
 
 .indexItem {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -231,6 +232,10 @@
   gap: 2px;
   text-decoration: none;
   color: inherit;
+}
+
+.indexBate {
+  display: none;
 }
 
 .itemLabel {
@@ -462,6 +467,17 @@
     align-self: flex-start;
   }
 
+  .indexBate {
+    display: block;
+    position: absolute;
+    left: calc(100% + 14px);
+    top: 50%;
+    transform: translateY(-50%) scaleX(-1);
+    width: auto;
+    height: 30px;
+    pointer-events: none;
+  }
+
   @media (max-width: 500px) {
     .container {
       min-height: 650px;
@@ -527,6 +543,10 @@
 
     .index {
       width: min(225px, 100%);
+    }
+
+    .indexBate {
+      height: 24px;
     }
   }
 

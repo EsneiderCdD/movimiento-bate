@@ -1,7 +1,9 @@
 "use client";
 
+import { useEffect, useRef, useState, type MouseEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import styles from "./NosotrosContent.module.css";
 
 const DOTS = Array.from({ length: 9 });
@@ -17,7 +19,31 @@ const CHAPTERS = [
   { code: "EPÍLOGO", title: "Lo que viene", anchor: "epilogo" },
 ];
 
+const SELECT_DELAY = 1200;
+
 export default function NosotrosContent() {
+  const router = useRouter();
+  const [selected, setSelected] = useState<string | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, []);
+
+  function handleSelect(event: MouseEvent<HTMLAnchorElement>, anchor: string) {
+    if (!window.matchMedia("(max-width: 600px)").matches) return;
+
+    event.preventDefault();
+    setSelected(anchor);
+
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => {
+      router.push(`/nosotros#${anchor}`);
+    }, SELECT_DELAY);
+  }
+
   return (
     <section className={styles.container}>
       <aside className={styles.sidebar}>
@@ -74,10 +100,23 @@ export default function NosotrosContent() {
           <ul className={styles.index}>
             {CHAPTERS.map(({ code, title, anchor }) => (
               <li key={code} className={styles.indexItem}>
-                <Link href={`/nosotros#${anchor}`} className={styles.indexLink}>
+                <Link
+                  href={`/nosotros#${anchor}`}
+                  className={styles.indexLink}
+                  onClick={(event) => handleSelect(event, anchor)}
+                >
                   <span className={styles.itemLabel}>{code}</span>
                   {title && <span className={styles.itemDesc}>{title}</span>}
                 </Link>
+                {selected === anchor && (
+                  <Image
+                    src="/bate.png"
+                    alt=""
+                    width={866}
+                    height={288}
+                    className={styles.indexBate}
+                  />
+                )}
               </li>
             ))}
           </ul>
