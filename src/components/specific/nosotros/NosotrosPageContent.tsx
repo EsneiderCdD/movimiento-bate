@@ -118,6 +118,13 @@ export default function NosotrosPageContent() {
       <div className={`${styles.sectionWrap} ${styles.onRight}`}>
         <Franja />
         <section className={styles.section}>
+          <Image
+            src="/mov_rep.jpg"
+            alt="Bate"
+            width={1238}
+            height={848}
+            className={styles.bateImage}
+          />
           <p className={styles.sectionSubtitle}>El bate</p>
           <div className={styles.grid}>
             <div className={styles.gridCol}>
@@ -157,13 +164,6 @@ export default function NosotrosPageContent() {
               </p>
             </div>
           </div>
-          <Image
-            src="/mov_rep.jpg"
-            alt="Bate"
-            width={1238}
-            height={848}
-            className={styles.bateImage}
-          />
           <div className={styles.accentBlock}>
             <p className={styles.text}>
               Sobre ese bate escribimos una sola palabra:{" "}

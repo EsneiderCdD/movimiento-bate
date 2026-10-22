@@ -328,6 +328,13 @@
     padding: 24px 0 6px 0;
   }
 
+  .bateImage {
+    width: calc(100% + 48px);
+    max-width: none;
+    margin: -32px -24px 0;
+    border-bottom: 4px solid var(--rojo);
+  }
+
   .accentBlockBg {
     width: auto;
     max-width: none;
