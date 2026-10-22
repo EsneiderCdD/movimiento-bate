@@ -82,11 +82,11 @@
 }
 @media (max-width: 400px) {
   .logoCd {
-    height: 1.33rem;
+    height: 1.75rem;
   }
 
   .logoImage {
-    height: 1.5rem;
+    height: 1.75rem;
   }
 
   .links {
