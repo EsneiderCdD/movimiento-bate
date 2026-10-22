@@ -175,9 +175,8 @@
 .outline {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 28px;
-  padding: 40px 44px;
 }
 
 .label {
@@ -186,7 +185,7 @@
   justify-content: center;
   gap: 12px;
   width: 100%;
-  padding-bottom: 16px;
+  padding: 44px 40px 36px;
 }
 
 .line {
@@ -207,7 +206,7 @@
 .index {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 40px 44px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -312,6 +311,14 @@
   .itemDesc {
     font-size: 16px;
   }
+
+  .label {
+    padding: 40px 32px 32px;
+  }
+
+  .index {
+    padding: 0 32px 40px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -357,6 +364,14 @@
 
   .itemDesc {
     font-size: 14px;
+  }
+
+  .label {
+    padding: 36px 24px 28px;
+  }
+
+  .index {
+    padding: 0 24px 36px;
   }
 }
 
@@ -415,7 +430,7 @@
   }
 
   .label {
-    width: min(300px, 100%);
+    padding: 32px 24px 28px;
   }
 
   .index {
@@ -481,10 +496,6 @@
       font-size: 11px;
     }
 
-    .label {
-      width: min(225px, 100%);
-    }
-
     .index {
       width: min(225px, 100%);
     }
@@ -530,10 +541,6 @@
   .index {
     width: min(200px, 100%);
     padding-right: 12px;
-  }
-
-  .label {
-    width: min(200px, 100%);
   }
 
   .indexItem {
