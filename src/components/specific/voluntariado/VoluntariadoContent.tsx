@@ -21,11 +21,6 @@ const OPTIONS: CardItem[] = [
     desc: "Esta red es para ti si…",
   },
   {
-    id: "La ruta",
-    label: "La ruta",
-    desc: "2027–2031 empieza antes",
-  },
-  {
     id: "Inscripciones",
     label: "Inscripciones",
     desc: "Únete a RED BATE",
@@ -90,34 +85,6 @@ const AUDIENCE = [
       "Tienes una causa, pero todavía no tienes un equipo.",
       "Quieres aprender a comunicar tus ideas.",
     ],
-  },
-];
-
-const STEPS = [
-  {
-    n: "01",
-    title: "Una causa",
-    body: "El punto de partida no es una candidatura, es una causa: algo que te duele, te enciende o que simplemente le pertenece a tu municipio.",
-  },
-  {
-    n: "02",
-    title: "Formación",
-    body: "Aquí aprendes a liderar, comunicar, organizar y conocer tu territorio.",
-  },
-  {
-    n: "03",
-    title: "Equipo",
-    body: "Dejas de trabajar solo. Armas el equipo de tu barrio con gente que también tenga una causa.",
-  },
-  {
-    n: "04",
-    title: "Territorio",
-    body: "Trabajas en campo: hablas con la gente, escuchas sus problemas y los conviertes en propuestas.",
-  },
-  {
-    n: "05",
-    title: "Candidatura",
-    body: "Si ese día llega, llegas preparado: con equipo, con propuesta y con una comunidad que ya te conoce.",
   },
 ];
 
@@ -224,57 +191,10 @@ export default function VoluntariadoContent() {
                 </div>
                 <div className={styles.accentBlock}>
                   <p className={styles.closingText}>
-                    <strong>
-                      No necesitas una gran maquinaria para comenzar.
-                    </strong>{" "}
-                    Necesitas una causa, disciplina, comunidad y ganas de
-                    aprender.
-                  </p>
-                  <p className={styles.closingText}>
                     No importa tu edad, tu experiencia política ni tu
                     profesión. Lo que importa es que tengas ganas de servir y
                     la disposición a aprender. Nosotros ponemos la escuela, tú
                     pones el compromiso.
-                  </p>
-                </div>
-              </section>
-            </div>
-          </>
-        )}
-
-        {selected === "La ruta" && (
-          <>
-            <div className={styles.chapterHeader}>
-              <SectionHeader title="¿Y si el próximo líder de tu municipio eres tú?" />
-            </div>
-            <div className={`${styles.sectionWrap} ${styles.onLeft}`}>
-              <Franja />
-              <section className={styles.section}>
-                <p className={styles.sectionSubtitle}>
-                  La ruta para llegar hasta ahí
-                </p>
-                <p className={styles.lead}>
-                  Hay personas que tienen ideas. Hay personas que tienen
-                  liderazgo. Hay personas que aman su territorio. Lo que falta
-                  es el cauce: por dónde empezar.
-                </p>
-                <ol className={styles.steps}>
-                  {STEPS.map((step) => (
-                    <li key={step.n} className={styles.step}>
-                      <span className={styles.stepNumber}>{step.n}</span>
-                      <div className={styles.stepBody}>
-                        <h3 className={styles.blockTitle}>{step.title}</h3>
-                        <p className={styles.text}>{step.body}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ol>
-                <div className={styles.accentBlock}>
-                  <p className={styles.closingText}>
-                    <strong>
-                      2027–2031 comienza mucho antes de una elección.
-                    </strong>{" "}
-                    Comienza formando a los líderes.
                   </p>
                 </div>
               </section>

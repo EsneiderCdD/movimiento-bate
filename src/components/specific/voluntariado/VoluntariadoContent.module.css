@@ -580,45 +580,6 @@
   margin-top: 12px;
 }
 
-.steps {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-}
-
-.step {
-  display: flex;
-  gap: 24px;
-  padding: 24px 0;
-  border-bottom: 1px solid rgba(21, 19, 15, 0.15);
-}
-
-.step:first-child {
-  padding-top: 0;
-}
-
-.step:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.stepNumber {
-  flex: 0 0 auto;
-  min-width: 58px;
-  font-family: var(--font-anton);
-  font-size: 40px;
-  line-height: 1;
-  color: var(--rojo);
-}
-
-.stepBody {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
 .checkboxField {
   display: flex;
   align-items: flex-start;
@@ -697,16 +658,6 @@
 
   .checkList li {
     font-size: 17px;
-  }
-
-  .step {
-    gap: 16px;
-    padding: 20px 0;
-  }
-
-  .stepNumber {
-    min-width: 44px;
-    font-size: 32px;
   }
 
   .closingText {
