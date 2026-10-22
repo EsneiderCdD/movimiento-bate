@@ -318,21 +318,6 @@ export default function VoluntariadoContent() {
                   </button>
                 </form>
                 </div>
-
-                <div className={styles.contactBlock}>
-                  <p className={styles.contactTitle}>
-                    ¿Prefieres hablar directo?
-                  </p>
-                  <p className={styles.text}>
-                    Escríbenos a{" "}
-                    <a href="mailto:redbate@movimientodelbate.com">
-                      redbate@movimientodelbate.com
-                    </a>{" "}
-                    o por WhatsApp al{" "}
-                    <a href="https://wa.me/573000000000">300 000 0000</a>.
-                    Contamos contigo.
-                  </p>
-                </div>
               </section>
             </div>
           </>
