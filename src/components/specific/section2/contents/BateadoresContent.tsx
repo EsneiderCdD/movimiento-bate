@@ -21,7 +21,6 @@ export default function BateadoresContent() {
 
       <div className={styles.right}>
         <div className={styles.main}>
-          <div className={styles.spacer} aria-hidden="true" />
           <div className={styles.bentoGrid} aria-hidden="true">
             <div className={styles.bentoItem}>
               <Image
@@ -30,39 +29,6 @@ export default function BateadoresContent() {
                 fill
                 className={styles.bentoImage}
               />
-            </div>
-          </div>
-
-          <div className={styles.content}>
-            <span className={styles.tag}>LOS BATEADORES</span>
-            <h1 className={styles.title}>
-              ESCUELA
-              <br />
-              <span className={styles.titleLine}>
-                DE LÍDERES
-                <Image
-                  src="/flecha.png"
-                  alt=""
-                  width={386}
-                  height={646}
-                  className={styles.arrow}
-                />
-              </span>
-            </h1>
-            <div className={styles.bottomRow}>
-              <Image
-                src="/logo.png"
-                alt="Movimiento del Bate"
-                width={1280}
-                height={1280}
-                className={styles.logo}
-              />
-              <blockquote className={styles.quote}>
-                El que no cuida lo suyo,
-                <br />
-                no merece tenerlo.
-                <span className={styles.author}>(Sabiduría arriera)</span>
-              </blockquote>
             </div>
           </div>
         </div>

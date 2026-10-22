@@ -255,6 +255,10 @@
   .author {
     font-size: 18px;
   }
+
+  .outlineText {
+    font-size: 19px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -292,6 +296,10 @@
 
   .author {
     font-size: 16px;
+  }
+
+  .outlineText {
+    font-size: 18px;
   }
 }
 
@@ -337,6 +345,10 @@
     font-size: 16px;
   }
 
+  .outlineText {
+    font-size: 18px;
+  }
+
   @media (max-width: 500px) {
     .sidebar {
       flex-basis: 40px;
@@ -378,6 +390,10 @@
     .author {
       font-size: 16px;
     }
+
+    .outlineText {
+      font-size: 17px;
+    }
   }
 
 }
@@ -415,5 +431,9 @@
   .bottomRow {
     gap: 6px;
     margin-left: -12px;
+  }
+
+  .outlineText {
+    font-size: 16px;
   }
 }
