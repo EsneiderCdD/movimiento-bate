@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import styles from "./HeroCarousel.module.css";
 
@@ -15,25 +15,31 @@ const SLIDES = [
 
 export default function HeroCarousel() {
   return (
-    <Swiper
-      modules={[Autoplay]}
-      autoplay={{ delay: 5000, disableOnInteraction: false }}
-      loop
-      className={styles.swiper}
-    >
-      {SLIDES.map((src) => (
-        <SwiperSlide key={src} className={styles.slide}>
-          <div className={styles.frame}>
-            <Image
-              src={src}
-              alt=""
-              fill
-              sizes="100vw"
-              className={styles.image}
-            />
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div className={styles.wrap}>
+      <div className={styles.stage}>
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          pagination={{ el: `.${styles.pagination}`, clickable: true }}
+          loop
+          className={styles.swiper}
+        >
+          {SLIDES.map((src) => (
+            <SwiperSlide key={src} className={styles.slide}>
+              <div className={styles.frame}>
+                <Image
+                  src={src}
+                  alt=""
+                  fill
+                  sizes="100vw"
+                  className={styles.image}
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className={styles.pagination} />
+    </div>
   );
 }

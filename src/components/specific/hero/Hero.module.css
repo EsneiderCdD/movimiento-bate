@@ -58,8 +58,7 @@
 }
 
 .backgroundCarousel {
-  position: absolute;
-  inset: 0;
+  position: relative;
   z-index: 0;
 }
 
@@ -357,11 +356,12 @@
     inset: auto;
     width: 100%;
     max-width: 454px;
-    aspect-ratio: 4 / 5;
     margin-inline: auto;
     transform: none;
     border-radius: 0;
     z-index: 0;
+    overflow: visible;
+    background: transparent;
   }
 
 @media (max-width: 600px) {
