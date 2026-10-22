@@ -28,9 +28,9 @@
 
 .links {
   display: flex;
-  gap: 2.29em;
+  gap: 2.5em;
   list-style: none;
-  font-size: 14px;
+  font-size: 24px;
 }
 
 .link {
@@ -61,7 +61,8 @@
 
 @media (max-width: 600px) {
   .links {
-    gap: 1em;
+    gap: 2em;
+    font-size: 18px;
   }
 }
 
@@ -75,7 +76,8 @@
   }
 
   .links {
-    font-size: 11px;
+    font-size: 14px;
+    gap: 1.5em;
   }
 }
 @media (max-width: 400px) {
@@ -88,8 +90,7 @@
   }
 
   .links {
-    font-size: 11px;
-    gap: 0.5rem;
-    
+    font-size: 12px;
+    gap: 1em;
   }
 }
