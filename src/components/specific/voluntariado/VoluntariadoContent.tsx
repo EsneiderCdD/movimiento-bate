@@ -232,9 +232,7 @@ export default function VoluntariadoContent() {
                 <p className={styles.text}>
                   Déjanos tus datos y cuéntanos sobre ti. Cuál es tu municipio,
                   qué aspiración tienes y por qué quieres ser parte de Los
-                  Bateadores. Un asesor de la RED te contacta para explicarte
-                  la ruta y acompañarte en el proceso.{" "}
-                  <strong>No necesitas una gran maquinaria para comenzar.</strong>
+                  Bateadores. Nos pondremos en contacto contigo.
                 </p>
 
                 <div className={styles.formBackdrop}>
