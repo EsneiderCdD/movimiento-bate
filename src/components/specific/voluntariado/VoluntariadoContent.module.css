@@ -222,86 +222,6 @@
   border-radius: 0;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: 100%;
-  max-width: 520px;
-  margin-inline: auto;
-  padding: 18px;
-  background: rgba(255, 255, 255, 0.8);
-  border: 2px solid var(--navy-oscuro);
-  border-radius: 20px;
-  box-shadow: 4px 5px 0 1px var(--amarillo);
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.label {
-  font-family: var(--font-oswald);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--navy-oscuro);
-}
-
-.input,
-.select,
-.textarea {
-  width: 100%;
-  padding: 12px 14px;
-  background: var(--blanco);
-  border: 2px solid var(--navy-oscuro);
-  border-radius: 6px;
-  box-shadow: 3px 4px 0 0 var(--amarillo);
-  color: var(--marron-negro);
-  font-family: var(--font-barlow);
-  font-size: 15px;
-  outline: none;
-}
-
-.select {
-  cursor: pointer;
-}
-
-.input::placeholder,
-.textarea::placeholder {
-  color: #a09884;
-}
-
-.input:focus,
-.select:focus,
-.textarea:focus {
-  border-color: var(--rojo);
-}
-
-.textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.button {
-  align-self: stretch;
-  padding: 14px 32px;
-  background: var(--rojo);
-  color: var(--blanco);
-  border: 2px solid var(--navy-oscuro);
-  border-radius: 10px;
-  box-shadow: 3px 4px 0 0 var(--amarillo);
-  font-family: var(--font-oswald);
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
 @media (max-width: 1000px) {
   .franja {
     width: 140px;
@@ -393,13 +313,6 @@
 
   .section {
     padding: 32px 24px;
-  }
-
-  .form {
-    width: auto;
-    margin-inline: -12px;
-    gap: 18px;
-    padding: 12px;
   }
 
   .grid {
@@ -614,25 +527,6 @@
 
 .closingText + .closingText {
   margin-top: 12px;
-}
-
-.checkboxField {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-family: var(--font-barlow);
-  font-size: 14px;
-  line-height: 1.45;
-  color: #4a463e;
-  cursor: pointer;
-}
-
-.checkbox {
-  flex: 0 0 auto;
-  margin-top: 2px;
-  width: 18px;
-  height: 18px;
-  accent-color: var(--rojo);
 }
 
 @media (max-width: 1000px) {

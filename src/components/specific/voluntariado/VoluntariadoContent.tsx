@@ -6,6 +6,7 @@ import Hero from "@/components/specific/hero/Hero";
 import HeroCarousel from "@/components/specific/hero/carousel/HeroCarousel";
 import SectionHeader from "@/components/reusables/sectionHeader/SectionHeader";
 import type { CardItem } from "@/components/specific/hero/cards/Cards";
+import InscripcionForm from "./InscripcionForm";
 import styles from "./VoluntariadoContent.module.css";
 
 const DOTS = Array.from({ length: 9 });
@@ -87,17 +88,6 @@ const AUDIENCE = [
       "Quieres aprender a comunicar tus ideas.",
     ],
   },
-];
-
-const ROLES = [
-  "Quiero ser líder de mi barrio/comuna",
-  "Quiero ser edil",
-  "Quiero ser concejal",
-  "Me interesa una alcaldía",
-  "Quiero trabajar en comunicaciones",
-  "Quiero organizar territorio",
-  "Quiero aprender de política",
-  "Quiero apoyar a otros líderes",
 ];
 
 function Franja() {
@@ -236,87 +226,7 @@ export default function VoluntariadoContent() {
                 </p>
 
                 <div className={styles.formBackdrop}>
-                  <form className={styles.form}>
-                  <div className={styles.field}>
-                    <label className={styles.label} htmlFor="nombre">
-                      Nombre completo
-                    </label>
-                    <input
-                      className={styles.input}
-                      type="text"
-                      id="nombre"
-                      placeholder="Tu nombre"
-                    />
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label} htmlFor="municipio">
-                      Municipio
-                    </label>
-                    <input
-                      className={styles.input}
-                      type="text"
-                      id="municipio"
-                      placeholder="Tu municipio"
-                    />
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label} htmlFor="email">
-                      Email
-                    </label>
-                    <input
-                      className={styles.input}
-                      type="email"
-                      id="email"
-                      placeholder="tu@email.com"
-                    />
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label} htmlFor="telefono">
-                      Teléfono / WhatsApp
-                    </label>
-                    <input
-                      className={styles.input}
-                      type="tel"
-                      id="telefono"
-                      placeholder="300 000 0000"
-                    />
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label} htmlFor="cargo">
-                      ¿Qué quieres hacer?
-                    </label>
-                    <select className={styles.select} id="cargo" defaultValue="">
-                      <option value="" disabled>
-                        Selecciona una opción
-                      </option>
-                      {ROLES.map((role) => (
-                        <option key={role} value={role}>
-                          {role}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className={styles.field}>
-                    <label className={styles.label} htmlFor="mensaje">
-                      Cuéntanos sobre ti
-                    </label>
-                    <textarea
-                      className={styles.textarea}
-                      id="mensaje"
-                      placeholder="¿Por qué quieres ser parte de Los Bateadores?"
-                    />
-                  </div>
-                  <label className={styles.checkboxField}>
-                    <input type="checkbox" className={styles.checkbox} />
-                    <span>
-                      Acepto que la RED me contacte y trate mis datos para el
-                      proceso de inscripción.
-                    </span>
-                  </label>
-                  <button className={styles.button} type="button">
-                    Únete a RED BATE
-                  </button>
-                </form>
+                  <InscripcionForm />
                 </div>
               </section>
             </div>
