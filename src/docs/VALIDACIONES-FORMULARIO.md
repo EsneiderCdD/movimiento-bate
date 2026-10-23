@@ -10,7 +10,7 @@ El formulario es un wizard de 4 pasos (Perfil, Talento, Formación, Participaci�
 
 - El `<form>` usa `noValidate` para evitar las burbujas nativas del navegador.
 - Al pulsar "Continuar" se valida el paso actual con validación propia (`validarPaso1`…`validarPaso4`) y mensajes inline. Ya no se usa `reportValidity`.
-- Al pulsar "Enviar" se ejecuta `validarPaso4()` y se previene el envío (todavía no hay backend).
+- Al pulsar "Enviar" se ejecuta `validarPaso4()` y, si todo está bien, se envía a `POST /api/inscripciones` (ver "Envío y almacenamiento").
 - Los errores se guardan en un objeto `errors` (`Record<string, string>`) y se muestran bajo el campo en rojo (`.error`), con borde rojo (`.inputError`), `aria-invalid` y `aria-describedby`.
 - Si hay errores, se hace foco y `scrollIntoView` al primero (en el orden de las reglas).
 - Al cambiar un campo se limpia su error; al salir del campo (`onBlur`) se normaliza el valor y se valida ese campo (sin marcar error si está vacío).
@@ -202,11 +202,11 @@ Todas las funciones viven en `validation.ts` y son reutilizables.
 
 ## Serialización / datos guardados
 
-No hay serialización todavía (no hay envío). El estado actual del formulario es:
+El formulario envía el estado completo a `POST /api/inscripciones`:
 
-| Campo | Se guarda | Al enviar (futuro) |
+| Campo | Se guarda en el cliente | Se envía al servidor |
 |---|---|---|
-| `nombre` | Texto normalizado (`trim` + espacios simples). | Tal cual. |
+| `nombre` | Texto normalizado (`trim` + espacios simples). | Normalizado otra vez en el servidor. |
 | `rangoEdad` | Etiqueta de la opción (`"25-34 años"`). | Tal cual. |
 | `celular` | Texto visible formateado (`+57 333 333 3333`). | `normalizarCelular()` → solo dígitos nacionales. |
 | `correo` | Minúsculas y sin espacios. | Tal cual. |
@@ -230,10 +230,21 @@ No hay serialización todavía (no hay envío). El estado actual del formulario 
 | `enteraste` | Etiqueta de la opción. | Tal cual. |
 | `autorizacion` | Booleano. | Tal cual. |
 
+## Envío y almacenamiento
+
+- **Endpoint:** `POST /api/inscripciones` (`src/app/api/inscripciones/route.ts`, runtime Node.js).
+- **Validación de servidor:** reutiliza `validation.ts` y repite las reglas obligatorias del cliente. Responde:
+  - `201 { ok: true, id }` cuando guarda.
+  - `400 { ok: false, error }` si los datos no son válidos.
+  - `500 { ok: false, error }` si falla la escritura.
+- **Dónde guarda:** `data/inscripciones.ndjson` en la raíz del proyecto (una línea JSON por registro). Se crea automáticamente. Cada registro agrega `id` (UUID), `enviadoEn` (ISO) y `origen: "voluntariado"`, además de los campos del formulario.
+- **Privacidad:** el archivo contiene datos personales; la carpeta `/data/` está en `.gitignore`.
+- **Limitación:** es un almacenamiento local de emulación. En un hosting serverless el sistema de archivos no persiste; para producción habrá que conectar una base de datos o API real.
+- **UX:** mientras se envía, el botón queda deshabilitado con el texto "Enviando…". Si responde bien, aparece el modal de éxito y al cerrarlo el formulario se reinicia. Si falla, aparece el modal de error con "Reintentar" (conserva las respuestas) y "Volver".
+- **Modales:** `src/components/specific/voluntariado/EnvioModal.tsx` (+ `.module.css`), con estética navy, borde rojo/amarillo y animación con `motion`.
+
 ## Pendientes
 
-- Envío real al backend (hoy "Enviar" solo valida y previene el envío).
+- Conectar un backend o base de datos real (hoy se escribe en un archivo local).
 - Persistencia de respuestas (localStorage) para no perderlas al recargar.
 - Enlace real a la política de tratamiento de datos (hoy `href="#"`).
-- Envío real, persistencia (localStorage) y mensaje de confirmación.
-- Política de tratamiento de datos: el enlace de autorización aún apunta a `#`.

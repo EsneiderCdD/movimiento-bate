@@ -8,9 +8,12 @@ import {
   type KeyboardEvent,
   type ReactNode,
 } from "react";
+import { AnimatePresence } from "motion/react";
+import EnvioModal from "./EnvioModal";
 import styles from "./InscripcionForm.module.css";
 import {
   formatearCelular,
+  normalizarCelular,
   normalizarParrafo,
   normalizarPerfil,
   normalizarTexto,
@@ -614,6 +617,9 @@ export default function InscripcionForm() {
   const [step, setStep] = useState(0);
   const [data, setData] = useState<Data>(INITIAL);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [estadoEnvio, setEstadoEnvio] = useState<
+    "idle" | "enviando" | "exito" | "error"
+  >("idle");
   const formRef = useRef<HTMLFormElement>(null);
 
   const set = <K extends keyof Data>(key: K, value: Data[K]) =>
@@ -893,13 +899,51 @@ export default function InscripcionForm() {
 
   const prev = () => setStep((current) => Math.max(current - 1, 0));
 
+  const enviar = async () => {
+    if (!validarPaso4()) return;
+    setEstadoEnvio("enviando");
+
+    try {
+      const response = await fetch("/api/inscripciones", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...data,
+          nombre: normalizarTexto(data.nombre),
+          celular: normalizarCelular(data.celular),
+          correo: data.correo.trim().toLowerCase(),
+          municipio: normalizarTexto(data.municipio),
+          barrioVive: normalizarTexto(data.barrioVive),
+          barrioActua: normalizarTexto(data.barrioActua),
+          experiencia: normalizarParrafo(data.experiencia),
+          aporte: normalizarParrafo(data.aporte),
+          idea: normalizarParrafo(data.idea),
+          perfilSocial: normalizarPerfil(data.perfilSocial),
+        }),
+      });
+
+      if (!response.ok) throw new Error("Envío fallido");
+      setEstadoEnvio("exito");
+    } catch {
+      setEstadoEnvio("error");
+    }
+  };
+
+  const cerrarExito = () => {
+    setEstadoEnvio("idle");
+    setData(INITIAL);
+    setErrors({});
+    setStep(0);
+  };
+
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (step !== 3) return;
-    validarPaso4();
+    void enviar();
   };
 
   return (
+    <>
     <form
       ref={formRef}
       className={styles.form}
@@ -1422,11 +1466,33 @@ export default function InscripcionForm() {
             Continuar
           </button>
         ) : (
-          <button type="submit" className={styles.button}>
-            Enviar
+          <button
+            type="submit"
+            className={styles.button}
+            disabled={estadoEnvio === "enviando"}
+          >
+            {estadoEnvio === "enviando" ? "Enviando…" : "Enviar"}
           </button>
         )}
       </div>
     </form>
+    <AnimatePresence>
+      {estadoEnvio === "exito" && (
+        <EnvioModal
+          key="exito"
+          variant="exito"
+          onClose={cerrarExito}
+        />
+      )}
+      {estadoEnvio === "error" && (
+        <EnvioModal
+          key="error"
+          variant="error"
+          onClose={() => setEstadoEnvio("idle")}
+          onRetry={enviar}
+        />
+      )}
+    </AnimatePresence>
+    </>
   );
 }

@@ -287,6 +287,12 @@
   box-shadow: 3px 4px 0 0 var(--amarillo);
 }
 
+.button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
 .ghostButton {
   background: transparent;
   color: var(--navy-oscuro);
