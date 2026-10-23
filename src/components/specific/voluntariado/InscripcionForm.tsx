@@ -5,6 +5,7 @@ import {
   useState,
   type FormEvent,
   type InputHTMLAttributes,
+  type KeyboardEvent,
   type ReactNode,
 } from "react";
 import styles from "./InscripcionForm.module.css";
@@ -17,7 +18,180 @@ const RANGOS = [
   "55 años o más",
 ];
 
-const MUNICIPIOS = ["Medellín", "Bello", "Envigado"];
+const MUNICIPIOS = [
+  {
+    region: "Bajo Cauca",
+    municipios: [
+      "Cáceres",
+      "Caucasia",
+      "El Bagre",
+      "Nechí",
+      "Tarazá",
+      "Zaragoza",
+    ],
+  },
+  {
+    region: "Magdalena Medio",
+    municipios: [
+      "Caracolí",
+      "Maceo",
+      "Puerto Berrío",
+      "Puerto Nare",
+      "Puerto Triunfo",
+      "Yondó",
+    ],
+  },
+  {
+    region: "Nordeste",
+    municipios: [
+      "Amalfi",
+      "Anorí",
+      "Cisneros",
+      "Remedios",
+      "San Roque",
+      "Santo Domingo",
+      "Segovia",
+      "Vegachí",
+      "Yalí",
+      "Yolombó",
+    ],
+  },
+  {
+    region: "Norte",
+    municipios: [
+      "Angostura",
+      "Belmira",
+      "Briceño",
+      "Campamento",
+      "Carolina del Príncipe",
+      "Donmatías",
+      "Entrerríos",
+      "Gómez Plata",
+      "Guadalupe",
+      "Ituango",
+      "San Andrés de Cuerquia",
+      "San José de la Montaña",
+      "San Pedro de los Milagros",
+      "Santa Rosa de Osos",
+      "Toledo",
+      "Valdivia",
+      "Yarumal",
+    ],
+  },
+  {
+    region: "Occidente",
+    municipios: [
+      "Abriaquí",
+      "Anzá",
+      "Armenia",
+      "Buriticá",
+      "Caicedo",
+      "Cañasgordas",
+      "Dabeiba",
+      "Ebéjico",
+      "Frontino",
+      "Giraldo",
+      "Heliconia",
+      "Liborina",
+      "Olaya",
+      "Peque",
+      "Sabanalarga",
+      "San Jerónimo",
+      "Santa Fe de Antioquia",
+      "Sopetrán",
+      "Uramita",
+    ],
+  },
+  {
+    region: "Oriente",
+    municipios: [
+      "Abejorral",
+      "Alejandría",
+      "Argelia",
+      "Cocorná",
+      "Concepción",
+      "El Carmen de Viboral",
+      "El Peñol",
+      "El Retiro",
+      "El Santuario",
+      "Granada",
+      "Guarne",
+      "Guatapé",
+      "La Ceja del Tambo",
+      "La Unión",
+      "Marinilla",
+      "Nariño",
+      "Rionegro",
+      "San Carlos",
+      "San Francisco",
+      "San Luis",
+      "San Rafael",
+      "San Vicente Ferrer",
+      "Sonsón",
+    ],
+  },
+  {
+    region: "Suroeste",
+    municipios: [
+      "Amagá",
+      "Andes",
+      "Angelópolis",
+      "Betania",
+      "Betulia",
+      "Caramanta",
+      "Ciudad Bolívar",
+      "Concordia",
+      "Fredonia",
+      "Hispania",
+      "Jardín",
+      "Jericó",
+      "La Pintada",
+      "Montebello",
+      "Pueblorrico",
+      "Salgar",
+      "Santa Bárbara",
+      "Támesis",
+      "Tarso",
+      "Titiribí",
+      "Urrao",
+      "Valparaíso",
+      "Venecia",
+    ],
+  },
+  {
+    region: "Urabá",
+    municipios: [
+      "Apartadó",
+      "Arboletes",
+      "Carepa",
+      "Chigorodó",
+      "Murindó",
+      "Mutatá",
+      "Necoclí",
+      "San Juan de Urabá",
+      "San Pedro de Urabá",
+      "Turbo",
+      "Vigía del Fuerte",
+    ],
+  },
+  {
+    region: "Valle de Aburrá",
+    municipios: [
+      "Barbosa",
+      "Bello",
+      "Caldas",
+      "Copacabana",
+      "Envigado",
+      "Girardota",
+      "Itagüí",
+      "La Estrella",
+      "Medellín",
+      "Sabaneta",
+    ],
+  },
+].flatMap((group) =>
+  group.municipios.map((nombre) => ({ nombre, region: group.region })),
+).sort((a, b) => a.nombre.localeCompare(b.nombre, "es"));
 
 const HABILIDADES = [
   "Liderazgo comunitario",
@@ -180,6 +354,122 @@ function TextField({
         {optional && <span className={styles.optional}> (opcional)</span>}
       </label>
       <input id={id} className={styles.input} {...props} />
+    </div>
+  );
+}
+
+const normalize = (value: string) =>
+  value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+
+function MunicipioField({
+  value,
+  onChange,
+}: {
+  value: string;
+  onChange: (value: string) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState(-1);
+
+  const query = normalize(value);
+  const results = query
+    ? MUNICIPIOS.filter((item) => normalize(item.nombre).includes(query))
+    : MUNICIPIOS;
+
+  const choose = (nombre: string) => {
+    onChange(nombre);
+    setOpen(false);
+    setActive(-1);
+  };
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      setOpen(true);
+      setActive((current) => Math.min(current + 1, results.length - 1));
+    } else if (event.key === "ArrowUp") {
+      event.preventDefault();
+      setActive((current) => Math.max(current - 1, 0));
+    } else if (event.key === "Enter") {
+      if (open && active >= 0 && results[active]) {
+        event.preventDefault();
+        choose(results[active].nombre);
+      }
+    } else if (event.key === "Escape") {
+      setOpen(false);
+      setActive(-1);
+    }
+  };
+
+  return (
+    <div className={styles.field}>
+      <label className={styles.label} htmlFor="municipio">
+        ¿En qué municipio vives?
+      </label>
+      <div className={styles.combo}>
+        <input
+          id="municipio"
+          className={styles.input}
+          type="text"
+          role="combobox"
+          aria-expanded={open}
+          aria-controls="municipios-lista"
+          aria-autocomplete="list"
+          autoComplete="off"
+          spellCheck={false}
+          placeholder="Escribe para buscar tu municipio"
+          value={value}
+          onChange={(event) => {
+            onChange(event.target.value);
+            setOpen(true);
+            setActive(-1);
+          }}
+          onFocus={() => setOpen(true)}
+          onBlur={() => {
+            setOpen(false);
+            setActive(-1);
+          }}
+          onKeyDown={handleKeyDown}
+          required
+        />
+        {open && (
+          <ul
+            id="municipios-lista"
+            className={styles.comboList}
+            role="listbox"
+            aria-label="Municipios de Antioquia"
+          >
+            {results.length === 0 && (
+              <li className={styles.comboEmpty}>Sin resultados</li>
+            )}
+            {results.map((item, index) => (
+              <li key={item.nombre}>
+                <button
+                  type="button"
+                  role="option"
+                  aria-selected={index === active}
+                  className={`${styles.comboOption} ${
+                    index === active ? styles.comboOptionActive : ""
+                  }`}
+                  onMouseDown={(event) => {
+                    event.preventDefault();
+                    choose(item.nombre);
+                  }}
+                >
+                  <span>{item.nombre}</span>
+                  <span className={styles.comboRegion}>{item.region}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+      <span className={styles.hint}>
+        Busca entre los 125 municipios de Antioquia.
+      </span>
     </div>
   );
 }
@@ -379,28 +669,10 @@ export default function InscripcionForm() {
               onChange={(event) => set("correo", event.target.value)}
               required
             />
-            <div className={styles.field}>
-              <label className={styles.label} htmlFor="municipio">
-                ¿En qué municipio vives?
-              </label>
-              <select
-                id="municipio"
-                className={styles.select}
-                value={data.municipio}
-                onChange={(event) => set("municipio", event.target.value)}
-                required
-              >
-                <option value="" disabled>
-                  Selecciona tu municipio
-                </option>
-                {MUNICIPIOS.map((municipio) => (
-                  <option key={municipio} value={municipio}>
-                    {municipio}
-                  </option>
-                ))}
-                <option disabled>Consultar y completar</option>
-              </select>
-            </div>
+            <MunicipioField
+              value={data.municipio}
+              onChange={(value) => set("municipio", value)}
+            />
             <TextField
               id="barrioVive"
               label="¿En qué barrio o vereda vives?"

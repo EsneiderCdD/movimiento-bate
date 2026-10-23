@@ -134,6 +134,63 @@
   resize: vertical;
 }
 
+.combo {
+  position: relative;
+}
+
+.comboList {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  left: 0;
+  z-index: 20;
+  max-height: 220px;
+  margin: 0;
+  padding: 4px;
+  overflow-y: auto;
+  list-style: none;
+  background: var(--blanco);
+  border: 2px solid var(--navy-oscuro);
+  border-radius: 6px;
+  box-shadow: 3px 4px 0 0 var(--amarillo);
+}
+
+.comboOption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 7px 10px;
+  border: 0;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--marron-negro);
+  font-family: var(--font-barlow);
+  font-size: 15px;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+}
+
+.comboOptionActive,
+.comboOption:hover {
+  background: rgba(225, 29, 42, 0.1);
+}
+
+.comboRegion {
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #7a746a;
+}
+
+.comboEmpty {
+  padding: 8px 10px;
+  font-family: var(--font-barlow);
+  font-size: 14px;
+  color: #7a746a;
+}
+
 .group {
   display: flex;
   flex-direction: column;
