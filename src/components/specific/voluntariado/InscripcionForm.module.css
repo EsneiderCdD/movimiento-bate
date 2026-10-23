@@ -13,20 +13,22 @@
 
 .steps {
   display: flex;
-  gap: 8px;
+  justify-content: center;
+  gap: 10px;
 }
 
 .stepDot {
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
+  width: 34px;
+  height: 34px;
   border: 2px solid rgba(21, 19, 15, 0.2);
   border-radius: 50%;
   font-family: var(--font-oswald);
   font-weight: 600;
-  font-size: 12px;
+  font-size: 15px;
   color: #7a746a;
 }
 
@@ -44,13 +46,15 @@
 .stepHeader {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 4px;
+  text-align: center;
 }
 
 .stepMeta {
   font-family: var(--font-oswald);
   font-weight: 600;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #7a746a;
@@ -228,6 +232,12 @@
 
   .stepTitle {
     font-size: 24px;
+  }
+
+  .stepDot {
+    width: 40px;
+    height: 40px;
+    font-size: 17px;
   }
 
   .stepBody {
