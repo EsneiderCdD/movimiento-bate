@@ -125,6 +125,18 @@
   border-color: var(--rojo);
 }
 
+.inputError,
+.inputError:focus {
+  border-color: var(--rojo);
+}
+
+.error {
+  font-family: var(--font-barlow);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--rojo);
+}
+
 .select {
   cursor: pointer;
 }
@@ -230,6 +242,24 @@
 .extra {
   margin-left: 28px;
   width: calc(100% - 28px);
+}
+
+.extraField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.extraField .error {
+  margin-left: 28px;
+}
+
+.counter {
+  align-self: flex-end;
+  font-family: var(--font-barlow);
+  font-size: 12px;
+  line-height: 1.4;
+  color: #7a746a;
 }
 
 .nav {
