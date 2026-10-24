@@ -14,7 +14,7 @@
 .steps {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 16px;
 }
 
 .stepDot {
