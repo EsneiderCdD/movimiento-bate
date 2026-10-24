@@ -60,9 +60,14 @@ export default function TiendaPageContent() {
                   <p className={styles.desc}>{product.desc}</p>
                   <div className={styles.footer}>
                     <span className={styles.price}>{product.price}</span>
-                    <button className="ctaBtn" type="button">
-                      Agregar
-                    </button>
+                    <a
+                      className="ctaBtn"
+                      href="https://wa.me/573053115505"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Comprar
+                    </a>
                   </div>
                 </div>
               </div>
