@@ -83,9 +83,9 @@ export default function NosotrosContent() {
                 className={styles.logo}
               />
               <blockquote className={styles.quote}>
-                "El que no cuida lo suyo,
+                &ldquo;El que no cuida lo suyo,
                 <br />
-                no merece tenerlo."
+                no merece tenerlo.&rdquo;
                 <span className={styles.author}>(Sabiduría arriera)</span>
               </blockquote>
             </div>
