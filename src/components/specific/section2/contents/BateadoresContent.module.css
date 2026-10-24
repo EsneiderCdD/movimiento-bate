@@ -195,13 +195,13 @@
 .outlineTitle {
   margin: 0;
   width: min(960px, 100%);
-  font-family: var(--font-shadows), cursive;
-  font-weight: 400;
+  font-family: var(--font-oswald);
+  font-weight: 700;
   font-size: 22px;
-  line-height: 1.6;
-  letter-spacing: 5px;
-  color: var(--rojo);
-  -webkit-text-stroke: 0.5px currentColor;
+  line-height: 1.2;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--marron-negro);
 }
 
 .outlineText {
