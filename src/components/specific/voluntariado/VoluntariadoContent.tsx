@@ -157,7 +157,7 @@ export default function VoluntariadoContent() {
                       <div className={styles.moduleHead}>
                         <h3 className={styles.blockTitle}>{module.title}</h3>
                         <Image
-                          src={`/${Number(module.n)}.png`}
+                          src={`/icon-${Number(module.n)}.png`}
                           alt=""
                           width={457}
                           height={546}

@@ -13,7 +13,7 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <Link href="/" className={styles.logo}>
         <Image
-          src="/logo-cd.jpeg"
+          src="/logo-icono.jpeg"
           alt="Movimiento del Bate"
           width={149}
           height={143}
@@ -21,7 +21,7 @@ export default function Navbar() {
           className={styles.logoCd}
         />
         <Image
-          src="/logo-nombre.png"
+          src="/logo-principal.png"
           alt="Movimiento del Bate"
           width={2039}
           height={771}

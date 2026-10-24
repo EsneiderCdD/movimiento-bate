@@ -7,14 +7,14 @@ export default function Footer() {
     <footer className={styles.footer}>
       <Link href="/" className={styles.logo}>
         <Image
-          src="/logo-nombre.png"
+          src="/logo-principal.png"
           alt="Movimiento del Bate"
           width={2039}
           height={771}
           className={styles.logoImage}
         />
         <Image
-          src="/116.png"
+          src="/logo-secundario.png"
           alt="Movimiento del Bate"
           width={513}
           height={132}

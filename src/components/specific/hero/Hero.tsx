@@ -29,7 +29,7 @@ export default function Hero({
   title = "MOVIMIENTO",
   accent = "DEL BATE",
   subtitle = "Somos un movimiento ciudadano comprometido con la defensa del orden, la libertad y el bienestar de nuestra gente.",
-  backgroundSrc = "/fondo2.jpg",
+  backgroundSrc = "/fondo-hero.jpg",
   backgroundOpacity,
   backgroundPosition,
   showLogo = true,
@@ -81,7 +81,7 @@ export default function Hero({
           <div className={styles.intro}>
             {showLogo && (
               <Image
-                src="/logo.png"
+                src="/logo-emblema.png"
                 alt="Movimiento Bate"
                 width={1280}
                 height={1280}

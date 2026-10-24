@@ -7,10 +7,10 @@ import "swiper/css";
 import styles from "./HeroCarousel.module.css";
 
 const SLIDES = [
-  "/mov-b(1).jpg",
-  "/mov-b(2).jpg",
-  "/mov-b(3).jpg",
-  "/mov-b(4).jpg",
+  "/carousel-1.jpg",
+  "/carousel-2.jpg",
+  "/carousel-3.jpg",
+  "/carousel-4.jpg",
 ];
 
 export default function HeroCarousel() {

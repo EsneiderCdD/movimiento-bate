@@ -119,7 +119,7 @@ export default function NosotrosPageContent() {
         <Franja />
         <section className={styles.section}>
           <Image
-            src="/mov_rep.jpg"
+            src="/bate-foto.jpg"
             alt="Bate"
             width={1238}
             height={848}

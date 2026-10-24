@@ -76,7 +76,7 @@ export default function NosotrosContent() {
             </h1>
             <div className={styles.bottomRow}>
               <Image
-                src="/logo.png"
+                src="/logo-emblema.png"
                 alt="Movimiento del Bate"
                 width={1280}
                 height={1280}

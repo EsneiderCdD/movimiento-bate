@@ -81,7 +81,7 @@
 .bgImage {
   position: absolute;
   inset: 0;
-  background-image: url("/fondo2.jpg");
+  background-image: url("/fondo-hero.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.55;
