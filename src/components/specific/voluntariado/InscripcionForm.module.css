@@ -22,13 +22,13 @@
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 44px;
+  height: 44px;
   border: 2px solid rgba(21, 19, 15, 0.2);
   border-radius: 50%;
   font-family: var(--font-oswald);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 20px;
   color: #7a746a;
 }
 
@@ -316,9 +316,9 @@
   }
 
   .stepDot {
-    width: 40px;
-    height: 40px;
-    font-size: 17px;
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
   }
 
   .stepBody {
