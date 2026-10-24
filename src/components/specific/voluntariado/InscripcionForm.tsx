@@ -291,10 +291,10 @@ const CELULAR = [
 ];
 
 const STEPS = [
-  { tag: "Perfil", title: "Conozcamos quién eres" },
-  { tag: "Talento", title: "Identifiquemos tu talento" },
-  { tag: "Formación", title: "¿Qué te gustaría aprender?" },
-  { tag: "Participación", title: "Construyamos la red" },
+  { tag: "Perfil" },
+  { tag: "Talento" },
+  { tag: "Formación" },
+  { tag: "Participación" },
 ];
 
 type Data = {
@@ -964,10 +964,8 @@ export default function InscripcionForm() {
       </div>
 
       <div className={styles.stepHeader}>
-        <span className={styles.stepMeta}>
-          Paso {step + 1} de {STEPS.length} · {STEPS[step].tag}
-        </span>
-        <h3 className={styles.stepTitle}>{STEPS[step].title}</h3>
+        <span className={styles.stepNumero}>Paso {step + 1}</span>
+        <span className={styles.stepTag}>{STEPS[step].tag}</span>
       </div>
 
       <div className={styles.stepBody}>
