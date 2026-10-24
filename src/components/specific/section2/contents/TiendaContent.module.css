@@ -160,24 +160,6 @@
   color: #FFFFFF;
 }
 
-.btn {
-  background: #E11D2A;
-  color: #FFFFFF;
-  border: none;
-  cursor: pointer;
-  font-family: var(--font-oswald);
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 11px 18px;
-  transition: background 0.2s;
-}
-
-.btn:hover {
-  background: #b81822;
-}
-
 @media (max-width: 1000px) {
   .sidebar {
     flex-basis: 140px;
@@ -197,10 +179,6 @@
 
   .price {
     font-size: 23px;
-  }
-
-  .btn {
-    font-size: 12px;
   }
 
   .tag {
@@ -227,10 +205,6 @@
 
   .price {
     font-size: 22px;
-  }
-
-  .btn {
-    font-size: 12px;
   }
 
   .tag {
@@ -263,10 +237,6 @@
     font-size: 22px;
   }
 
-  .btn {
-    font-size: 12px;
-  }
-
   .tag {
     font-size: 10px;
   }
@@ -297,10 +267,6 @@
     font-size: 20px;
   }
 
-  .btn {
-    font-size: 11px;
-  }
-
   .tag {
     font-size: 10px;
   }
@@ -329,10 +295,6 @@
 
   .price {
     font-size: 19px;
-  }
-
-  .btn {
-    font-size: 11px;
   }
 
   .tag {

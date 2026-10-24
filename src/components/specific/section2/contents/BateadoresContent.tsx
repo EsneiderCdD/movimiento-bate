@@ -37,7 +37,7 @@ export default function BateadoresContent() {
             en agente de cambio real.
           </p>
 
-          <Link href="/voluntariado" className={styles.cta}>
+          <Link href="/voluntariado" className={`${styles.cta} ctaBtn`}>
             Conocer
           </Link>
         </div>

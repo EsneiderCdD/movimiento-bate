@@ -216,24 +216,7 @@
 }
 
 .cta {
-  display: inline-block;
-  align-self: flex-end;
-  padding: 12px 32px;
-  background: var(--rojo);
-  color: var(--blanco);
-  font-family: var(--font-oswald);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.cta:hover {
-  background: var(--rojo-hover);
+  align-self: flex-start;
 }
 
 @media (max-width: 1000px) {

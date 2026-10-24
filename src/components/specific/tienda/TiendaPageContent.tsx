@@ -61,7 +61,7 @@ export default function TiendaPageContent() {
                   <p className={styles.desc}>{product.desc}</p>
                   <div className={styles.footer}>
                     <span className={styles.price}>{product.price}</span>
-                    <button className={styles.btn} type="button">
+                    <button className="ctaBtn" type="button">
                       Agregar
                     </button>
                   </div>

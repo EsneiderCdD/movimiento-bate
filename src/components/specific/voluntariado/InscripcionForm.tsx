@@ -1462,13 +1462,17 @@ export default function InscripcionForm() {
           </button>
         )}
         {step < STEPS.length - 1 ? (
-          <button type="button" className={styles.button} onClick={next}>
+          <button
+            type="button"
+            className={`${styles.button} ctaBtn`}
+            onClick={next}
+          >
             Continuar
           </button>
         ) : (
           <button
             type="submit"
-            className={styles.button}
+            className={`${styles.button} ctaBtn`}
             disabled={estadoEnvio === "enviando"}
           >
             {estadoEnvio === "enviando" ? "Enviando…" : "Enviar"}

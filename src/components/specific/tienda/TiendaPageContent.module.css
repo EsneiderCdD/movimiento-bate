@@ -174,24 +174,6 @@
   color: #FFFFFF;
 }
 
-.btn {
-  background: #E11D2A;
-  color: #FFFFFF;
-  border: none;
-  cursor: pointer;
-  font-family: var(--font-oswald);
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 11px 18px;
-  transition: background 0.2s;
-}
-
-.btn:hover {
-  background: #b81822;
-}
-
 @media (max-width: 1000px) {
   .franja {
     width: 140px;
