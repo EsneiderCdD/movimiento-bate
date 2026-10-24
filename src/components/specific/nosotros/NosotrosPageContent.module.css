@@ -217,13 +217,6 @@
   margin: 0 auto;
 }
 
-.divider {
-  width: 100%;
-  height: 1px;
-  background: #e2dcce;
-  margin: 24px 0;
-}
-
 @media (max-width: 1000px) {
   .franja {
     width: 140px;
