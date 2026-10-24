@@ -22,25 +22,6 @@
       var(--navy-profundo) 100%);
 }
 
-.sidebarText {
-  position: absolute;
-  left: 50%;
-  bottom: 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-  white-space: nowrap;
-  writing-mode: vertical-rl;
-  transform: translateX(-50%) rotate(180deg);
-  font-family: var(--font-anton);
-  font-weight: 700;
-  font-size: 64px;
-  letter-spacing: 4px;
-  line-height: 1;
-  color: var(--blanco);
-}
-
 .dots {
   position: absolute;
   right: 0;
@@ -257,33 +238,9 @@
   -webkit-text-stroke: 0.5px currentColor;
 }
 
-.cta {
-  display: inline-block;
-  padding: 12px 32px;
-  background: var(--rojo);
-  color: var(--blanco);
-  font-family: var(--font-oswald);
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.cta:hover {
-  background: var(--rojo-hover);
-}
-
 @media (max-width: 1000px) {
   .sidebar {
     flex-basis: 140px;
-  }
-
-  .sidebarText {
-    font-size: 56px;
   }
 
   .manifesto {
@@ -339,10 +296,6 @@
 
   .sidebar {
     flex-basis: 120px;
-  }
-
-  .sidebarText {
-    font-size: 48px;
   }
 
   .spacer {
@@ -402,10 +355,6 @@
 
   .sidebar {
     flex-basis: 100px;
-  }
-
-  .sidebarText {
-    font-size: 40px;
   }
 
   .spacer {
@@ -492,10 +441,6 @@
       flex-basis: 40px;
     }
 
-    .sidebarText {
-      font-size: 32px;
-    }
-
     .spacer {
       flex-basis: 15%;
     }
@@ -564,10 +509,6 @@
 
   .sidebar {
     flex-basis: 20px;
-  }
-
-  .sidebarText {
-    font-size: 24px;
   }
 
   .spacer {

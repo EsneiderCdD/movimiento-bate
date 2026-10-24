@@ -1,12 +1,9 @@
-import Link from "next/link";
 import styles from "./SectionHeader.module.css";
 
 interface SectionHeaderProps {
   title: string;
   accent?: string;
   subtitle?: string;
-  ctaText?: string;
-  ctaHref?: string;
   onlyRedBottom?: boolean;
 }
 
@@ -14,8 +11,6 @@ export default function SectionHeader({
   title,
   accent,
   subtitle,
-  ctaText,
-  ctaHref,
   onlyRedBottom,
 }: SectionHeaderProps) {
   const parts = accent ? title.split(accent) : [title];
@@ -38,11 +33,6 @@ export default function SectionHeader({
           )}
         </h2>
         {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
-        {ctaText && ctaHref && (
-          <Link href={ctaHref} className={styles.ctaBtn}>
-            {ctaText}
-          </Link>
-        )}
       </div>
     </section>
   );

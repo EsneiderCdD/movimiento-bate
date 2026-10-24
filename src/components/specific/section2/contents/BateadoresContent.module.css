@@ -26,25 +26,6 @@
     );
 }
 
-.sidebarText {
-  position: absolute;
-  left: 50%;
-  bottom: 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-  white-space: nowrap;
-  writing-mode: vertical-rl;
-  transform: translateX(-50%) rotate(180deg);
-  font-family: var(--font-anton);
-  font-weight: 700;
-  font-size: 64px;
-  letter-spacing: 4px;
-  line-height: 1;
-  color: var(--blanco);
-}
-
 .dots {
   position: absolute;
   right: 0;
@@ -77,10 +58,6 @@
   display: flex;
 }
 
-.spacer {
-  flex: 0 0 40%;
-}
-
 .bentoGrid {
   position: absolute;
   inset: 0;
@@ -97,91 +74,6 @@
 .bentoImage {
   object-fit: cover;
   opacity: 0.55;
-}
-
-.content {
-  position: relative;
-  z-index: 1;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  padding: 48px 40px 48px 64px;
-}
-
-.tag {
-  align-self: flex-start;
-  font-family: var(--font-shadows), cursive;
-  font-size: 60px;
-  letter-spacing: 4px;
-  font-style: italic;
-  color: var(--rojo);
-  line-height: 1.2;
-  padding-bottom: 16px;
-  background-image: url("/trazo.png");
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 100% auto;
-  -webkit-text-stroke: 0.5px currentColor;
-}
-
-.title {
-  position: relative;
-  font-family: var(--font-anton);
-  font-size: 80px;
-  line-height: 1;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--blanco);
-  margin: 0;
-}
-
-.titleLine {
-  position: relative;
-  display: inline-block;
-}
-
-.bottomRow {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  margin-top: -4px;
-}
-
-.logo {
-  width: 160px;
-  height: auto;
-  display: block;
-}
-
-.arrow {
-  position: absolute;
-  left: calc(100% + 4px);
-  top: 50%;
-  width: 0.7em;
-  height: auto;
-}
-
-.quote {
-  font-family: var(--font-barlow);
-  font-size: 22px;
-  line-height: 1;
-  font-weight: 400;
-  font-style: italic;
-  color: var(--blanco);
-  margin: 0;
-}
-
-.author {
-  display: block;
-  margin-top: 16px;
-  font-size: 20px;
-  font-weight: 700;
-  font-style: normal;
-  color: #e6e6e6;
 }
 
 .outline {
@@ -224,34 +116,6 @@
     flex-basis: 140px;
   }
 
-  .sidebarText {
-    font-size: 56px;
-  }
-
-  .tag {
-    font-size: 55px;
-  }
-
-  .title {
-    font-size: 64px;
-  }
-
-  .content {
-    padding: 40px;
-  }
-
-  .logo {
-    width: 145px;
-  }
-
-  .quote {
-    font-size: 18px;
-  }
-
-  .author {
-    font-size: 18px;
-  }
-
   .outlineTitle {
     font-size: 20px;
   }
@@ -273,38 +137,6 @@
 
   .sidebar {
     flex-basis: 120px;
-  }
-
-  .sidebarText {
-    font-size: 48px;
-  }
-
-  .spacer {
-    flex-basis: 30%;
-  }
-
-  .content {
-    padding: 32px;
-  }
-
-  .tag {
-    font-size: 50px;
-  }
-
-  .title {
-    font-size: 58px;
-  }
-
-  .logo {
-    width: 125px;
-  }
-
-  .quote {
-    font-size: 16px;
-  }
-
-  .author {
-    font-size: 16px;
   }
 
   .outlineTitle {
@@ -330,43 +162,6 @@
     flex-basis: 100px;
   }
 
-  .sidebarText {
-    font-size: 40px;
-  }
-
-  .spacer {
-    flex-basis: 25%;
-  }
-
-  .content {
-    padding: 24px;
-    padding-left: 0px;
-  }
-
-  .tag {
-    font-size: 44px;
-  }
-
-  .title {
-    font-size: 50px;
-  }
-
-  .logo {
-    width: 115px;
-  }
-
-  .bottomRow {
-    gap: 16px;
-  }
-
-  .quote {
-    font-size: 16px;
-  }
-
-  .author {
-    font-size: 16px;
-  }
-
   .outlineTitle {
     font-size: 18px;
   }
@@ -389,43 +184,6 @@
       flex-basis: 40px;
     }
 
-    .sidebarText {
-      font-size: 32px;
-    }
-
-    .spacer {
-      flex-basis: 15%;
-    }
-
-    .content {
-      padding: 20px;
-      padding-left: 0px;
-    }
-
-    .tag {
-      font-size: 40px;
-    }
-
-    .title {
-      font-size: 44px;
-    }
-
-    .logo {
-      width: 100px;
-    }
-
-    .bottomRow {
-      gap: 6px;
-    }
-
-    .quote {
-      font-size: 16px;
-    }
-
-    .author {
-      font-size: 16px;
-    }
-
     .outlineTitle {
       font-size: 16px;
     }
@@ -434,7 +192,6 @@
       font-size: 17px;
     }
   }
-
 }
 
 @media (max-width: 400px) {
@@ -449,36 +206,6 @@
 
   .sidebar {
     flex-basis: 20px;
-  }
-
-  .sidebarText {
-    font-size: 24px;
-  }
-
-  .spacer {
-    flex-basis: 10%;
-  }
-
-  .content {
-    padding: 0px;
-    padding-left: 0px;
-  }
-
-  .tag {
-    font-size: 38px;
-  }
-
-  .title {
-    font-size: 44px;
-  }
-
-  .logo {
-    width: 95px;
-  }
-
-  .bottomRow {
-    gap: 6px;
-    margin-left: -12px;
   }
 
   .outlineTitle {

@@ -25,25 +25,6 @@
     );
 }
 
-.sidebarText {
-  position: absolute;
-  left: 50%;
-  bottom: 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-  white-space: nowrap;
-  writing-mode: vertical-rl;
-  transform: translateX(-50%) rotate(180deg);
-  font-family: var(--font-anton);
-  font-weight: 700;
-  font-size: 64px;
-  letter-spacing: 4px;
-  line-height: 1;
-  color: var(--blanco);
-}
-
 .dots {
   position: absolute;
   right: 0;
@@ -108,20 +89,6 @@
   justify-content: center;
 }
 
-.tag {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: #0C1A33;
-  color: #FFFFFF;
-  font-family: var(--font-oswald);
-  font-weight: 600;
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 5px 10px;
-}
-
 .body {
   padding: 22px 22px 24px;
   display: flex;
@@ -165,10 +132,6 @@
     flex-basis: 140px;
   }
 
-  .sidebarText {
-    font-size: 56px;
-  }
-
   .name {
     font-size: 17px;
   }
@@ -181,18 +144,10 @@
     font-size: 23px;
   }
 
-  .tag {
-    font-size: 10px;
-  }
-}
 
 @media (max-width: 750px) {
   .sidebar {
     flex-basis: 120px;
-  }
-
-  .sidebarText {
-    font-size: 48px;
   }
 
   .name {
@@ -207,10 +162,6 @@
     font-size: 22px;
   }
 
-  .tag {
-    font-size: 10px;
-  }
-}
 
 @media (max-width: 600px) {
   .grid {
@@ -219,10 +170,6 @@
 
   .sidebar {
     flex-basis: 100px;
-  }
-
-  .sidebarText {
-    font-size: 40px;
   }
 
   .card {
@@ -241,19 +188,11 @@
     font-size: 22px;
   }
 
-  .tag {
-    font-size: 10px;
-  }
-}
 
 @media (max-width: 500px) {
     .sidebar {
       flex-basis: 40px;
     }
-
-  .sidebarText {
-    font-size: 32px;
-  }
 
   .card {
     flex: 0 0 300px;
@@ -271,18 +210,10 @@
     font-size: 20px;
   }
 
-  .tag {
-    font-size: 10px;
-  }
-}
 
 @media (max-width: 400px) {
   .sidebar {
     flex-basis: 20px;
-  }
-
-  .sidebarText {
-    font-size: 24px;
   }
 
   .card {
@@ -301,8 +232,4 @@
     font-size: 19px;
   }
 
-  .tag {
-    font-size: 10px;
-  }
-}
 

@@ -5,7 +5,6 @@ const DOTS = Array.from({ length: 9 });
 
 const products = [
   {
-    tag: "Ropa",
     name: "Camiseta Movimiento Bate",
     desc: "Algodón premium, estampado serigrafía. Disponible en S, M, L, XL.",
     price: "$45.000",
@@ -13,7 +12,6 @@ const products = [
     fit: "cover",
   },
   {
-    tag: "Accesorio",
     name: "Gorra MB Edición Limitada",
     desc: "Gorra snapback bordada con el logo del movimiento. Ajustable.",
     price: "$25.000",
