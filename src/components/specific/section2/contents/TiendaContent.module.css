@@ -75,7 +75,7 @@
 
 .grid {
   display: flex;
-  gap: 24px;
+  gap: 48px;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
@@ -213,6 +213,10 @@
 }
 
 @media (max-width: 600px) {
+  .grid {
+    gap: 32px;
+  }
+
   .sidebar {
     flex-basis: 100px;
   }

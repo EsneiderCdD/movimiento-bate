@@ -89,7 +89,7 @@
 
 .grid {
   display: flex;
-  gap: 24px;
+  gap: 48px;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
@@ -205,6 +205,10 @@
 @media (max-width: 600px) {
   .franja {
     width: 100px;
+  }
+
+  .grid {
+    gap: 32px;
   }
 
   .onRight {
