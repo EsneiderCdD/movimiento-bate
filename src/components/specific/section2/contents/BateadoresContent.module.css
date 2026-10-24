@@ -187,7 +187,7 @@
 .outline {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 28px;
   padding: 32px 24px;
 }
@@ -217,6 +217,7 @@
 
 .cta {
   display: inline-block;
+  align-self: flex-end;
   padding: 12px 32px;
   background: var(--rojo);
   color: var(--blanco);
