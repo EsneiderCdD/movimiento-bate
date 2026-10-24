@@ -26,7 +26,6 @@ export default function Footer() {
         <li>
           <a
             href="https://www.instagram.com/davidtoledoosp"
-            className={styles.contactLink}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"

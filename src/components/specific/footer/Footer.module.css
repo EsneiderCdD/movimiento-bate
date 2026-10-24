@@ -16,12 +16,6 @@
   cursor: pointer;
 }
 
-.logoCd {
-  display: block;
-  height: 44px;
-  width: auto;
-}
-
 .logoImage {
   display: block;
   height: 46px;
@@ -34,52 +28,9 @@
   width: auto;
 }
 
-.creed {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5em;
-  text-align: left;
-  margin: 0;
-}
-
-.creed span {
-  font-family: var(--font-anton);
-  font-size: 20px;
-  line-height: 1.4;
-}
-
-.lineAmarillo {
-  color: var(--amarillo);
-}
-
-.lineAzul {
-  color: var(--navy-medio);
-}
-
-.lineRojo {
-  color: var(--rojo);
-}
-
 .contacts {
   display: flex;
-  gap: 2.5em;
   list-style: none;
-  font-size: 24px;
-}
-
-.contactLink {
-  font-family: var(--font-oswald);
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--marron-negro);
-  transition: color 0.2s;
-}
-
-.contactLink:hover {
-  color: var(--rojo);
 }
 
 .instagramIcon {
@@ -95,10 +46,6 @@
 
   .logo {
     gap: 0.625rem;
-  }
-
-  .logoCd {
-    height: 2.375rem;
   }
 
   .logoImage {
@@ -122,22 +69,9 @@
   .instagramIcon {
     height: 2.5rem;
   }
-
-  .creed span {
-    font-size: 18px;
-  }
-
-  .contacts {
-    gap: 2em;
-    font-size: 18px;
-  }
 }
 
 @media (max-width: 500px) {
-  .logoCd {
-    height: 2rem;
-  }
-
   .logoImage {
     height: 2rem;
   }
@@ -149,22 +83,9 @@
   .instagramIcon {
     height: 2.25rem;
   }
-
-  .creed span {
-    font-size: 14px;
-  }
-
-  .contacts {
-    font-size: 14px;
-    gap: 1.5em;
-  }
 }
 
 @media (max-width: 400px) {
-  .logoCd {
-    height: 1.75rem;
-  }
-
   .logoImage {
     height: 1.75rem;
   }
@@ -175,14 +96,5 @@
 
   .instagramIcon {
     height: 2rem;
-  }
-
-  .creed span {
-    font-size: 12px;
-  }
-
-  .contacts {
-    font-size: 12px;
-    gap: 1em;
   }
 }
