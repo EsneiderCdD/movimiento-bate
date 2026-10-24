@@ -28,12 +28,18 @@
 
 .links {
   display: flex;
-  gap: 2.5em;
+  gap: 14px;
   list-style: none;
   font-size: 24px;
 }
 
 .link {
+  display: inline-block;
+  padding: 7px 18px;
+  border: 2px solid var(--navy-oscuro);
+  border-radius: 10px;
+  background: var(--blanco);
+  box-shadow: 2px 2px 0 0 var(--amarillo);
   font-family: var(--font-oswald);
   font-weight: 700;
   letter-spacing: 0.07em;
@@ -57,12 +63,24 @@
   .logoImage {
     height: 2.5rem;
   }
+
+  .links {
+    gap: 10px;
+  }
+
+  .link {
+    padding: 6px 14px;
+  }
 }
 
 @media (max-width: 600px) {
   .links {
-    gap: 2em;
+    gap: 8px;
     font-size: 18px;
+  }
+
+  .link {
+    padding: 5px 10px;
   }
 }
 
@@ -77,7 +95,11 @@
 
   .links {
     font-size: 14px;
-    gap: 1.5em;
+    gap: 7px;
+  }
+
+  .link {
+    padding: 4px 8px;
   }
 }
 @media (max-width: 400px) {
@@ -91,6 +113,10 @@
 
   .links {
     font-size: 12px;
-    gap: 1em;
+    gap: 6px;
+  }
+
+  .link {
+    padding: 3px 6px;
   }
 }
