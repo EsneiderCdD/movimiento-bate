@@ -391,6 +391,9 @@ const normalize = (value: string) =>
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
 
+const esMunicipioValido = (value: string) =>
+  MUNICIPIOS.some((item) => normalize(item.nombre) === normalize(value));
+
 function MunicipioField({
   value,
   error,
@@ -698,6 +701,8 @@ export default function InscripcionForm() {
     }
     if (!normalizarTexto(data.municipio)) {
       nextErrors.municipio = "Escribe tu municipio.";
+    } else if (!esMunicipioValido(data.municipio)) {
+      nextErrors.municipio = "Selecciona un municipio de la lista.";
     }
     if (!validarBarrio(data.barrioVive)) {
       nextErrors.barrioVive = "Escribe tu barrio o vereda.";
@@ -817,7 +822,11 @@ export default function InscripcionForm() {
   const onBlurMunicipio = () => {
     const value = normalizarTexto(data.municipio);
     if (value !== data.municipio) set("municipio", value);
-    if (!value) setFieldError("municipio", null);
+    if (!value) return setFieldError("municipio", null);
+    setFieldError(
+      "municipio",
+      esMunicipioValido(value) ? null : "Selecciona un municipio de la lista.",
+    );
   };
 
   const onBlurBarrio = (key: "barrioVive" | "barrioActua") => {

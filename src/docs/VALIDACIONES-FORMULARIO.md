@@ -70,11 +70,10 @@ Todas las funciones viven en `validation.ts` y son reutilizables.
 
 ### Municipio
 
-- **Regla:** texto libre obligatorio (decisión del cliente), máximo 60 caracteres.
+- **Regla:** obligatorio y **debe coincidir con uno de los 125 municipios** (sin importar tildes ni mayúsculas), máximo 60 caracteres.
 - **Búsqueda:** combobox con los **125 municipios de Antioquia** agrupados por subregión. Filtra por coincidencia sin importar tildes ni mayúsculas; navegable con ↑/↓, Enter selecciona y Esc cierra. Al elegir, se guarda el nombre del municipio.
 - **Limpieza:** `normalizarTexto` al salir del campo.
-- **Mensaje:** "Escribe tu municipio."
-- **Nota:** no se exige que el texto coincida con la lista.
+- **Mensajes:** "Escribe tu municipio." si está vacío; "Selecciona un municipio de la lista." si no coincide.
 
 ### Barrio/vereda donde vive y donde actúa
 
@@ -210,7 +209,7 @@ El formulario envía el estado completo a `POST /api/inscripciones`:
 | `rangoEdad` | Etiqueta de la opción (`"25-34 años"`). | Tal cual. |
 | `celular` | Texto visible formateado (`+57 333 333 3333`). | `normalizarCelular()` → solo dígitos nacionales. |
 | `correo` | Minúsculas y sin espacios. | Tal cual. |
-| `municipio` | Texto (idealmente uno de los 125). | Tal cual. |
+| `municipio` | Texto (debe ser uno de los 125). | Tal cual. |
 | `barrioVive`, `barrioActua` | Texto normalizado. | Tal cual. |
 | `habilidades` | Etiquetas marcadas (incluye `"Otra"`). | Tal cual. |
 | `habilidadOtra` | Texto normalizado (solo si "Otra" está marcada). | Tal cual. |
