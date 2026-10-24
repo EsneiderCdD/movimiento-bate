@@ -68,10 +68,6 @@
   width: 100%;
 }
 
-.onRight {
-  padding-right: 170px;
-}
-
 .onLeft {
   padding-left: 170px;
 }
@@ -97,10 +93,6 @@
     );
 }
 
-.onRight .franja {
-  right: 0;
-}
-
 .onLeft .franja {
   left: 0;
 }
@@ -115,11 +107,6 @@
   z-index: 2;
 }
 
-.onRight .dots {
-  left: 0;
-  transform: translateY(-50%) translateX(-50%);
-}
-
 .onLeft .dots {
   right: 0;
   transform: translateY(-50%) translateX(50%);
@@ -132,54 +119,12 @@
   background: var(--rojo);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-}
-
-.gridCol {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .accentBlock {
   border-left: 4px solid var(--rojo);
   padding: 6px 0 6px 32px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.accentQuote {
-  font-family: var(--font-anton);
-  font-size: 36px;
-  line-height: 1.1;
-  color: var(--marron-negro);
-  text-transform: uppercase;
-  margin: 0 0 18px;
-}
-
-.accentAuthor {
-  font-family: var(--font-oswald);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #7a746a;
-}
-
-.blocks {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-.block {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
 }
 
 .blockTitle {
@@ -199,10 +144,6 @@
   line-height: 1.7;
   color: #2a2722;
   margin: 0;
-}
-
-.text strong {
-  font-weight: 600;
 }
 
 .formSection {
@@ -227,20 +168,12 @@
     width: 140px;
   }
 
-  .onRight {
-    padding-right: 140px;
-  }
-
   .onLeft {
     padding-left: 140px;
   }
 
   .text {
     font-size: 19px;
-  }
-
-  .accentQuote {
-    font-size: 32px;
   }
 
   .sectionSubtitle {
@@ -257,24 +190,12 @@
     width: 120px;
   }
 
-  .onRight {
-    padding-right: 120px;
-  }
-
   .onLeft {
     padding-left: 120px;
   }
 
   .text {
     font-size: 18px;
-  }
-
-  .accentQuote {
-    font-size: 30px;
-  }
-
-  .accentAuthor {
-    font-size: 13px;
   }
 
   .sectionSubtitle {
@@ -291,10 +212,6 @@
     width: 100px;
   }
 
-  .onRight {
-    padding-right: 100px;
-  }
-
   .onLeft {
     padding-left: 100px;
   }
@@ -303,21 +220,8 @@
     font-size: 18px;
   }
 
-  .accentQuote {
-    font-size: 28px;
-  }
-
-  .accentAuthor {
-    font-size: 13px;
-  }
-
   .section {
     padding: 32px 24px;
-  }
-
-  .grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 32px;
   }
 
   .accentBlock {
@@ -331,24 +235,12 @@
       width: 40px;
     }
 
-    .onRight {
-      padding-right: 40px;
-    }
-
     .onLeft {
       padding-left: 40px;
     }
 
     .text {
       font-size: 17px;
-    }
-
-    .accentQuote {
-      font-size: 26px;
-    }
-
-    .accentAuthor {
-      font-size: 12px;
     }
 
     .sectionSubtitle {
@@ -367,24 +259,12 @@
     width: 20px;
   }
 
-  .onRight {
-    padding-right: 20px;
-  }
-
   .onLeft {
     padding-left: 20px;
   }
 
   .text {
     font-size: 16px;
-  }
-
-  .accentQuote {
-    font-size: 24px;
-  }
-
-  .accentAuthor {
-    font-size: 12px;
   }
 
   .sectionSubtitle {
@@ -523,10 +403,6 @@
   line-height: 1.7;
   color: #2a2722;
   margin: 0;
-}
-
-.closingText + .closingText {
-  margin-top: 12px;
 }
 
 @media (max-width: 1000px) {
