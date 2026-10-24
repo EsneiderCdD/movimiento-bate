@@ -167,7 +167,7 @@ export default function NosotrosPageContent() {
           <div className={`${styles.accentBlock} ${styles.accentBlockYellow}`}>
             <p className={styles.text}>
               Sobre ese bate escribimos una sola palabra:{" "}
-              <strong>DIÁLOGO</strong>. Porque en Colombia, el que no habla desde
+              <strong className={styles.dialogo}>DIÁLOGO</strong>. Porque en Colombia, el que no habla desde
               una posición de firmeza no es escuchado. Porque la historia ha
               demostrado que con el terrorismo no se dialoga desde la debilidad,
               se dialoga desde la dignidad.
@@ -373,12 +373,10 @@ export default function NosotrosPageContent() {
             <strong>nosotros guardaremos el nuestro.</strong>
           </p>
           <div className={styles.accentBlock}>
-            <p className={styles.accentQuote}>
+            <p className={styles.text}>
               Somos el Movimiento del Bate.
               <br />
-              <br />
               Somos Antioquia de pie.
-              <br />
               <br />
               Somos Colombia que no se rinde.
             </p>

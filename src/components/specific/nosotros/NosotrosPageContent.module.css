@@ -202,6 +202,10 @@
 }
 
 .text strong {
+  font-weight: 400;
+}
+
+.text strong.dialogo {
   font-weight: 600;
 }
 
