@@ -122,20 +122,6 @@
   justify-content: center;
 }
 
-.cardTag {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: #0C1A33;
-  color: #FFFFFF;
-  font-family: var(--font-oswald);
-  font-weight: 600;
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 5px 10px;
-}
-
 .body {
   padding: 22px 22px 24px;
   display: flex;
@@ -179,6 +165,18 @@
     width: 140px;
   }
 
+  .name {
+    font-size: 17px;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 23px;
+  }
+
   .onRight {
     padding-right: 140px;
   }
@@ -191,6 +189,18 @@
 @media (max-width: 750px) {
   .franja {
     width: 120px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 22px;
   }
 
   .onRight {
@@ -211,6 +221,22 @@
     gap: 32px;
   }
 
+  .card {
+    flex: 0 0 325px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .desc {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 22px;
+  }
+
   .onRight {
     padding-right: 100px;
   }
@@ -228,6 +254,22 @@
       width: 40px;
     }
 
+    .card {
+      flex: 0 0 300px;
+    }
+
+    .name {
+      font-size: 15px;
+    }
+
+    .desc {
+      font-size: 12px;
+    }
+
+    .price {
+      font-size: 20px;
+    }
+
     .onRight {
       padding-right: 40px;
     }
@@ -242,6 +284,22 @@
 @media (max-width: 400px) {
   .franja {
     width: 20px;
+  }
+
+  .card {
+    flex: 0 0 275px;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 19px;
   }
 
   .onRight {
