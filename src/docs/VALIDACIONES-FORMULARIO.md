@@ -234,17 +234,23 @@ El formulario envía el estado completo a `POST /api/inscripciones`:
 
 - **Endpoint:** `POST /api/inscripciones` (`src/app/api/inscripciones/route.ts`, runtime Node.js).
 - **Validación de servidor:** reutiliza `validation.ts` y repite las reglas obligatorias del cliente. Responde:
-  - `201 { ok: true, id }` cuando guarda.
+  - `201 { ok: true, id }` cuando envía el correo (y guarda en local).
   - `400 { ok: false, error }` si los datos no son válidos.
-  - `500 { ok: false, error }` si falla la escritura.
+  - `502 { ok: false, error }` si Resend falla (no se guarda, para poder reintentar sin duplicados).
+  - `503 { ok: false, error }` si falta `RESEND_API_KEY` o `INSCRIPCIONES_TO`.
+- **Correo (Resend):** `src/lib/emailInscripcion.ts` arma asunto, HTML y texto a partir del registro; `src/lib/resend.ts` inicializa el cliente de forma perezosa. Remitente por defecto `onboarding@resend.dev`, destinatario en `INSCRIPCIONES_TO`, `replyTo` con el correo del inscrito.
+- **Variables de entorno:** ver `.env.example`. Con `onboarding@resend.dev` solo se puede enviar al correo dueño de la cuenta Resend; para otros destinatarios o un remitente propio hay que verificar un dominio.
+- **Orden del flujo:** validar → enviar correo → guardar NDJSON (solo fuera de Vercel) → `201`.
 - **Dónde guarda:** `data/inscripciones.ndjson` en la raíz del proyecto (una línea JSON por registro). Se crea automáticamente. Cada registro agrega `id` (UUID), `enviadoEn` (ISO) y `origen: "voluntariado"`, además de los campos del formulario.
 - **Privacidad:** el archivo contiene datos personales; la carpeta `/data/` está en `.gitignore`.
-- **Limitación:** es un almacenamiento local de emulación. En un hosting serverless el sistema de archivos no persiste; para producción habrá que conectar una base de datos o API real.
+- **Limitación:** el NDJSON es un almacenamiento local de emulación y en Vercel (serverless) no persiste; allí el correo es el registro real. Para producción habrá que conectar una base de datos o API real.
 - **UX:** mientras se envía, el botón queda deshabilitado con el texto "Enviando…". Si responde bien, aparece el modal de éxito y al cerrarlo el formulario se reinicia. Si falla, aparece el modal de error con "Reintentar" (conserva las respuestas) y "Volver".
 - **Modales:** `src/components/specific/voluntariado/EnvioModal.tsx` (+ `.module.css`), con estética navy, borde rojo/amarillo y animación con `motion`.
 
 ## Pendientes
 
-- Conectar un backend o base de datos real (hoy se escribe en un archivo local).
+- Conectar un backend o base de datos real (hoy correo + archivo local).
+- Personalizar la plantilla del correo (hoy es una plantilla HTML simple; se evalúa usar React Email).
+- Verificar un dominio en Resend para enviar a cualquier destinatario con remitente propio.
 - Persistencia de respuestas (localStorage) para no perderlas al recargar.
 - Enlace real a la política de tratamiento de datos (hoy `href="#"`).

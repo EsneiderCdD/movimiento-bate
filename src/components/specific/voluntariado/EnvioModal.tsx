@@ -133,7 +133,7 @@ export default function EnvioModal({
         <p className={styles.text}>
           {variant === "exito"
             ? "Gracias por sumarte a Generación De-Bate. Recibimos tus datos y muy pronto nos pondremos en contacto contigo."
-            : "Revisa tu conexión e inténtalo de nuevo. Tus respuestas siguen aquí, no se han perdido."}
+            : "No pudimos completar el envío. Revisa tu conexión e inténtalo de nuevo; tus respuestas siguen aquí, no se han perdido."}
         </p>
 
         <div className={styles.actions}>

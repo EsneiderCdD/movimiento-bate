@@ -1,6 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { NextResponse } from "next/server";
 import { guardarInscripcion, type Inscripcion } from "@/lib/inscripciones";
+import { enviarCorreoInscripcion } from "@/lib/emailInscripcion";
 import {
   normalizarCelular,
   normalizarParrafo,
@@ -134,12 +135,23 @@ export async function POST(request: Request) {
   };
 
   try {
-    await guardarInscripcion(registro);
-  } catch {
+    await enviarCorreoInscripcion(registro);
+  } catch (error) {
+    console.error("Error al enviar el correo:", error);
+    const mensaje = error instanceof Error ? error.message : "";
+    const status = /RESEND_API_KEY|INSCRIPCIONES_TO/.test(mensaje) ? 503 : 502;
     return NextResponse.json(
-      { ok: false, error: "No se pudo guardar la inscripción." },
-      { status: 500 },
+      { ok: false, error: "No se pudo enviar la inscripción." },
+      { status },
     );
+  }
+
+  if (!process.env.VERCEL) {
+    try {
+      await guardarInscripcion(registro);
+    } catch (error) {
+      console.error("Error al guardar el registro:", error);
+    }
   }
 
   return NextResponse.json({ ok: true, id: registro.id }, { status: 201 });
