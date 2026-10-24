@@ -7,11 +7,18 @@ export default function Footer() {
     <footer className={styles.footer}>
       <Link href="/" className={styles.logo}>
         <Image
+          src="/logo-nombre.png"
+          alt="Movimiento del Bate"
+          width={2039}
+          height={771}
+          className={styles.logoImage}
+        />
+        <Image
           src="/116.png"
           alt="Movimiento del Bate"
           width={513}
           height={132}
-          className={styles.logoImage}
+          className={styles.logoMark}
         />
       </Link>
 
