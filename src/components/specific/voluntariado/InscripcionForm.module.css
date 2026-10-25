@@ -11,6 +11,15 @@
   box-shadow: 4px 5px 0 1px var(--amarillo);
 }
 
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
 .steps {
   display: flex;
   justify-content: center;

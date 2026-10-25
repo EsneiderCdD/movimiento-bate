@@ -24,7 +24,39 @@ const lista = (value: unknown) =>
     ? value.filter((item): item is string => typeof item === "string")
     : [];
 
+const VENTANA_MS = 6 * 60 * 60 * 1000;
+const MAX_ENVIOS = 5;
+
+const rateLimit = new Map<string, { count: number; resetAt: number }>();
+
+function limiteExcedido(ip: string) {
+  const ahora = Date.now();
+  const entrada = rateLimit.get(ip);
+
+  if (!entrada || entrada.resetAt <= ahora) {
+    rateLimit.set(ip, { count: 1, resetAt: ahora + VENTANA_MS });
+    return false;
+  }
+
+  entrada.count += 1;
+  return entrada.count > MAX_ENVIOS;
+}
+
+function ipDelRequest(request: Request) {
+  const xff = request.headers.get("x-forwarded-for");
+  if (xff) return xff.split(",")[0].trim();
+  return request.headers.get("x-real-ip") ?? "desconocido";
+}
+
 export async function POST(request: Request) {
+  const ip = ipDelRequest(request);
+  if (limiteExcedido(ip)) {
+    return NextResponse.json(
+      { ok: false, error: "Demasiadas solicitudes." },
+      { status: 429 },
+    );
+  }
+
   let body: unknown;
 
   try {
@@ -44,6 +76,10 @@ export async function POST(request: Request) {
   }
 
   const raw = body as Record<string, unknown>;
+
+  if (texto(raw.empresa)) {
+    return NextResponse.json({ ok: true, id: randomUUID() }, { status: 201 });
+  }
 
   const nombre = normalizarTexto(texto(raw.nombre));
   const rangoEdad = texto(raw.rangoEdad);

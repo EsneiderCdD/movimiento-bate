@@ -624,6 +624,7 @@ export default function InscripcionForm() {
     "idle" | "enviando" | "exito" | "error"
   >("idle");
   const formRef = useRef<HTMLFormElement>(null);
+  const honeypotRef = useRef<HTMLInputElement>(null);
 
   const set = <K extends keyof Data>(key: K, value: Data[K]) =>
     setData((current) => ({ ...current, [key]: value } as Data));
@@ -928,6 +929,7 @@ export default function InscripcionForm() {
           aporte: normalizarParrafo(data.aporte),
           idea: normalizarParrafo(data.idea),
           perfilSocial: normalizarPerfil(data.perfilSocial),
+          empresa: honeypotRef.current?.value ?? "",
         }),
       });
 
@@ -959,6 +961,15 @@ export default function InscripcionForm() {
       onSubmit={onSubmit}
       noValidate
     >
+      <input
+        ref={honeypotRef}
+        type="text"
+        name="empresa"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className={styles.honeypot}
+      />
       <div className={styles.steps} aria-hidden="true">
         {STEPS.map((item, index) => (
           <span
