@@ -73,6 +73,14 @@ export async function POST(request: Request) {
     );
   }
 
+  const largo = Number(request.headers.get("content-length") ?? "0");
+  if (largo > 32 * 1024) {
+    return NextResponse.json(
+      { ok: false, error: "Cuerpo demasiado grande." },
+      { status: 413 },
+    );
+  }
+
   let body: unknown;
 
   try {
