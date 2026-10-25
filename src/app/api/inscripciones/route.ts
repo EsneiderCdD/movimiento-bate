@@ -13,6 +13,22 @@ import {
   validarNombre,
   validarOtra,
 } from "@/components/specific/voluntariado/validation";
+import {
+  CELULAR,
+  ENTERASTE,
+  FORMACION,
+  HABILIDADES,
+  IMPEDIMENTOS,
+  MOTIVACIONES,
+  OPCION_OTRA,
+  OPCION_OTRO,
+  PARTICIPACION,
+  RANGOS,
+  REDES,
+  TIEMPOS,
+  esListaValida,
+  esMunicipioValido,
+} from "@/lib/opciones";
 
 export const runtime = "nodejs";
 
@@ -108,29 +124,33 @@ export async function POST(request: Request) {
 
   const invalido =
     !validarNombre(nombre) ||
-    !rangoEdad ||
+    !RANGOS.includes(rangoEdad) ||
     !validarCelular(celular) ||
     !validarCorreo(correo) ||
-    !municipio ||
-    municipio.length > 60 ||
+    !esMunicipioValido(municipio) ||
     !validarBarrio(barrioVive) ||
     !validarBarrio(barrioActua) ||
     habilidades.length === 0 ||
-    (habilidades.includes("Otra") && !validarOtra(habilidadOtra)) ||
-    !participacion ||
+    !esListaValida(habilidades, HABILIDADES, [OPCION_OTRA]) ||
+    (habilidades.includes(OPCION_OTRA) && !validarOtra(habilidadOtra)) ||
+    !PARTICIPACION.includes(participacion) ||
     experiencia.length > 500 ||
     redes.length === 0 ||
-    !celularContenido ||
+    !esListaValida(redes, REDES) ||
+    !CELULAR.includes(celularContenido) ||
     formacion.length === 0 ||
-    (formacion.includes("Otra") && !validarOtra(formacionOtra)) ||
+    !esListaValida(formacion, FORMACION, [OPCION_OTRA]) ||
+    (formacion.includes(OPCION_OTRA) && !validarOtra(formacionOtra)) ||
     aporte.length > 500 ||
     impedimentos.length === 0 ||
-    (impedimentos.includes("Otro") && !validarOtra(impedimentoOtro)) ||
+    !esListaValida(impedimentos, IMPEDIMENTOS, [OPCION_OTRO]) ||
+    (impedimentos.includes(OPCION_OTRO) && !validarOtra(impedimentoOtro)) ||
     motivaciones.length === 0 ||
-    !tiempo ||
+    !esListaValida(motivaciones, MOTIVACIONES) ||
+    !TIEMPOS.includes(tiempo) ||
     idea.length > 500 ||
     perfilSocial.length > 100 ||
-    !enteraste ||
+    !ENTERASTE.includes(enteraste) ||
     !autorizacion;
 
   if (invalido) {
