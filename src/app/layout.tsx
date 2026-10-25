@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Anton, Oswald, Barlow, Shadows_Into_Light } from "next/font/google";
 import Navbar from "@/components/reusables/navbar/Navbar";
 import Footer from "@/components/specific/footer/Footer";
+import { SITE_URL, buildOpenGraph, buildTwitter } from "@/lib/site";
 import "./globals.css";
 import styles from "./layout.module.css";
 
@@ -32,13 +33,18 @@ const shadowsIntoLight = Shadows_Into_Light({
   display: "swap",
 });
 
+const description =
+  "Movimiento ciudadano por la defensa del orden, la libertad y el bienestar. Conoce la causa, fórmate en la Escuela de Líderes y lleva el bate puesto.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Movimiento del Bate",
     template: "%s | Movimiento del Bate",
   },
-  description:
-    "Movimiento ciudadano por la defensa del orden, la libertad y el bienestar. Conoce la causa, fórmate en la Escuela de Líderes y lleva el bate puesto.",
+  description,
+  openGraph: buildOpenGraph("Movimiento del Bate", description, "/"),
+  twitter: buildTwitter("Movimiento del Bate", description),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
