@@ -60,7 +60,7 @@ export default function NosotrosContent() {
           <div className={styles.bgImage} aria-hidden="true" />
           <div className={styles.content}>
             <span className={styles.manifesto}>MANIFIESTO</span>
-            <h1 className={styles.title}>
+            <h2 className={styles.title}>
               MOVIMIENTO
               <br />
               <span className={styles.titleLine}>
@@ -73,7 +73,7 @@ export default function NosotrosContent() {
                   className={styles.arrow}
                 />
               </span>
-            </h1>
+            </h2>
             <div className={styles.bottomRow}>
               <Image
                 src="/logo-emblema.png"

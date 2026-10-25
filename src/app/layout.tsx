@@ -33,8 +33,12 @@ const shadowsIntoLight = Shadows_Into_Light({
 });
 
 export const metadata: Metadata = {
-  title: "Movimiento del Bate",
-  description: "Movimiento del bate",
+  title: {
+    default: "Movimiento del Bate",
+    template: "%s | Movimiento del Bate",
+  },
+  description:
+    "Movimiento ciudadano por la defensa del orden, la libertad y el bienestar. Conoce la causa, fórmate en la Escuela de Líderes y lleva el bate puesto.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

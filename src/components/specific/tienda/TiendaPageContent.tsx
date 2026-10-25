@@ -36,6 +36,7 @@ function Franja() {
 export default function TiendaPageContent() {
   return (
     <div className={styles.page}>
+      <h1 className={styles.srOnly}>Tienda</h1>
       <div className={styles.chapterHeader}>
         <SectionHeader title="Lleva el bate puesto" onlyRedBottom />
       </div>

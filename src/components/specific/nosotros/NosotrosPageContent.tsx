@@ -19,6 +19,7 @@ function Franja() {
 export default function NosotrosPageContent() {
   return (
     <div className={styles.page}>
+      <h1 className={styles.srOnly}>Nosotros</h1>
       <div className={styles.chapterHeader} id="prologo">
         <SectionHeader title="Prólogo" onlyRedBottom />
       </div>
