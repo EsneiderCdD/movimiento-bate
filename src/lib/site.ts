@@ -1,12 +1,21 @@
 import type { Metadata } from "next";
 
-// TODO: En producción, define SITE_URL en Vercel (ej. "https://tudominio.com").
-// Mientras se trabaja en local se usa un dominio de ejemplo.
-export const SITE_URL = process.env.SITE_URL ?? "https://tudominio.com";
+// Dominio oficial de producción. Se puede sobrescribir con la variable SITE_URL en Vercel.
+export const SITE_URL =
+  process.env.SITE_URL ?? "https://www.movimientodelbate.com";
 
 export const SITE_NAME = "Movimiento del Bate";
 
-export const OG_IMAGE_URL = `${SITE_URL}/logo-principal.png`;
+export const SITE_DESCRIPTION =
+  "Movimiento ciudadano por la defensa del orden, la libertad y el bienestar. Conoce la causa, fórmate en la Escuela de Líderes y lleva el bate puesto.";
+
+export const INSTAGRAM_URL = "https://www.instagram.com/davidtoledoosp";
+
+export const LOGO_URL = `${SITE_URL}/logo-principal.png`;
+
+export function buildCanonical(path: string) {
+  return `${SITE_URL}${path}`;
+}
 
 export function buildOpenGraph(
   title: string,
@@ -19,7 +28,7 @@ export function buildOpenGraph(
     title,
     description,
     url: `${SITE_URL}${path}`,
-    images: [{ url: OG_IMAGE_URL, alt: SITE_NAME }],
+    images: [{ url: LOGO_URL, alt: SITE_NAME }],
   };
 }
 
@@ -31,6 +40,27 @@ export function buildTwitter(
     card: "summary_large_image",
     title,
     description,
-    images: [OG_IMAGE_URL],
+    images: [LOGO_URL],
+  };
+}
+
+export function buildJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: SITE_NAME,
+        url: `${SITE_URL}/`,
+        logo: LOGO_URL,
+        description: SITE_DESCRIPTION,
+        sameAs: [INSTAGRAM_URL],
+      },
+      {
+        "@type": "WebSite",
+        name: SITE_NAME,
+        url: `${SITE_URL}/`,
+      },
+    ],
   };
 }
