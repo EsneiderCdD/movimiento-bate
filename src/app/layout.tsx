@@ -39,8 +39,7 @@ const shadowsIntoLight = Shadows_Into_Light({
   display: "swap",
 });
 
-const description =
-  "Movimiento ciudadano por la defensa del orden, la libertad y el bienestar. Conoce la causa, fórmate en la Escuela de Líderes y lleva el bate puesto.";
+const description = SITE_DESCRIPTION;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -60,6 +59,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${anton.variable} ${oswald.variable} ${barlow.variable} ${shadowsIntoLight.variable}`}
     >
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(buildJsonLd()) }}
+        />
         <div className={styles.spine}>
           <Navbar />
           <main className={styles.content}>{children}</main>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import NosotrosPageContent from "@/components/specific/nosotros/NosotrosPageContent";
-import { buildOpenGraph, buildTwitter } from "@/lib/site";
+import { buildCanonical, buildOpenGraph, buildTwitter } from "@/lib/site";
 
 const description =
   "Conoce la causa del Movimiento del Bate: el diagnóstico de la ciudad, el símbolo del bate y nuestros principios. La legítima defensa es un derecho.";
@@ -8,6 +8,7 @@ const description =
 export const metadata: Metadata = {
   title: "Nosotros",
   description,
+  alternates: { canonical: buildCanonical("/nosotros") },
   openGraph: buildOpenGraph("Nosotros", description, "/nosotros"),
   twitter: buildTwitter("Nosotros", description),
 };
