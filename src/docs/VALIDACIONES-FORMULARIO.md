@@ -4,7 +4,7 @@ Componente: `src/components/specific/voluntariado/InscripcionForm.tsx`
 Reglas puras: `src/components/specific/voluntariado/validation.ts`
 Estilos: `src/components/specific/voluntariado/InscripcionForm.module.css`
 
-El formulario es un wizard de 4 pasos (Perfil, Talento, Formación, Participación). Todavía **no envía datos** a ningún servidor: el estado vive en `useState` y se pierde al recargar.
+El formulario es un wizard de 4 pasos (Perfil, Talento, Formación, Participación). Al enviar, guarda el registro en MySQL con Prisma y después notifica por correo con Resend.
 
 ## Cómo se validan los pasos
 
@@ -229,26 +229,31 @@ El formulario envía el estado completo a `POST /api/inscripciones`:
 | `enteraste` | Etiqueta de la opción. | Tal cual. |
 | `autorizacion` | Booleano. | Tal cual. |
 
+En el servidor, `guardarInscripcion` (`src/lib/inscripciones.ts`) mapea esos campos a la tabla MySQL `form_submissions` (`nombre → full_name`, `rangoEdad → age_range`, etc.). Los textos de «Otra»/«Otro» se incrustan en el arreglo JSON correspondiente como `"Otra: texto"` / `"Otro: texto"`. Los campos opcionales vacíos se guardan como `NULL`.
+
 ## Envío y almacenamiento
 
 - **Endpoint:** `POST /api/inscripciones` (`src/app/api/inscripciones/route.ts`, runtime Node.js).
 - **Validación de servidor:** reutiliza `validation.ts` y repite las reglas obligatorias del cliente. Responde:
-  - `201 { ok: true, id }` cuando envía el correo (y guarda en local).
+  - `201 { ok: true, id }` cuando el registro se guarda en MySQL.
   - `400 { ok: false, error }` si los datos no son válidos.
-  - `502 { ok: false, error }` si Resend falla (no se guarda, para poder reintentar sin duplicados).
-  - `503 { ok: false, error }` si falta `RESEND_API_KEY` o `INSCRIPCIONES_TO`.
+  - `500 { ok: false, error }` si falla la inserción en la base de datos.
+- **Orden del flujo:** validar → guardar en MySQL → responder `201` → enviar correo con `after()`.
+- **Base de datos:** Prisma ORM con MySQL. El modelo es `FormSubmission` en `prisma/schema.prisma` y se inserta con `prisma.formSubmission.create()`. La conexión vive en `src/lib/prisma.ts` (singleton). Cada registro usa `id` autoincremental y `created_at` como fecha de envío. La base es compartida con WordPress: solo se modela `form_submissions`; las tablas `wp_*` no se tocan.
+- **Selecciones múltiples:** se guardan como JSON serializado en columnas `LONGTEXT` (`talents`, `social_networks`, `training_interests`, `barriers`, `participation_types`). El detalle de «Otra»/«Otro» viaja dentro del mismo arreglo.
 - **Correo (Resend):** `src/lib/emailInscripcion.ts` arma asunto, HTML y texto a partir del registro; `src/lib/resend.ts` inicializa el cliente de forma perezosa. Remitente por defecto `onboarding@resend.dev`, destinatario en `INSCRIPCIONES_TO`, `replyTo` con el correo del inscrito.
-- **Variables de entorno:** ver `.env.example`. Con `onboarding@resend.dev` solo se puede enviar al correo dueño de la cuenta Resend; para otros destinatarios o un remitente propio hay que verificar un dominio.
-- **Orden del flujo:** validar → enviar correo → guardar NDJSON (solo fuera de Vercel) → `201`.
-- **Dónde guarda:** `data/inscripciones.ndjson` en la raíz del proyecto (una línea JSON por registro). Se crea automáticamente. Cada registro agrega `id` (UUID), `enviadoEn` (ISO) y `origen: "voluntariado"`, además de los campos del formulario.
-- **Privacidad:** el archivo contiene datos personales; la carpeta `/data/` está en `.gitignore`.
-- **Limitación:** el NDJSON es un almacenamiento local de emulación y en Vercel (serverless) no persiste; allí el correo es el registro real. Para producción habrá que conectar una base de datos o API real.
+- **Fallo del correo:** se ejecuta después de responder y dentro de `after()`. Si Resend falla, el error se registra en consola pero la API mantiene el `201` y el registro queda guardado.
+- **Variables de entorno:** `DATABASE_URL` en `.env.local` (formato `mysql://usuario:password@host:3306/base`); además `RESEND_API_KEY`, `INSCRIPCIONES_TO` y `RESEND_FROM`. `prisma.config.ts` carga `.env.local` para los comandos de la CLI.
+- **Comandos de Prisma:** `npm run prisma:generate` regenera el cliente; `npm run prisma:pull` introspecciona la tabla existente. No usar `prisma migrate dev` contra producción.
+- **Datos históricos:** `data/inscripciones.ndjson` queda solo como respaldo; no se importó a MySQL.
+- **Privacidad:** la base de datos contiene datos personales; el acceso debe restringirse y las credenciales no se versionan.
 - **UX:** mientras se envía, el botón queda deshabilitado con el texto "Enviando…". Si responde bien, aparece el modal de éxito y al cerrarlo el formulario se reinicia. Si falla, aparece el modal de error con "Reintentar" (conserva las respuestas) y "Volver".
 - **Modales:** `src/components/specific/voluntariado/EnvioModal.tsx` (+ `.module.css`), con estética navy, borde rojo/amarillo y animación con `motion`.
 
 ## Pendientes
 
-- Conectar un backend o base de datos real (hoy correo + archivo local).
+- Verificar que el esquema Prisma coincida exactamente con la tabla en producción (`npm run prisma:pull` o `prisma migrate diff`) cuando estén las credenciales.
+- Evaluar si se importa el histórico de `data/inscripciones.ndjson` a MySQL.
 - Personalizar la plantilla del correo (hoy es una plantilla HTML simple; se evalúa usar React Email).
 - Verificar un dominio en Resend para enviar a cualquier destinatario con remitente propio.
 - Persistencia de respuestas (localStorage) para no perderlas al recargar.

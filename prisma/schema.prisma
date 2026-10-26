@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model FormSubmission {
+  id                    Int       @id @default(autoincrement())
+  fullName              String    @map("full_name") @db.VarChar(150)
+  ageRange              String    @map("age_range") @db.VarChar(50)
+  phone                 String    @db.VarChar(50)
+  email                 String    @db.VarChar(150)
+  municipality          String    @db.VarChar(100)
+  neighborhoodResidence String    @map("neighborhood_residence") @db.VarChar(100)
+  neighborhoodActivity  String    @map("neighborhood_activity") @db.VarChar(100)
+  talents               String    @db.LongText
+  communityInvolvement  String    @map("community_involvement") @db.VarChar(100)
+  experienceDetails     String?   @map("experience_details") @db.Text
+  socialNetworks        String    @map("social_networks") @db.LongText
+  smartphoneStatus      String    @map("smartphone_status") @db.VarChar(100)
+  trainingInterests     String    @map("training_interests") @db.LongText
+  communityContribution String?   @map("community_contribution") @db.Text
+  barriers              String    @db.LongText
+  participationTypes    String    @map("participation_types") @db.LongText
+  timeCommitment        String    @map("time_commitment") @db.VarChar(100)
+  projectIdea           String?   @map("project_idea") @db.Text
+  socialProfile         String?   @map("social_profile") @db.VarChar(100)
+  discoverySource       String    @map("discovery_source") @db.VarChar(100)
+  dataAuthorization     Boolean   @map("data_authorization")
+  createdAt             DateTime? @default(now()) @map("created_at") @db.Timestamp(0)
+
+  @@map("form_submissions")
+}

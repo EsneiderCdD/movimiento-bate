@@ -1,5 +1,4 @@
-import { appendFile, mkdir } from "node:fs/promises";
-import { join } from "node:path";
+import { prisma } from "@/lib/prisma";
 
 export type Inscripcion = {
   id: string;
@@ -31,10 +30,62 @@ export type Inscripcion = {
   autorizacion: boolean;
 };
 
-const DATA_DIR = join(process.cwd(), "data");
-const DATA_FILE = join(DATA_DIR, "inscripciones.ndjson");
+export type NuevaInscripcion = Omit<
+  Inscripcion,
+  "id" | "enviadoEn" | "origen"
+>;
 
-export async function guardarInscripcion(inscripcion: Inscripcion) {
-  await mkdir(DATA_DIR, { recursive: true });
-  await appendFile(DATA_FILE, `${JSON.stringify(inscripcion)}\n`, "utf8");
+const combinarOtra = (
+  seleccion: string[],
+  detalle: string,
+  etiqueta: "Otra" | "Otro",
+) => {
+  const texto = detalle.trim();
+  if (!texto) return seleccion;
+  return seleccion.map((valor) =>
+    valor === etiqueta ? `${etiqueta}: ${texto}` : valor,
+  );
+};
+
+export async function guardarInscripcion(inscripcion: NuevaInscripcion) {
+  return prisma.formSubmission.create({
+    data: {
+      fullName: inscripcion.nombre,
+      ageRange: inscripcion.rangoEdad,
+      phone: inscripcion.celular,
+      email: inscripcion.correo,
+      municipality: inscripcion.municipio,
+      neighborhoodResidence: inscripcion.barrioVive,
+      neighborhoodActivity: inscripcion.barrioActua,
+      talents: JSON.stringify(
+        combinarOtra(
+          inscripcion.habilidades,
+          inscripcion.habilidadOtra,
+          "Otra",
+        ),
+      ),
+      communityInvolvement: inscripcion.participacion,
+      experienceDetails: inscripcion.experiencia || null,
+      socialNetworks: JSON.stringify(inscripcion.redes),
+      smartphoneStatus: inscripcion.celularContenido,
+      trainingInterests: JSON.stringify(
+        combinarOtra(inscripcion.formacion, inscripcion.formacionOtra, "Otra"),
+      ),
+      communityContribution: inscripcion.aporte || null,
+      barriers: JSON.stringify(
+        combinarOtra(
+          inscripcion.impedimentos,
+          inscripcion.impedimentoOtro,
+          "Otro",
+        ),
+      ),
+      participationTypes: JSON.stringify(inscripcion.motivaciones),
+      timeCommitment: inscripcion.tiempo,
+      projectIdea: inscripcion.idea || null,
+      socialProfile: inscripcion.perfilSocial || null,
+      discoverySource: inscripcion.enteraste,
+      dataAuthorization: inscripcion.autorizacion,
+    },
+    select: { id: true, createdAt: true },
+  });
 }

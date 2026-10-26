@@ -1,6 +1,10 @@
 import { randomUUID } from "node:crypto";
-import { NextResponse } from "next/server";
-import { guardarInscripcion, type Inscripcion } from "@/lib/inscripciones";
+import { after, NextResponse } from "next/server";
+import {
+  guardarInscripcion,
+  type Inscripcion,
+  type NuevaInscripcion,
+} from "@/lib/inscripciones";
 import { enviarCorreoInscripcion } from "@/lib/emailInscripcion";
 import {
   normalizarCelular,
@@ -168,10 +172,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const registro: Inscripcion = {
-    id: randomUUID(),
-    enviadoEn: new Date().toISOString(),
-    origen: "voluntariado",
+  const nueva: NuevaInscripcion = {
     nombre,
     rangoEdad,
     celular,
@@ -198,25 +199,32 @@ export async function POST(request: Request) {
     autorizacion,
   };
 
-  try {
-    await enviarCorreoInscripcion(registro);
-  } catch (error) {
-    console.error("Error al enviar el correo:", error);
-    const mensaje = error instanceof Error ? error.message : "";
-    const status = /RESEND_API_KEY|INSCRIPCIONES_TO/.test(mensaje) ? 503 : 502;
+  const guardada = await guardarInscripcion(nueva).catch((error) => {
+    console.error("Error al guardar la inscripción:", error);
+    return null;
+  });
+
+  if (!guardada) {
     return NextResponse.json(
-      { ok: false, error: "No se pudo enviar la inscripción." },
-      { status },
+      { ok: false, error: "No se pudo guardar la inscripción." },
+      { status: 500 },
     );
   }
 
-  if (!process.env.VERCEL) {
-    try {
-      await guardarInscripcion(registro);
-    } catch (error) {
-      console.error("Error al guardar el registro:", error);
-    }
-  }
+  const registro: Inscripcion = {
+    ...nueva,
+    id: String(guardada.id),
+    enviadoEn: (guardada.createdAt ?? new Date()).toISOString(),
+    origen: "voluntariado",
+  };
 
-  return NextResponse.json({ ok: true, id: registro.id }, { status: 201 });
+  after(async () => {
+    try {
+      await enviarCorreoInscripcion(registro);
+    } catch (error) {
+      console.error("Error al enviar el correo:", error);
+    }
+  });
+
+  return NextResponse.json({ ok: true, id: guardada.id }, { status: 201 });
 }

@@ -45,3 +45,5 @@ next-env.d.ts
 
 # mantener el ejemplo de variables
 !.env.example
+
+/src/generated/prisma
